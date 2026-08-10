@@ -64,7 +64,7 @@ const roadmap = [
   {
     phase: "01",
     title: "Launch the Engine",
-    text: "Build cash flow through creative services while growing Roblox games and their communities.",
+    text: "Launch Furreal Studio and Furreal Interactive. Build cash flow through creative services while growing Roblox games and community.",
   },
   {
     phase: "02",
