@@ -338,7 +338,7 @@ function App() {
             </div>
             <div className="mt-10 grid gap-3 sm:grid-cols-2">
               <a
-                href="mailto:hello@furrealproductions.com"
+                href="mailto:mosesonerhime11@gmail.com.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-bold text-white transition hover:bg-furreal"
