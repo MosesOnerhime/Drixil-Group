@@ -126,7 +126,9 @@ function App() {
             <a className="transition hover:text-white" href="#contact">Contact</a>
           </div>
           <a
-            href="mailto:hello@furrealproductions.com"
+            href="mailto:mosesonerhime11@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden items-center gap-2 rounded-full border border-white/15 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-black transition hover:bg-furreal hover:text-white sm:inline-flex"
           >
             Start a brief
@@ -335,7 +337,12 @@ function App() {
               </p>
             </div>
             <div className="mt-10 grid gap-3 sm:grid-cols-2">
-              <a href="mailto:hello@furrealproductions.com" className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-bold text-white transition hover:bg-furreal">
+              <a
+                href="mailto:hello@furrealproductions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-bold text-white transition hover:bg-furreal"
+              >
                 Contact Furreal
                 <ArrowUpRight className="h-4 w-4" />
               </a>
