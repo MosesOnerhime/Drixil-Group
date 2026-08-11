@@ -193,7 +193,7 @@ function App() {
               Furreal Productions
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:mt-7 sm:text-xl sm:leading-8">
-              A creative technology company building interactive entertainment, digital media, software, original IP, and consumer brands for a global audience.
+              A creative entertainment company building interactive entertainment, digital media, software, original IP, and consumer brands for a global audience.
             </p>
             <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap">
               <a href="#ecosystem" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-furreal px-5 py-3 text-sm font-bold text-white shadow-violet transition hover:bg-white hover:text-black">
