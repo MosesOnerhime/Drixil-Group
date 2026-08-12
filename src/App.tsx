@@ -1,4 +1,6 @@
 import {
+  ArrowLeft,
+  ArrowRight,
   ArrowUpRight,
   BadgeDollarSign,
   BrainCircuit,
@@ -6,7 +8,6 @@ import {
   Gamepad2,
   Menu,
   MousePointer2,
-  Orbit,
   PenTool,
   Play,
   Sparkles,
@@ -17,47 +18,90 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState, type MouseEvent, type ReactNode } from "react";
+import beyond90Icon from "./assets/beyond-90-icon.png";
 import furrealLogo from "./assets/brand/furreal-logo.jpeg";
 import furrealMark from "./assets/brand/furreal-mark.jpeg";
 import logoBoard from "./assets/brand/logo-board-02.jpeg";
 
-const ventures = [
+type Division = {
+  name: string;
+  shortName: string;
+  slug: string;
+  number: string;
+  descriptor: string;
+  icon: LucideIcon;
+  accent: string;
+  accentClass: string;
+  stage: "active" | "development";
+};
+
+const divisions: Division[] = [
   {
     name: "Furreal Interactive",
+    shortName: "Interactive",
+    slug: "interactive",
+    number: "01",
     descriptor: "Roblox games, future PC/mobile games, and publishing.",
     icon: Gamepad2,
-    accent: "text-furreal",
+    accent: "#d8ff1f",
+    accentClass: "text-volt",
+    stage: "active",
   },
   {
     name: "Furreal Studio",
+    shortName: "Studio",
+    slug: "studio",
+    number: "02",
     descriptor: "Editing, motion graphics, commercials, trailers, branding, UI/UX, web, and graphic design.",
     icon: PenTool,
-    accent: "text-cyan",
+    accent: "#55e6ff",
+    accentClass: "text-cyan",
+    stage: "development",
   },
   {
     name: "Furreal Labs",
+    shortName: "Labs",
+    slug: "labs",
+    number: "03",
     descriptor: "AI, software, SaaS, automation, and internal tools.",
     icon: BrainCircuit,
-    accent: "text-volt",
+    accent: "#d6ff4b",
+    accentClass: "text-volt",
+    stage: "development",
   },
   {
     name: "Furreal Originals",
+    shortName: "Originals",
+    slug: "originals",
+    number: "04",
     descriptor: "Original IP, animation, stories, music, and worlds.",
     icon: Clapperboard,
-    accent: "text-furreal",
+    accent: "#7b5cff",
+    accentClass: "text-furreal",
+    stage: "development",
   },
   {
     name: "Furreal Store",
+    shortName: "Store",
+    slug: "store",
+    number: "05",
     descriptor: "Merchandise, apparel, accessories, and fan objects.",
     icon: Store,
-    accent: "text-cyan",
+    accent: "#55e6ff",
+    accentClass: "text-cyan",
+    stage: "development",
   },
   {
     name: "Furreal Ventures",
+    shortName: "Ventures",
+    slug: "ventures",
+    number: "06",
     descriptor: "Future publishing, investment, acquisitions, and venture building.",
     icon: BadgeDollarSign,
-    accent: "text-volt",
+    accent: "#d6ff4b",
+    accentClass: "text-volt",
+    stage: "development",
   },
 ];
 
@@ -86,18 +130,11 @@ const roadmap = [
 
 const beyond90Modes = ["3v3", "5v5", "7v7", "11v11", "Ranked", "Clubs", "Street", "Training"];
 
-const navLinks = [
-  ["Ecosystem", "#ecosystem"],
-  ["Interactive", "#interactive"],
-  ["Roadmap", "#roadmap"],
-  ["Contact", "#contact"],
-];
-
 const beyond90Features: Array<{ icon: LucideIcon; title: string; text: string }> = [
   {
     icon: UsersRound,
     title: "Real-player football",
-    text: "Teamwork-led football where the pitch is controlled by real Roblox players, not a single avatar fantasy.",
+    text: "Teamwork-led football where the pitch is controlled by real Roblox players, not a single-avatar fantasy.",
   },
   {
     icon: Trophy,
@@ -116,8 +153,39 @@ const beyond90Features: Array<{ icon: LucideIcon; title: string; text: string }>
   },
 ];
 
-function App() {
+function RouteLink({ to, className, children, ariaLabel }: { to: string; className?: string; children: ReactNode; ariaLabel?: string }) {
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    window.history.pushState({}, "", to);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+    window.scrollTo({ top: 0, behavior: "auto" });
+  };
+
+  return (
+    <a href={to} className={className} aria-label={ariaLabel} onClick={handleClick}>
+      {children}
+    </a>
+  );
+}
+
+function BrandLink({ compact = false }: { compact?: boolean }) {
+  return (
+    <RouteLink to="/" className="flex items-center gap-3" ariaLabel="Furreal Productions home">
+      <img src={furrealMark} alt="" className="h-8 w-8 rounded-xl object-cover shadow-violet sm:h-9 sm:w-9" />
+      {!compact && <span className="text-xs font-semibold uppercase tracking-[0.24em] text-white sm:text-sm sm:tracking-[0.34em]">Furreal</span>}
+    </RouteLink>
+  );
+}
+
+function ParentSite() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navLinks = [
+    ["Ecosystem", "#ecosystem"],
+    ["Current project", "#current-project"],
+    ["Roadmap", "#roadmap"],
+    ["Contact", "#contact"],
+  ];
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-ink text-white">
@@ -136,8 +204,6 @@ function App() {
           </div>
           <a
             href="mailto:mosesonerhime11@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
             className="hidden items-center gap-2 rounded-full border border-white/15 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-black transition hover:bg-furreal hover:text-white sm:inline-flex"
           >
             Start a brief
@@ -154,27 +220,13 @@ function App() {
           </button>
         </div>
         {menuOpen && (
-          <div className="border-t border-white/10 bg-black/95 px-4 py-4 shadow-2xl md:hidden">
+          <div className="border-t border-white/10 bg-black/95 px-4 py-4 md:hidden">
             <div className="mx-auto grid max-w-7xl gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-white/80">
               {navLinks.map(([label, href]) => (
-                <a
-                  key={href}
-                  className="min-h-12 border border-white/10 bg-white/[0.035] px-4 py-3 transition hover:border-furreal hover:text-white"
-                  href={href}
-                  onClick={() => setMenuOpen(false)}
-                >
+                <a key={href} className="min-h-12 border border-white/10 bg-white/[0.035] px-4 py-3" href={href} onClick={() => setMenuOpen(false)}>
                   {label}
                 </a>
               ))}
-              <a
-                href="mailto:mosesonerhime11@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-4 py-3 text-center text-xs font-bold uppercase tracking-[0.16em] text-black"
-              >
-                Start a brief
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
             </div>
           </div>
         )}
@@ -185,24 +237,22 @@ function App() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(123,92,255,0.3),transparent_32%),linear-gradient(180deg,rgba(0,0,0,0.62),rgba(0,0,0,0.9)_52%,rgba(0,0,0,0.98))] sm:bg-[radial-gradient(circle_at_20%_20%,rgba(123,92,255,0.28),transparent_30%),linear-gradient(90deg,rgba(0,0,0,0.95),rgba(0,0,0,0.66)_45%,rgba(0,0,0,0.38))]" />
         <div className="relative mx-auto grid w-full max-w-7xl gap-8 px-4 pb-10 pt-24 sm:gap-10 sm:px-6 sm:pb-12 sm:pt-28 lg:grid-cols-[1.05fr_0.7fr] lg:px-8">
           <div className="max-w-4xl">
-            <div className="mb-5 inline-flex max-w-full items-center gap-2 border border-white/12 bg-white/5 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/70 sm:mb-6 sm:text-xs sm:tracking-[0.22em]">
+            <div className="mb-5 inline-flex items-center gap-2 border border-white/12 bg-white/5 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/70 sm:mb-6 sm:text-xs sm:tracking-[0.22em]">
               <Sparkles className="h-4 w-4 shrink-0 text-furreal" />
               Where ideas become interactive
             </div>
-            <h1 className="max-w-5xl text-[2.75rem] font-semibold leading-[0.95] tracking-normal text-white sm:text-7xl lg:text-8xl">
-              Furreal Productions
-            </h1>
+            <h1 className="max-w-5xl text-[2.75rem] font-semibold leading-[0.95] tracking-normal text-white sm:text-7xl lg:text-8xl">Furreal Productions</h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:mt-7 sm:text-xl sm:leading-8">
               A creative entertainment company building interactive entertainment, digital media, software, original IP, and consumer brands for a global audience.
             </p>
             <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap">
               <a href="#ecosystem" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-furreal px-5 py-3 text-sm font-bold text-white shadow-violet transition hover:bg-white hover:text-black">
-                Explore ecosystem
+                Explore the divisions
                 <ArrowUpRight className="h-4 w-4" />
               </a>
-              <a href="#interactive" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/16 px-5 py-3 text-sm font-bold text-white transition hover:border-white hover:bg-white/10">
+              <a href="#current-project" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/16 px-5 py-3 text-sm font-bold text-white transition hover:border-white hover:bg-white/10">
                 <Play className="h-4 w-4" />
-                View Beyond 90
+                See what we’re building
               </a>
             </div>
           </div>
@@ -225,9 +275,7 @@ function App() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-[0.72fr_1fr] lg:px-8">
           <div>
             <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">The philosophy</p>
-            <h2 className="mt-4 max-w-xl text-3xl font-semibold leading-tight sm:text-5xl">
-              We turn imagination into experiences people remember.
-            </h2>
+            <h2 className="mt-4 max-w-xl text-3xl font-semibold leading-tight sm:text-5xl">We turn imagination into experiences people remember.</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {[
@@ -248,70 +296,71 @@ function App() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
             <div>
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">Brand architecture</p>
-              <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight sm:text-6xl">
-                One mark. Multiple ventures. Shared momentum.
-              </h2>
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">Independent division websites</p>
+              <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight sm:text-6xl">One company. Six focused divisions.</h2>
             </div>
-            <p className="max-w-xl text-base leading-7 text-white/60">
-              Furreal uses a branded-house system: the star logo and typography stay consistent while each business line carries its own descriptor.
-            </p>
+            <p className="max-w-xl text-base leading-7 text-white/60">Each Furreal division has its own home, focus, and identity—connected by one shared standard and one parent company.</p>
           </div>
 
           <div className="mt-9 grid gap-px overflow-hidden border border-white/10 bg-white/10 sm:mt-12 md:grid-cols-2 xl:grid-cols-3">
-            {ventures.map((venture) => {
-              const Icon = venture.icon;
+            {divisions.map((division) => {
+              const Icon = division.icon;
               return (
-                <article key={venture.name} className="group bg-coal p-5 transition hover:bg-white hover:text-black sm:p-6">
+                <RouteLink key={division.name} to={`/${division.slug}`} className="group flex min-h-[270px] flex-col justify-between bg-coal p-5 transition hover:bg-white hover:text-black sm:p-6">
                   <div className="flex items-start justify-between gap-4">
-                    <Icon className={`h-6 w-6 shrink-0 sm:h-7 sm:w-7 ${venture.accent} transition group-hover:text-black`} />
-                    <ArrowUpRight className="h-5 w-5 shrink-0 text-white/30 transition group-hover:text-black" />
+                    <Icon className={`h-6 w-6 shrink-0 sm:h-7 sm:w-7 ${division.accentClass} transition group-hover:text-black`} />
+                    <span className="flex items-center gap-2 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-white/45 transition group-hover:text-black/50">
+                      {division.stage === "active" ? "Active" : "In development"}
+                      <ArrowUpRight className="h-4 w-4" />
+                    </span>
                   </div>
-                  <h3 className="mt-8 text-xl font-semibold sm:mt-10 sm:text-2xl">{venture.name}</h3>
-                  <p className="mt-3 text-sm leading-6 text-white/60 transition group-hover:text-black/60 sm:mt-4">{venture.descriptor}</p>
-                </article>
+                  <div>
+                    <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-white/25 transition group-hover:text-black/30">{division.number}</p>
+                    <h3 className="text-xl font-semibold sm:text-2xl">{division.name}</h3>
+                    <p className="mt-3 text-sm leading-6 text-white/60 transition group-hover:text-black/60 sm:mt-4">{division.descriptor}</p>
+                  </div>
+                </RouteLink>
               );
             })}
           </div>
         </div>
       </section>
 
-      <section id="interactive" className="scroll-mt-14 border-b border-white/10 bg-ink py-14 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <div className="relative min-h-[560px] overflow-hidden border border-white/10 bg-smoke sm:min-h-[520px]">
-            <div className="absolute inset-0 bg-[linear-gradient(140deg,rgba(123,92,255,0.34),transparent_35%),radial-gradient(circle_at_74%_18%,rgba(85,230,255,0.18),transparent_25%)]" />
-            <div className="absolute left-5 right-5 top-5 flex items-center gap-3 sm:left-8 sm:right-8 sm:top-8">
-              <img src={furrealMark} alt="" className="h-10 w-10 shrink-0 rounded-xl object-cover sm:h-11 sm:w-11" />
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-white/70 sm:text-sm sm:tracking-[0.24em]">Furreal Interactive</span>
-            </div>
-            <div className="absolute inset-x-5 bottom-5 sm:inset-x-8 sm:bottom-8">
-              <div className="mb-6 flex flex-wrap gap-2 sm:mb-7">
-                {beyond90Modes.map((mode) => (
-                  <span key={mode} className="border border-white/12 bg-black/40 px-2.5 py-2 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-white/75 sm:px-3 sm:text-xs sm:tracking-[0.18em]">
-                    {mode}
-                  </span>
-                ))}
+      <section id="current-project" className="scroll-mt-14 border-b border-white/10 bg-ink py-14 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-7 flex flex-col justify-between gap-5 sm:mb-10 sm:flex-row sm:items-end">
+            <div>
+              <div className="inline-flex items-center gap-2 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-volt sm:text-xs sm:tracking-[0.24em]">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-volt shadow-[0_0_14px_#d6ff4b]" />
+                Currently working on
               </div>
-              <h2 className="text-4xl font-semibold leading-none sm:text-7xl">Beyond 90</h2>
-              <p className="mt-5 max-w-xl text-sm leading-6 text-white/70 sm:text-base sm:leading-7">
-                The definitive football platform on Roblox: every player on the pitch is real, every mode feeds identity, and every match is built for social, competitive moments.
-              </p>
+              <h2 className="mt-4 text-3xl font-semibold sm:text-6xl">Beyond 90</h2>
             </div>
+            <p className="max-w-xl text-base leading-7 text-white/60">The first active project from Furreal Interactive—an ambitious team football experience built for Roblox.</p>
           </div>
 
-          <div className="grid content-center gap-4">
-            {beyond90Features.map(({ icon: Icon, title, text }) => (
-              <article key={title} className="flex gap-4 border border-white/10 bg-white/[0.035] p-4 sm:gap-5 sm:p-5">
-                <div className="grid h-11 w-11 shrink-0 place-items-center bg-furreal text-white sm:h-12 sm:w-12">
-                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+          <RouteLink to="/interactive" className="group grid overflow-hidden border border-white/10 bg-smoke lg:grid-cols-[1.08fr_0.92fr]">
+            <div className="relative min-h-[390px] overflow-hidden sm:min-h-[600px]">
+              <img src={beyond90Icon} alt="Beyond 90 Roblox football game artwork" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-black/25" />
+            </div>
+            <div className="flex flex-col justify-between p-5 sm:p-8 lg:p-10">
+              <div className="flex items-center justify-between gap-4">
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-volt">Furreal Interactive / 001</span>
+                <ArrowUpRight className="h-6 w-6 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </div>
+              <div className="mt-14 lg:mt-0">
+                <p className="text-2xl font-semibold leading-tight sm:text-4xl">Football is better when every player matters.</p>
+                <p className="mt-5 text-sm leading-6 text-white/60 sm:text-base sm:leading-7">Real players. Real roles. Competitive clubs, ranked progression, and the feeling of a proper match—from kickoff to the final whistle.</p>
+                <div className="mt-7 flex flex-wrap gap-2">
+                  {beyond90Modes.slice(0, 6).map((mode) => (
+                    <span key={mode} className="border border-white/12 px-3 py-2 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-white/65">{mode}</span>
+                  ))}
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold sm:text-xl">{title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-white/60">{text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+              </div>
+              <span className="mt-12 inline-flex items-center gap-2 text-sm font-bold text-white">Enter Furreal Interactive <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
+            </div>
+          </RouteLink>
         </div>
       </section>
 
@@ -320,9 +369,7 @@ function App() {
           <div className="grid gap-8 lg:grid-cols-[0.65fr_1fr]">
             <div>
               <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">5-year roadmap</p>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-6xl">
-                Service revenue funds IP. IP compounds the company.
-              </h2>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-6xl">Service revenue funds IP. IP compounds the company.</h2>
             </div>
             <div className="grid gap-px overflow-hidden border border-black/10 bg-black/10">
               {roadmap.map((item) => (
@@ -346,47 +393,187 @@ function App() {
           </div>
           <div id="contact" className="flex scroll-mt-14 flex-col justify-between border border-white/10 bg-white p-5 text-black sm:p-8">
             <div>
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">Investment opportunity</p>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-5xl">
-                A diversified creative technology ecosystem with recurring revenue potential.
-              </h2>
-              <p className="mt-5 text-sm leading-6 text-black/60 sm:text-base sm:leading-7">
-                Furreal Productions owns the master brand, sets strategy, manages capital allocation, and provides shared services across games, media, software, merchandise, and original entertainment.
-              </p>
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">Build with Furreal</p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-5xl">Big ideas deserve a serious home.</h2>
+              <p className="mt-5 text-sm leading-6 text-black/60 sm:text-base sm:leading-7">Furreal Productions sets strategy, develops original products, and supports the focused teams building across games, media, software, and design.</p>
             </div>
-            <div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2">
-              <a
-                href="mailto:mosesonerhime11@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-black px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-furreal"
-              >
-                Contact Furreal
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
-              <a href="#top" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-black/15 px-5 py-3 text-center text-sm font-bold text-black transition hover:border-black hover:bg-black hover:text-white">
-                Back to top
-                <Orbit className="h-4 w-4" />
-              </a>
-            </div>
+            <a href="mailto:mosesonerhime11@gmail.com" className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-black px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-furreal sm:mt-10">
+              Contact Furreal
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
 
       <footer className="border-t border-white/10 bg-black px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs uppercase tracking-[0.18em] text-white/45 sm:flex-row">
-          <p>Furreal Productions</p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <span>Interactive</span>
-            <span>Studio</span>
-            <span>Labs</span>
-            <span>Originals</span>
-            <span>Ventures</span>
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 text-xs uppercase tracking-[0.18em] text-white/45 sm:flex-row">
+          <p>© {new Date().getFullYear()} Furreal Productions</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-3">
+            {divisions.map((division) => <RouteLink key={division.slug} to={`/${division.slug}`} className="transition hover:text-white">{division.shortName}</RouteLink>)}
           </div>
         </div>
       </footer>
     </main>
   );
+}
+
+function InteractiveSite() {
+  return (
+    <main className="min-h-screen overflow-x-hidden bg-[#070905] text-white selection:bg-volt selection:text-black">
+      <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          <BrandLink />
+          <span className="hidden text-xs font-bold uppercase tracking-[0.24em] text-white/50 sm:block">Furreal Interactive</span>
+          <RouteLink to="/" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-white/65 transition hover:text-white">
+            <ArrowLeft className="h-4 w-4" />
+            <span className="hidden sm:inline">All divisions</span>
+          </RouteLink>
+        </div>
+      </nav>
+
+      <section className="relative min-h-svh border-b border-white/10 pt-16">
+        <div className="mx-auto grid min-h-[calc(100svh-4rem)] max-w-[1600px] lg:grid-cols-[0.82fr_1.18fr]">
+          <div className="relative z-10 flex flex-col justify-center px-4 py-16 sm:px-8 lg:px-14 xl:px-20">
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/45">Furreal Interactive presents</p>
+            <div className="mt-8 inline-flex w-fit items-center gap-2 border border-volt/30 bg-volt/10 px-3 py-2 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-volt sm:text-xs">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-volt shadow-[0_0_14px_#d6ff4b]" />
+              Currently working on
+            </div>
+            <h1 className="mt-5 text-6xl font-black uppercase leading-[0.82] tracking-[-0.07em] sm:text-8xl lg:text-[7.8rem]">Beyond<br /><span className="text-volt">90</span></h1>
+            <p className="mt-7 max-w-xl text-base leading-7 text-white/65 sm:text-lg sm:leading-8">A competitive Roblox football experience where every position is played by a real person—and every touch can change the match.</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#game" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-volt px-5 py-3 text-sm font-bold text-black transition hover:bg-white">
+                Discover the game
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <span className="inline-flex min-h-12 items-center rounded-full border border-white/15 px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-white/55">In development</span>
+            </div>
+          </div>
+          <div className="relative min-h-[62svh] overflow-hidden lg:min-h-0">
+            <img src={beyond90Icon} alt="Beyond 90 Roblox football game artwork" className="absolute inset-0 h-full w-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#070905] lg:bg-gradient-to-r lg:from-[#070905] lg:via-transparent lg:to-transparent" />
+            <span className="absolute bottom-5 right-5 border border-white/15 bg-black/55 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.2em] text-white/60 backdrop-blur-md sm:bottom-8 sm:right-8">Project 001 / Roblox</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="game" className="scroll-mt-16 border-b border-white/10 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-20">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">The experience</p>
+              <h2 className="mt-5 text-4xl font-semibold leading-[1.02] sm:text-6xl">More than a football game. A place to belong.</h2>
+            </div>
+            <div className="grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2">
+              {beyond90Features.map(({ icon: Icon, title, text }) => (
+                <article key={title} className="bg-[#0b0d08] p-5 sm:p-7">
+                  <Icon className="h-6 w-6 text-volt" />
+                  <h3 className="mt-8 text-xl font-semibold">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-white/55">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-volt py-12 text-black sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-black uppercase tracking-[0.25em]">Ways to play</p>
+          <div className="mt-8 grid grid-cols-2 gap-px bg-black/20 sm:grid-cols-4 lg:grid-cols-8">
+            {beyond90Modes.map((mode, index) => (
+              <div key={mode} className="bg-volt p-4 sm:p-5">
+                <span className="text-[0.6rem] font-bold text-black/35">0{index + 1}</span>
+                <p className="mt-8 text-lg font-black uppercase sm:text-xl">{mode}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.75fr] lg:px-8">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Furreal Interactive</p>
+            <h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight sm:text-6xl">We build games that feel bigger together.</h2>
+          </div>
+          <div className="flex flex-col justify-end">
+            <p className="text-base leading-7 text-white/55">Beyond 90 is our current focus. More from Furreal Interactive will be revealed when it is ready.</p>
+            <RouteLink to="/" className="mt-8 inline-flex w-fit items-center gap-2 border-b border-white/25 pb-2 text-sm font-bold transition hover:border-volt hover:text-volt">
+              Explore Furreal Productions
+              <ArrowUpRight className="h-4 w-4" />
+            </RouteLink>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 px-4 py-8 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs uppercase tracking-[0.18em] text-white/40 sm:flex-row">
+          <p>© {new Date().getFullYear()} Furreal Interactive</p>
+          <p>A Furreal Productions division</p>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+function DivisionPlaceholder({ division }: { division: Division }) {
+  const Icon = division.icon;
+
+  return (
+    <main className="relative flex min-h-svh flex-col overflow-hidden bg-[#050505] text-white" style={{ "--division-accent": division.accent } as React.CSSProperties}>
+      <div className="pointer-events-none absolute -right-32 top-1/4 h-[28rem] w-[28rem] rounded-full bg-[var(--division-accent)] opacity-[0.08] blur-[120px]" />
+      <nav className="relative z-10 border-b border-white/10">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          <BrandLink />
+          <RouteLink to="/" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-white/55 transition hover:text-white">
+            <ArrowLeft className="h-4 w-4" />
+            <span className="hidden sm:inline">All divisions</span>
+          </RouteLink>
+        </div>
+      </nav>
+
+      <section className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 py-16 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-4">
+          <span className="grid h-12 w-12 place-items-center border border-white/15" style={{ color: division.accent }}><Icon className="h-6 w-6" /></span>
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/40">Division {division.number}</p>
+        </div>
+        <h1 className="mt-10 max-w-5xl text-5xl font-semibold leading-[0.94] sm:text-7xl lg:text-8xl">{division.name}</h1>
+        <p className="mt-6 max-w-2xl text-base leading-7 text-white/55 sm:text-lg">{division.descriptor}</p>
+        <div className="mt-14 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em]" style={{ color: division.accent }}>
+          <span className="h-2 w-2 rounded-full bg-[var(--division-accent)]" />
+          Website in development
+        </div>
+      </section>
+
+      <footer className="relative z-10 border-t border-white/10 px-4 py-7 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs uppercase tracking-[0.18em] text-white/35 sm:flex-row">
+          <p>© {new Date().getFullYear()} {division.name}</p>
+          <p>A Furreal Productions division</p>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+function App() {
+  const [pathname, setPathname] = useState(() => window.location.pathname.replace(/\/+$/, "") || "/");
+
+  useEffect(() => {
+    const syncPath = () => setPathname(window.location.pathname.replace(/\/+$/, "") || "/");
+    window.addEventListener("popstate", syncPath);
+    return () => window.removeEventListener("popstate", syncPath);
+  }, []);
+
+  useEffect(() => {
+    const division = divisions.find((item) => `/${item.slug}` === pathname);
+    document.title = division ? `${division.name} — Furreal Productions` : "Furreal Productions";
+  }, [pathname]);
+
+  const activeDivision = divisions.find((division) => `/${division.slug}` === pathname);
+  if (activeDivision?.slug === "interactive") return <InteractiveSite />;
+  if (activeDivision) return <DivisionPlaceholder division={activeDivision} />;
+  return <ParentSite />;
 }
 
 export default App;
