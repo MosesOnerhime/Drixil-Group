@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 import { useEffect, useState, type MouseEvent, type ReactNode } from "react";
 import beyond90Icon from "./assets/beyond-90-icon.png";
+import beyond90Thumbnail1 from "./assets/beyond-90-thumbnail-1.png";
+import beyond90Thumbnail3 from "./assets/beyond-90-thumbnail-3.png";
 import furrealLogo from "./assets/brand/furreal-logo.jpeg";
 import furrealMark from "./assets/brand/furreal-mark.jpeg";
 import logoBoard from "./assets/brand/logo-board-02.jpeg";
@@ -473,6 +475,39 @@ function InteractiveSite() {
                 </article>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/10 bg-black py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex flex-col justify-between gap-5 sm:mb-12 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Inside Beyond 90</p>
+              <h2 className="mt-4 text-4xl font-semibold leading-tight sm:text-6xl">See the vision in play.</h2>
+            </div>
+            <p className="max-w-md text-sm leading-6 text-white/55 sm:text-base sm:leading-7">Competitive matches, coordinated team play, and a broadcast presentation built to make every moment feel important.</p>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            <figure className="group overflow-hidden border border-white/10 bg-[#0b0d08]">
+              <div className="aspect-[16/9] overflow-hidden">
+                <img src={beyond90Thumbnail1} alt="Beyond 90 players competing in a packed Roblox football stadium" className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" />
+              </div>
+              <figcaption className="flex items-center justify-between gap-4 border-t border-white/10 p-4 sm:p-5">
+                <span className="text-sm font-semibold">Real football. Real competition.</span>
+                <span className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-volt">Matchday</span>
+              </figcaption>
+            </figure>
+            <figure className="group overflow-hidden border border-white/10 bg-[#0b0d08]">
+              <div className="aspect-[16/9] overflow-hidden">
+                <img src={beyond90Thumbnail3} alt="Beyond 90 broadcast camera overlooking a full football pitch" className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]" />
+              </div>
+              <figcaption className="flex items-center justify-between gap-4 border-t border-white/10 p-4 sm:p-5">
+                <span className="text-sm font-semibold">See every run. Read every play.</span>
+                <span className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-volt">Broadcast view</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
