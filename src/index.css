@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
   overflow-x: hidden;
 }
 
@@ -37,6 +38,7 @@ body {
 
 img,
 svg {
+  display: block;
   max-width: 100%;
 }
 
@@ -49,7 +51,38 @@ button {
   font: inherit;
 }
 
+a,
+button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(123, 92, 255, 0.22);
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 3px solid #d6ff4b;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #050505;
+}
+
+main:focus {
+  outline: none;
+}
+
 ::selection {
   background: #7b5cff;
   color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

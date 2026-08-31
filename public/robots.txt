@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drixil-group.vercel.app/sitemap.xml
