@@ -171,11 +171,31 @@ function RouteLink({ to, className, children, ariaLabel }: { to: string; classNa
   );
 }
 
-function BrandLink({ compact = false }: { compact?: boolean }) {
+function DrixilNavLockup() {
   return (
-    <RouteLink to="/" className="flex items-center gap-3" ariaLabel="Drixil Group home">
-      <img src={drixilFlatWhite} alt="" className="h-11 w-24 object-cover object-center" />
-      {!compact && <span className="sr-only">Drixil Group</span>}
+    <span className="flex items-center gap-3">
+      <span
+        className="relative block h-9 w-9 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black shadow-[0_8px_24px_rgba(123,92,255,0.18)]"
+        aria-hidden="true"
+      >
+        <img
+          src={drixilFlatWhite}
+          alt=""
+          className="absolute left-[-27px] top-[-19px] h-[88px] w-[88px] max-w-none"
+        />
+      </span>
+      <span className="leading-none">
+        <span className="block text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-white">Drixil</span>
+        <span className="mt-1 block text-[0.48rem] font-medium uppercase tracking-[0.32em] text-white/45">Group</span>
+      </span>
+    </span>
+  );
+}
+
+function BrandLink() {
+  return (
+    <RouteLink to="/" className="inline-flex items-center" ariaLabel="Drixil Group home">
+      <DrixilNavLockup />
     </RouteLink>
   );
 }
@@ -191,10 +211,10 @@ function ParentSite() {
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-ink text-white">
-      <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl">
+      <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/85 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
-          <a href="#top" className="flex items-center gap-3" aria-label="Drixil Group home">
-            <img src={drixilFlatWhite} alt="Drixil" className="h-11 w-24 object-cover object-center" />
+          <a href="#top" className="inline-flex items-center" aria-label="Drixil Group home">
+            <DrixilNavLockup />
           </a>
           <div className="hidden items-center gap-7 text-xs font-medium uppercase tracking-[0.22em] text-white/60 md:flex">
             {navLinks.map(([label, href]) => (
