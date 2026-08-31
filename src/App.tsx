@@ -6,9 +6,13 @@ import {
   BrainCircuit,
   Clapperboard,
   Gamepad2,
+  Instagram,
   Menu,
+  MessageCircle,
   MousePointer2,
+  Music2,
   PenTool,
+  Phone,
   Play,
   Sparkles,
   Store,
@@ -152,6 +156,33 @@ const beyond90Features: Array<{ icon: LucideIcon; title: string; text: string }>
     icon: WandSparkles,
     title: "Cosmetic-first economy",
     text: "Monetization focused on expression, identity, and cosmetics instead of pay-to-win advantages.",
+  },
+];
+
+const beyond90Socials: Array<{ name: string; handle: string; href: string; icon: LucideIcon }> = [
+  {
+    name: "Discord",
+    handle: "Join the server",
+    href: "https://discord.gg/63ZZBdW8p",
+    icon: MessageCircle,
+  },
+  {
+    name: "Instagram",
+    handle: "@beyond90_studio",
+    href: "https://www.instagram.com/beyond90_studio?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==",
+    icon: Instagram,
+  },
+  {
+    name: "TikTok",
+    handle: "@beyond90.dev",
+    href: "https://www.tiktok.com/@beyond90.dev?is_from_webapp=1&sender_device=pc",
+    icon: Music2,
+  },
+  {
+    name: "WhatsApp",
+    handle: "Join the community chat",
+    href: "https://chat.whatsapp.com/Hg51qcoU6EN2bEOeqGliex?mode=gi_t",
+    icon: Phone,
   },
 ];
 
@@ -467,6 +498,16 @@ function InteractiveSite() {
                 Discover the game
                 <ArrowRight className="h-4 w-4" />
               </a>
+              <a
+                href="https://www.roblox.com/share/g/451345789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-volt hover:text-volt"
+              >
+                <Gamepad2 className="h-4 w-4" />
+                Join on Roblox
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
               <span className="inline-flex min-h-12 items-center rounded-full border border-white/15 px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] text-white/55">In development</span>
             </div>
           </div>
@@ -541,6 +582,50 @@ function InteractiveSite() {
                 <p className="mt-8 text-lg font-black uppercase sm:text-xl">{mode}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="community" className="scroll-mt-16 border-b border-white/10 bg-[#0b0d08] py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-20">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Beyond the pitch</p>
+              <h2 className="mt-5 text-4xl font-semibold leading-[1.02] sm:text-6xl">Join the Beyond 90 community.</h2>
+              <p className="mt-6 max-w-lg text-base leading-7 text-white/55">Follow development, meet future teammates, share feedback, and be there for every milestone on the road to kickoff.</p>
+              <a
+                href="https://www.roblox.com/share/g/451345789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-volt px-5 py-3 text-sm font-bold text-black transition hover:bg-white"
+              >
+                <Gamepad2 className="h-5 w-5" />
+                Join the Roblox community
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2">
+              {beyond90Socials.map(({ name, handle, href, icon: Icon }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Follow Beyond 90 on ${name}`}
+                  className="group flex min-h-44 flex-col justify-between bg-[#070905] p-5 transition hover:bg-white hover:text-black sm:p-7"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <Icon className="h-6 w-6 text-volt transition group-hover:text-black" />
+                    <ArrowUpRight className="h-5 w-5 text-white/30 transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-black" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold">{name}</h3>
+                    <p className="mt-2 text-sm text-white/45 transition group-hover:text-black/55">{handle}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
