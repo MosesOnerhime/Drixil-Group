@@ -22,9 +22,9 @@ import { useEffect, useState, type MouseEvent, type ReactNode } from "react";
 import beyond90Icon from "./assets/beyond-90-icon.png";
 import beyond90Thumbnail1 from "./assets/beyond-90-thumbnail-1.png";
 import beyond90Thumbnail3 from "./assets/beyond-90-thumbnail-3.png";
-import furrealLogo from "./assets/brand/furreal-logo.jpeg";
-import furrealMark from "./assets/brand/furreal-mark.jpeg";
-import logoBoard from "./assets/brand/logo-board-02.jpeg";
+import drixilFlatBlack from "./assets/brand/drixil-flat-black.jpeg";
+import drixilFlatWhite from "./assets/brand/drixil-flat-white.jpeg";
+import drixilMetallic from "./assets/brand/drixil-metallic.jpeg";
 
 type Division = {
   name: string;
@@ -40,7 +40,7 @@ type Division = {
 
 const divisions: Division[] = [
   {
-    name: "Furreal Interactive",
+    name: "Drixil Interactive",
     shortName: "Interactive",
     slug: "interactive",
     number: "01",
@@ -51,7 +51,7 @@ const divisions: Division[] = [
     stage: "active",
   },
   {
-    name: "Furreal Studio",
+    name: "Drixil Studio",
     shortName: "Studio",
     slug: "studio",
     number: "02",
@@ -62,7 +62,7 @@ const divisions: Division[] = [
     stage: "development",
   },
   {
-    name: "Furreal Labs",
+    name: "Drixil Labs",
     shortName: "Labs",
     slug: "labs",
     number: "03",
@@ -73,18 +73,18 @@ const divisions: Division[] = [
     stage: "development",
   },
   {
-    name: "Furreal Originals",
+    name: "Drixil Originals",
     shortName: "Originals",
     slug: "originals",
     number: "04",
     descriptor: "Original IP, animation, stories, music, and worlds.",
     icon: Clapperboard,
     accent: "#7b5cff",
-    accentClass: "text-furreal",
+    accentClass: "text-drixil",
     stage: "development",
   },
   {
-    name: "Furreal Store",
+    name: "Drixil Store",
     shortName: "Store",
     slug: "store",
     number: "05",
@@ -95,7 +95,7 @@ const divisions: Division[] = [
     stage: "development",
   },
   {
-    name: "Furreal Ventures",
+    name: "Drixil Ventures",
     shortName: "Ventures",
     slug: "ventures",
     number: "06",
@@ -111,22 +111,22 @@ const roadmap = [
   {
     phase: "01",
     title: "Launch the Engine",
-    text: "Launch Furreal Studio and Furreal Interactive. Build cash flow through creative services while growing Roblox games and community.",
+    text: "Launch Drixil Studio and Drixil Interactive. Build cash flow through creative services while growing Roblox games and community.",
   },
   {
     phase: "02",
     title: "Expand the Audience",
-    text: "Launch Furreal Store and Furreal Labs once revenue, trust, and fan demand are established.",
+    text: "Launch Drixil Store and Drixil Labs once revenue, trust, and fan demand are established.",
   },
   {
     phase: "03",
     title: "Own the Worlds",
-    text: "Move into Furreal Originals and a creator network for owned stories, characters, and media.",
+    text: "Move into Drixil Originals and a creator network for owned stories, characters, and media.",
   },
   {
     phase: "04",
     title: "Compound the Portfolio",
-    text: "Explore publishing, investments, acquisitions, and shared infrastructure through Furreal Ventures.",
+    text: "Explore publishing, investments, acquisitions, and shared infrastructure through Drixil Ventures.",
   },
 ];
 
@@ -173,9 +173,9 @@ function RouteLink({ to, className, children, ariaLabel }: { to: string; classNa
 
 function BrandLink({ compact = false }: { compact?: boolean }) {
   return (
-    <RouteLink to="/" className="flex items-center gap-3" ariaLabel="Furreal Productions home">
-      <img src={furrealMark} alt="" className="h-8 w-8 rounded-xl object-cover shadow-violet sm:h-9 sm:w-9" />
-      {!compact && <span className="text-xs font-semibold uppercase tracking-[0.24em] text-white sm:text-sm sm:tracking-[0.34em]">Furreal</span>}
+    <RouteLink to="/" className="flex items-center gap-3" ariaLabel="Drixil Group home">
+      <img src={drixilFlatWhite} alt="" className="h-11 w-24 object-cover object-center" />
+      {!compact && <span className="sr-only">Drixil Group</span>}
     </RouteLink>
   );
 }
@@ -193,9 +193,8 @@ function ParentSite() {
     <main className="min-h-screen overflow-x-hidden bg-ink text-white">
       <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
-          <a href="#top" className="flex items-center gap-3" aria-label="Furreal Productions home">
-            <img src={furrealMark} alt="" className="h-8 w-8 rounded-xl object-cover shadow-violet sm:h-9 sm:w-9" />
-            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-white sm:text-sm sm:tracking-[0.34em]">Furreal</span>
+          <a href="#top" className="flex items-center gap-3" aria-label="Drixil Group home">
+            <img src={drixilFlatWhite} alt="Drixil" className="h-11 w-24 object-cover object-center" />
           </a>
           <div className="hidden items-center gap-7 text-xs font-medium uppercase tracking-[0.22em] text-white/60 md:flex">
             {navLinks.map(([label, href]) => (
@@ -206,7 +205,7 @@ function ParentSite() {
           </div>
           <a
             href="mailto:mosesonerhime11@gmail.com"
-            className="hidden items-center gap-2 rounded-full border border-white/15 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-black transition hover:bg-furreal hover:text-white sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full border border-white/15 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-black transition hover:bg-drixil hover:text-white sm:inline-flex"
           >
             Start a brief
             <ArrowUpRight className="h-4 w-4" />
@@ -235,20 +234,20 @@ function ParentSite() {
       </nav>
 
       <section id="top" className="relative flex min-h-svh scroll-mt-14 items-end border-b border-white/10 sm:min-h-[86svh]">
-        <img src={logoBoard} alt="" className="absolute inset-0 h-full w-full object-cover object-left opacity-[0.32] sm:object-center sm:opacity-[0.48]" />
+        <img src={drixilMetallic} alt="" className="absolute inset-0 h-full w-full object-cover object-center opacity-[0.32] sm:opacity-[0.48]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(123,92,255,0.3),transparent_32%),linear-gradient(180deg,rgba(0,0,0,0.62),rgba(0,0,0,0.9)_52%,rgba(0,0,0,0.98))] sm:bg-[radial-gradient(circle_at_20%_20%,rgba(123,92,255,0.28),transparent_30%),linear-gradient(90deg,rgba(0,0,0,0.95),rgba(0,0,0,0.66)_45%,rgba(0,0,0,0.38))]" />
         <div className="relative mx-auto grid w-full max-w-7xl gap-8 px-4 pb-10 pt-24 sm:gap-10 sm:px-6 sm:pb-12 sm:pt-28 lg:grid-cols-[1.05fr_0.7fr] lg:px-8">
           <div className="max-w-4xl">
             <div className="mb-5 inline-flex items-center gap-2 border border-white/12 bg-white/5 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/70 sm:mb-6 sm:text-xs sm:tracking-[0.22em]">
-              <Sparkles className="h-4 w-4 shrink-0 text-furreal" />
+              <Sparkles className="h-4 w-4 shrink-0 text-drixil" />
               Where ideas become interactive
             </div>
-            <h1 className="max-w-5xl text-[2.75rem] font-semibold leading-[0.95] tracking-normal text-white sm:text-7xl lg:text-8xl">Furreal Productions</h1>
+            <h1 className="max-w-5xl text-[2.75rem] font-semibold leading-[0.95] tracking-normal text-white sm:text-7xl lg:text-8xl">Drixil Group</h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:mt-7 sm:text-xl sm:leading-8">
               A creative entertainment company building interactive entertainment, digital media, software, original IP, and consumer brands for a global audience.
             </p>
             <div className="mt-7 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap">
-              <a href="#ecosystem" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-furreal px-5 py-3 text-sm font-bold text-white shadow-violet transition hover:bg-white hover:text-black">
+              <a href="#ecosystem" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-drixil px-5 py-3 text-sm font-bold text-white shadow-violet transition hover:bg-white hover:text-black">
                 Explore the divisions
                 <ArrowUpRight className="h-4 w-4" />
               </a>
@@ -265,7 +264,7 @@ function ParentSite() {
               ["Long-Term Vision", "One of Africa's leading creative technology companies."],
             ].map(([title, text]) => (
               <div key={title} className="border border-white/12 bg-black/55 p-4 backdrop-blur-md sm:p-5">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.22em]">{title}</p>
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-drixil sm:text-xs sm:tracking-[0.22em]">{title}</p>
                 <p className="mt-3 text-sm leading-6 text-white/70">{text}</p>
               </div>
             ))}
@@ -276,14 +275,14 @@ function ParentSite() {
       <section className="border-b border-white/10 bg-white text-black">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-[0.72fr_1fr] lg:px-8">
           <div>
-            <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">The philosophy</p>
+            <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-drixil sm:text-xs sm:tracking-[0.24em]">The philosophy</p>
             <h2 className="mt-4 max-w-xl text-3xl font-semibold leading-tight sm:text-5xl">We turn imagination into experiences people remember.</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {[
               ["Own", "Build and protect the master brand, subsidiaries, and intellectual property."],
               ["Fund", "Use service revenue and product growth to finance original IP and software."],
-              ["Scale", "Launch and acquire ventures that share one trusted Furreal identity."],
+              ["Scale", "Launch and acquire ventures that share one trusted Drixil identity."],
             ].map(([title, text]) => (
               <article key={title} className="border border-black/10 p-4 sm:p-5">
                 <p className="text-lg font-semibold sm:text-xl">{title}</p>
@@ -298,10 +297,10 @@ function ParentSite() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
             <div>
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">Independent division websites</p>
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-drixil sm:text-xs sm:tracking-[0.24em]">Independent division websites</p>
               <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight sm:text-6xl">One company. Six focused divisions.</h2>
             </div>
-            <p className="max-w-xl text-base leading-7 text-white/60">Each Furreal division has its own home, focus, and identity—connected by one shared standard and one parent company.</p>
+            <p className="max-w-xl text-base leading-7 text-white/60">Each Drixil division has its own home, focus, and identity—connected by one shared standard and one parent company.</p>
           </div>
 
           <div className="mt-9 grid gap-px overflow-hidden border border-white/10 bg-white/10 sm:mt-12 md:grid-cols-2 xl:grid-cols-3">
@@ -338,7 +337,7 @@ function ParentSite() {
               </div>
               <h2 className="mt-4 text-3xl font-semibold sm:text-6xl">Beyond 90</h2>
             </div>
-            <p className="max-w-xl text-base leading-7 text-white/60">The first active project from Furreal Interactive—an ambitious team football experience built for Roblox.</p>
+            <p className="max-w-xl text-base leading-7 text-white/60">The first active project from Drixil Interactive—an ambitious team football experience built for Roblox.</p>
           </div>
 
           <RouteLink to="/interactive" className="group grid overflow-hidden border border-white/10 bg-smoke lg:grid-cols-[1.08fr_0.92fr]">
@@ -348,7 +347,7 @@ function ParentSite() {
             </div>
             <div className="flex flex-col justify-between p-5 sm:p-8 lg:p-10">
               <div className="flex items-center justify-between gap-4">
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-volt">Furreal Interactive / 001</span>
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-volt">Drixil Interactive / 001</span>
                 <ArrowUpRight className="h-6 w-6 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
               </div>
               <div className="mt-14 lg:mt-0">
@@ -360,7 +359,7 @@ function ParentSite() {
                   ))}
                 </div>
               </div>
-              <span className="mt-12 inline-flex items-center gap-2 text-sm font-bold text-white">Enter Furreal Interactive <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
+              <span className="mt-12 inline-flex items-center gap-2 text-sm font-bold text-white">Enter Drixil Interactive <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
             </div>
           </RouteLink>
         </div>
@@ -370,13 +369,13 @@ function ParentSite() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.65fr_1fr]">
             <div>
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">5-year roadmap</p>
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-drixil sm:text-xs sm:tracking-[0.24em]">5-year roadmap</p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-6xl">Service revenue funds IP. IP compounds the company.</h2>
             </div>
             <div className="grid gap-px overflow-hidden border border-black/10 bg-black/10">
               {roadmap.map((item) => (
                 <article key={item.phase} className="grid gap-4 bg-white p-5 sm:grid-cols-[92px_1fr] sm:gap-5 sm:p-6">
-                  <p className="text-3xl font-semibold text-furreal sm:text-4xl">{item.phase}</p>
+                  <p className="text-3xl font-semibold text-drixil sm:text-4xl">{item.phase}</p>
                   <div>
                     <h3 className="text-xl font-semibold sm:text-2xl">{item.title}</h3>
                     <p className="mt-2 text-sm leading-6 text-black/60">{item.text}</p>
@@ -390,17 +389,17 @@ function ParentSite() {
 
       <section className="bg-coal py-14 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.78fr] lg:px-8">
-          <div className="border border-white/10 bg-black p-4 sm:p-8">
-            <img src={furrealLogo} alt="Furreal Productions logo" className="mx-auto max-h-[320px] w-full object-contain sm:max-h-[420px]" />
+          <div className="border border-white/10 bg-white p-4 sm:p-8">
+            <img src={drixilFlatBlack} alt="Drixil Group logo" className="mx-auto max-h-[320px] w-full object-contain sm:max-h-[420px]" />
           </div>
           <div id="contact" className="flex scroll-mt-14 flex-col justify-between border border-white/10 bg-white p-5 text-black sm:p-8">
             <div>
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-furreal sm:text-xs sm:tracking-[0.24em]">Build with Furreal</p>
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-drixil sm:text-xs sm:tracking-[0.24em]">Build with Drixil</p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-5xl">Big ideas deserve a serious home.</h2>
-              <p className="mt-5 text-sm leading-6 text-black/60 sm:text-base sm:leading-7">Furreal Productions sets strategy, develops original products, and supports the focused teams building across games, media, software, and design.</p>
+              <p className="mt-5 text-sm leading-6 text-black/60 sm:text-base sm:leading-7">Drixil Group sets strategy, develops original products, and supports the focused teams building across games, media, software, and design.</p>
             </div>
-            <a href="mailto:mosesonerhime11@gmail.com" className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-black px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-furreal sm:mt-10">
-              Contact Furreal
+            <a href="mailto:mosesonerhime11@gmail.com" className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-black px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-drixil sm:mt-10">
+              Contact Drixil
               <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>
@@ -409,7 +408,7 @@ function ParentSite() {
 
       <footer className="border-t border-white/10 bg-black px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 text-xs uppercase tracking-[0.18em] text-white/45 sm:flex-row">
-          <p>© {new Date().getFullYear()} Furreal Productions</p>
+          <p>© {new Date().getFullYear()} Drixil Group</p>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {divisions.map((division) => <RouteLink key={division.slug} to={`/${division.slug}`} className="transition hover:text-white">{division.shortName}</RouteLink>)}
           </div>
@@ -425,7 +424,7 @@ function InteractiveSite() {
       <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <BrandLink />
-          <span className="hidden text-xs font-bold uppercase tracking-[0.24em] text-white/50 sm:block">Furreal Interactive</span>
+          <span className="hidden text-xs font-bold uppercase tracking-[0.24em] text-white/50 sm:block">Drixil Interactive</span>
           <RouteLink to="/" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-white/65 transition hover:text-white">
             <ArrowLeft className="h-4 w-4" />
             <span className="hidden sm:inline">All divisions</span>
@@ -436,7 +435,7 @@ function InteractiveSite() {
       <section className="relative min-h-svh border-b border-white/10 pt-16">
         <div className="mx-auto grid min-h-[calc(100svh-4rem)] max-w-[1600px] lg:grid-cols-[0.82fr_1.18fr]">
           <div className="relative z-10 flex flex-col justify-center px-4 py-16 sm:px-8 lg:px-14 xl:px-20">
-            <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/45">Furreal Interactive presents</p>
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/45">Drixil Interactive presents</p>
             <div className="mt-8 inline-flex w-fit items-center gap-2 border border-volt/30 bg-volt/10 px-3 py-2 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-volt sm:text-xs">
               <span className="h-2 w-2 animate-pulse rounded-full bg-volt shadow-[0_0_14px_#d6ff4b]" />
               Currently working on
@@ -529,13 +528,13 @@ function InteractiveSite() {
       <section className="py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.75fr] lg:px-8">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Furreal Interactive</p>
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Drixil Interactive</p>
             <h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight sm:text-6xl">We build games that feel bigger together.</h2>
           </div>
           <div className="flex flex-col justify-end">
-            <p className="text-base leading-7 text-white/55">Beyond 90 is our current focus. More from Furreal Interactive will be revealed when it is ready.</p>
+            <p className="text-base leading-7 text-white/55">Beyond 90 is our current focus. More from Drixil Interactive will be revealed when it is ready.</p>
             <RouteLink to="/" className="mt-8 inline-flex w-fit items-center gap-2 border-b border-white/25 pb-2 text-sm font-bold transition hover:border-volt hover:text-volt">
-              Explore Furreal Productions
+              Explore Drixil Group
               <ArrowUpRight className="h-4 w-4" />
             </RouteLink>
           </div>
@@ -544,8 +543,8 @@ function InteractiveSite() {
 
       <footer className="border-t border-white/10 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs uppercase tracking-[0.18em] text-white/40 sm:flex-row">
-          <p>© {new Date().getFullYear()} Furreal Interactive</p>
-          <p>A Furreal Productions division</p>
+          <p>© {new Date().getFullYear()} Drixil Interactive</p>
+          <p>A Drixil Group division</p>
         </div>
       </footer>
     </main>
@@ -584,7 +583,7 @@ function DivisionPlaceholder({ division }: { division: Division }) {
       <footer className="relative z-10 border-t border-white/10 px-4 py-7 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs uppercase tracking-[0.18em] text-white/35 sm:flex-row">
           <p>© {new Date().getFullYear()} {division.name}</p>
-          <p>A Furreal Productions division</p>
+          <p>A Drixil Group division</p>
         </div>
       </footer>
     </main>
@@ -602,7 +601,7 @@ function App() {
 
   useEffect(() => {
     const division = divisions.find((item) => `/${item.slug}` === pathname);
-    document.title = division ? `${division.name} — Furreal Productions` : "Furreal Productions";
+    document.title = division ? `${division.name} — Drixil Group` : "Drixil Group";
   }, [pathname]);
 
   const activeDivision = divisions.find((division) => `/${division.slug}` === pathname);

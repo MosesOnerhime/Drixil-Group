@@ -9,7 +9,7 @@ export default {
         coal: "#0d0d0d",
         smoke: "#151515",
         line: "rgba(255,255,255,0.12)",
-        furreal: "#7B5CFF",
+        drixil: "#7B5CFF",
         volt: "#D6FF4B",
         cyan: "#55E6FF",
       },
