@@ -2,6 +2,7 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUpRight,
+  AtSign,
   BadgeDollarSign,
   BrainCircuit,
   Clapperboard,
@@ -20,6 +21,7 @@ import {
   UsersRound,
   WandSparkles,
   X,
+  Youtube,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -98,7 +100,7 @@ const divisions: Division[] = [
     shortName: "Studio",
     slug: "studio",
     number: "02",
-    descriptor: "Editing, motion graphics, commercials, trailers, branding, UI/UX, web, and graphic design.",
+    descriptor: "Editing, motion design for product showcases and launches, commercials, trailers, branding, UI/UX, web, and graphic design.",
     icon: PenTool,
     accent: "#55e6ff",
     accentClass: "text-cyan",
@@ -173,18 +175,22 @@ const roadmap = [
   },
 ];
 
-const beyond90Modes = ["3v3", "5v5", "7v7", "11v11", "Ranked", "Clubs", "Street", "Training"];
+const ROBLOX_COMMUNITY_URL = "https://www.roblox.com/share/g/451345789";
+const BEYOND_90_GAME_URL = "https://www.roblox.com/games/138362130200118/Beyond-90";
+const VOLLEYBALL_RALLY_GAME_URL = "https://www.roblox.com/games/87714615725428/Volleyball-Rally";
+
+const beyond90Modes = ["3v3", "5v5", "7v7", "11v11", "Clubs", "Training"];
 
 const beyond90Features: Array<{ icon: LucideIcon; title: string; text: string }> = [
   {
     icon: UsersRound,
-    title: "Real-player football",
-    text: "Teamwork-led football where the pitch is controlled by real Roblox players, not a single-avatar fantasy.",
+    title: "Human-first football",
+    text: "One real player controls each footballer, making positioning, movement, and teamwork matter across the pitch.",
   },
   {
     icon: Trophy,
-    title: "Clubs and ranked progression",
-    text: "Persistent clubs, seasons, promotion and relegation, tournaments, and player reputation.",
+    title: "3v3 to 11v11",
+    text: "Different team sizes support quick matches and the scale of a proper full-pitch game.",
   },
   {
     icon: MousePointer2,
@@ -198,28 +204,49 @@ const beyond90Features: Array<{ icon: LucideIcon; title: string; text: string }>
   },
 ];
 
-const beyond90Socials: Array<{ name: string; handle: string; href: string; icon: LucideIcon }> = [
+const interactiveSocials: Array<{ name: string; handle: string; href: string; icon: LucideIcon }> = [
   {
-    name: "Discord",
-    handle: "Join the server",
+    name: "TikTok",
+    handle: "@drixil.interactive",
+    href: "https://www.tiktok.com/@drixil.interactive?is_from_webapp=1&sender_device=pc",
+    icon: Music2,
+  },
+  {
+    name: "Instagram",
+    handle: "@drixil.interactive",
+    href: "https://www.instagram.com/drixil.interactive?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==",
+    icon: Instagram,
+  },
+  {
+    name: "YouTube",
+    handle: "@drixil.interactive",
+    href: "https://www.youtube.com/@drixil.interactive",
+    icon: Youtube,
+  },
+  {
+    name: "X / Twitter",
+    handle: "@drixil_inter",
+    href: "https://x.com/drixil_inter?s=20",
+    icon: AtSign,
+  },
+];
+
+const communityLinks: Array<{ name: string; text: string; href: string; icon: LucideIcon }> = [
+  {
+    name: "Roblox community",
+    text: "Join Drixil Interactive on Roblox",
+    href: ROBLOX_COMMUNITY_URL,
+    icon: Gamepad2,
+  },
+  {
+    name: "Beyond 90 Discord",
+    text: "Talk with the Beyond 90 community",
     href: "https://discord.gg/63ZZBdW8p",
     icon: MessageCircle,
   },
   {
-    name: "Instagram",
-    handle: "@beyond90_studio",
-    href: "https://www.instagram.com/beyond90_studio?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==",
-    icon: Instagram,
-  },
-  {
-    name: "TikTok",
-    handle: "@beyond90.dev",
-    href: "https://www.tiktok.com/@beyond90.dev?is_from_webapp=1&sender_device=pc",
-    icon: Music2,
-  },
-  {
-    name: "WhatsApp",
-    handle: "Join the community chat",
+    name: "Beyond 90 WhatsApp",
+    text: "Join the Beyond 90 group chat",
     href: "https://chat.whatsapp.com/Hg51qcoU6EN2bEOeqGliex?mode=gi_t",
     icon: Phone,
   },
@@ -437,7 +464,7 @@ function ParentSite() {
               <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-drixil sm:text-xs sm:tracking-[0.24em]">Independent division websites</p>
               <h2 id="ecosystem-title" className="mt-4 max-w-3xl text-3xl font-semibold leading-tight sm:text-6xl">One company. Six focused divisions.</h2>
             </div>
-            <p className="max-w-xl text-base leading-7 text-white/75">Each Drixil division has its own home, focus, and identity—connected by one shared standard and one parent company.</p>
+            <p className="max-w-xl text-base leading-7 text-white/75">Each Drixil division has its own home, focus, and identity, connected by one shared standard and one parent company.</p>
           </div>
 
           <div className="mt-9 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:mt-12 md:grid-cols-2 xl:grid-cols-3">
@@ -474,7 +501,7 @@ function ParentSite() {
               </div>
               <h2 id="current-project-title" className="mt-4 text-3xl font-semibold sm:text-6xl">Beyond 90</h2>
             </div>
-            <p className="max-w-xl text-base leading-7 text-white/75">The first active project from Drixil Interactive—an ambitious team football experience built for Roblox.</p>
+            <p className="max-w-xl text-base leading-7 text-white/75">The first active project from Drixil Interactive, an ambitious team football experience built for Roblox.</p>
           </div>
 
           <RouteLink to="/interactive" ariaLabel="Explore Beyond 90 on Drixil Interactive" className="group grid overflow-hidden rounded-3xl border border-white/10 bg-smoke lg:grid-cols-[1.08fr_0.92fr]">
@@ -499,7 +526,7 @@ function ParentSite() {
               </div>
               <div className="mt-14 lg:mt-0">
                 <p className="text-2xl font-semibold leading-tight sm:text-4xl">Football is better when every player matters.</p>
-                <p className="mt-5 text-sm leading-6 text-white/75 sm:text-base sm:leading-7">Real players. Real roles. Competitive clubs, ranked progression, and the feeling of a proper match—from kickoff to the final whistle.</p>
+                <p className="mt-5 text-sm leading-6 text-white/75 sm:text-base sm:leading-7">Real players. Real roles. Competitive clubs, ranked progression, and the feeling of a proper match from kickoff to the final whistle.</p>
                 <div className="mt-7 flex flex-wrap gap-2">
                   {beyond90Modes.slice(0, 6).map((mode) => (
                     <span key={mode} className="border border-white/12 px-3 py-2 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-white/65">{mode}</span>
@@ -570,8 +597,8 @@ function ParentSite() {
 
 function InteractiveSite() {
   usePageMetadata({
-    title: "Beyond 90 | Drixil Interactive",
-    description: "Beyond 90 is Drixil Interactive’s competitive Roblox football experience, currently in development.",
+    title: "Drixil Interactive | Roblox Games",
+    description: "Explore Beyond 90 and Volleyball Rally, two multiplayer Roblox sports games in development at Drixil Interactive.",
     pathname: "/interactive",
     image: "/media/beyond-90-1254.webp",
   });
@@ -584,9 +611,10 @@ function InteractiveSite() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <BrandLink />
           <div className="hidden items-center gap-6 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-white/65 lg:flex">
-            <a href="#game" className="transition hover:text-white">Experience</a>
-            <a href="#media" className="transition hover:text-white">Media</a>
-            <a href="#community" className="transition hover:text-white">Community</a>
+            <a href="#games" className="transition-colors hover:text-white">Games</a>
+            <a href="#beyond-90" className="transition-colors hover:text-white">Beyond 90</a>
+            <a href="#volleyball-rally" className="transition-colors hover:text-white">Volleyball Rally</a>
+            <a href="#community" className="transition-colors hover:text-white">Follow</a>
           </div>
           <RouteLink to="/" ariaLabel="Return to all Drixil Group divisions" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-white/65 transition hover:text-white">
             <ArrowLeft className="h-4 w-4" />
@@ -607,20 +635,20 @@ function InteractiveSite() {
               Currently working on
             </div>
             <h1 id="interactive-title" className="mt-5 text-6xl font-black uppercase leading-[0.82] tracking-[-0.07em] sm:text-8xl lg:text-[7.8rem]">Beyond<br /><span className="text-volt">90</span></h1>
-            <p className="mt-7 max-w-xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">A competitive Roblox football experience where every position is played by a real person—and every touch can change the match.</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#game" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-volt px-5 py-3 text-sm font-bold text-black transition hover:bg-white">
-                Discover the game
+            <p className="mt-7 max-w-xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">A competitive Roblox football experience where every position is played by a real person, and every touch can change the match.</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a href="#games" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-volt px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-white active:translate-y-px">
+                Explore our games
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="https://www.roblox.com/share/g/451345789"
+                href={BEYOND_90_GAME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-volt hover:text-volt"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition-colors hover:border-volt hover:text-volt active:translate-y-px"
               >
                 <Gamepad2 className="h-4 w-4" />
-                Join on Roblox
+                View Beyond 90 on Roblox
                 <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
@@ -643,7 +671,83 @@ function InteractiveSite() {
         </div>
       </section>
 
-      <section id="game" aria-labelledby="experience-title" className="scroll-mt-16 border-b border-white/10 py-16 sm:py-24">
+      <section id="games" aria-labelledby="games-title" className="scroll-mt-16 border-b border-white/10 bg-black py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 grid gap-5 sm:mb-12 lg:grid-cols-[0.85fr_1fr] lg:items-end lg:gap-16">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Drixil Interactive games</p>
+              <h2 id="games-title" className="mt-4 text-4xl font-semibold leading-[1.02] sm:text-6xl">Two sports worlds. One multiplayer focus.</h2>
+            </div>
+            <p className="max-w-xl text-base leading-7 text-white/70">Beyond 90 is our current focus, with Volleyball Rally also in development. Each game is built around readable controls, team play, and moments worth sharing.</p>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-2">
+            <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#0b0d08]">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src="/media/beyond-90-1254.webp"
+                  srcSet="/media/beyond-90-640.webp 640w, /media/beyond-90-1254.webp 1254w"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  alt="Beyond 90 footballer preparing to strike the ball"
+                  width="1254"
+                  height="1254"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-[1.025]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <span className="absolute left-4 top-4 rounded-full border border-volt/35 bg-black/75 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-volt backdrop-blur-md">Current focus</span>
+              </div>
+              <div className="p-5 sm:p-7">
+                <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/50">Football / Project 001</p>
+                <h3 className="mt-3 text-3xl font-black uppercase tracking-[-0.04em]">Beyond <span className="text-volt">90</span></h3>
+                <p className="mt-4 max-w-xl text-sm leading-6 text-white/70">Human-first football where one real player controls each footballer, from compact 3v3 matches to full 11v11 play.</p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <a href={BEYOND_90_GAME_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-volt px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-white active:translate-y-px">
+                    View game <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                  <a href={ROBLOX_COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold transition-colors hover:border-volt hover:text-volt active:translate-y-px">
+                    Roblox community <UsersRound className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article className="group overflow-hidden rounded-3xl border border-[#55a8ff]/25 bg-[#07101e]">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src="/media/volleyball-rally-1672.webp"
+                  srcSet="/media/volleyball-rally-768.webp 768w, /media/volleyball-rally-1672.webp 1672w"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  alt="Volleyball Rally players competing at the net in a packed indoor arena"
+                  width="1672"
+                  height="941"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-[1.025]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020813]/90 via-transparent to-transparent" />
+                <span className="absolute left-4 top-4 rounded-full border border-[#55a8ff]/40 bg-[#020813]/80 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#7bc7ff] backdrop-blur-md">In development</span>
+              </div>
+              <div className="p-5 sm:p-7">
+                <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/50">Volleyball / Project 002</p>
+                <h3 className="mt-3 text-3xl font-black uppercase tracking-[-0.04em]">Volleyball <span className="text-[#66b7ff]">Rally</span></h3>
+                <p className="mt-4 max-w-xl text-sm leading-6 text-white/70">A 3v3 indoor volleyball game where simple inputs become passes, sets, spikes, blocks, serves, and dives through context and timing.</p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <a href={VOLLEYBALL_RALLY_GAME_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#66b7ff] px-5 py-3 text-sm font-bold text-[#020813] transition-colors hover:bg-white active:translate-y-px">
+                    View game <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                  <a href={ROBLOX_COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold transition-colors hover:border-[#66b7ff] hover:text-[#7bc7ff] active:translate-y-px">
+                    Roblox community <UsersRound className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="beyond-90" aria-labelledby="experience-title" className="scroll-mt-16 border-b border-white/10 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-20">
             <div>
@@ -730,42 +834,97 @@ function InteractiveSite() {
         </div>
       </section>
 
+      <section id="volleyball-rally" aria-labelledby="volleyball-title" className="scroll-mt-16 border-b border-white/10 bg-[#06101f] py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.82fr_1fr] lg:items-center lg:gap-16">
+            <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-3xl border border-[#55a8ff]/25 bg-[#020813] shadow-[0_28px_90px_rgba(20,106,255,0.14)]">
+              <img
+                src="/media/volleyball-rally-icon-1254.webp"
+                srcSet="/media/volleyball-rally-icon-640.webp 640w, /media/volleyball-rally-icon-1254.webp 1254w"
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                alt="Volleyball Rally game icon showing a Roblox player spiking a volleyball"
+                width="1254"
+                height="1254"
+                loading="lazy"
+                decoding="async"
+                className="aspect-square h-auto w-full object-cover"
+              />
+            </div>
+
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#7bc7ff]">Also in development</p>
+              <h2 id="volleyball-title" className="mt-4 text-4xl font-black uppercase leading-[0.92] tracking-[-0.045em] sm:text-6xl">Volleyball <span className="text-[#66b7ff]">Rally</span></h2>
+              <p className="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">Easy to learn, hard to master. Move, choose your intent, aim, and time the contact in fast 3v3 indoor volleyball.</p>
+
+              <div className="mt-8 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-2">
+                {[
+                  ["Control", "Pass, set, dig, and receive with one contextual intent."],
+                  ["Attack", "Serve, spike, tip, and block when the moment calls for it."],
+                  ["Hustle", "Dive for difficult balls and keep the rally alive."],
+                  ["Play your way", "Built for mobile, keyboard and mouse, and controller."],
+                ].map(([title, text]) => (
+                  <article key={title} className="bg-[#081426] p-5 sm:p-6">
+                    <h3 className="text-lg font-bold text-white">{title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-white/65">{text}</p>
+                  </article>
+                ))}
+              </div>
+
+              <p className="mt-6 text-sm leading-6 text-white/60">Playing solo still gives you a full 3v3 match, with AI athletes filling open roster spots.</p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a href={VOLLEYBALL_RALLY_GAME_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#66b7ff] px-5 py-3 text-sm font-bold text-[#020813] transition-colors hover:bg-white active:translate-y-px">
+                  View Volleyball Rally on Roblox <ArrowUpRight className="h-4 w-4" />
+                </a>
+                <a href={ROBLOX_COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold transition-colors hover:border-[#66b7ff] hover:text-[#7bc7ff] active:translate-y-px">
+                  Join the Roblox community <UsersRound className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="community" aria-labelledby="community-title" className="scroll-mt-16 border-b border-white/10 bg-[#0b0d08] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.72fr_1fr] lg:gap-20">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Beyond the pitch</p>
-              <h2 id="community-title" className="mt-5 text-4xl font-semibold leading-[1.02] sm:text-6xl">Join the Beyond 90 community.</h2>
-              <p className="mt-6 max-w-lg text-base leading-7 text-white/75">Follow development, meet future teammates, share feedback, and be there for every milestone on the road to kickoff.</p>
-              <a
-                href="https://www.roblox.com/share/g/451345789"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-volt px-5 py-3 text-sm font-bold text-black transition hover:bg-white"
-              >
-                <Gamepad2 className="h-5 w-5" />
-                Join the Roblox community
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Follow the studio</p>
+              <h2 id="community-title" className="mt-5 text-4xl font-semibold leading-[1.02] sm:text-6xl">All our game content, in one place.</h2>
+              <p className="mt-6 max-w-lg text-base leading-7 text-white/75">Follow Drixil Interactive for progress from Beyond 90, Volleyball Rally, and the games that come next.</p>
+
+              <div className="mt-8 grid gap-3">
+                {communityLinks.map(({ name, text, href, icon: Icon }) => (
+                  <a key={name} href={href} target="_blank" rel="noopener noreferrer" className="group flex min-h-14 items-center justify-between gap-4 rounded-2xl border border-white/10 bg-black/30 px-4 py-3 transition-colors hover:border-volt/60 hover:bg-volt/5 active:translate-y-px">
+                    <span className="flex min-w-0 items-center gap-3">
+                      <Icon className="h-5 w-5 shrink-0 text-volt" />
+                      <span>
+                        <span className="block text-sm font-bold text-white">{name}</span>
+                        <span className="mt-0.5 block text-xs leading-5 text-white/55">{text}</span>
+                      </span>
+                    </span>
+                    <ArrowUpRight className="h-4 w-4 shrink-0 text-white/35 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-volt" />
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div className="grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 sm:grid-cols-2">
-              {beyond90Socials.map(({ name, handle, href, icon: Icon }) => (
+              {interactiveSocials.map(({ name, handle, href, icon: Icon }) => (
                 <a
                   key={name}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Follow Beyond 90 on ${name}`}
-                  className="group flex min-h-44 flex-col justify-between bg-[#070905] p-5 transition hover:bg-white hover:text-black sm:p-7"
+                  aria-label={`Follow Drixil Interactive on ${name}`}
+                  className="group flex min-h-40 flex-col justify-between bg-[#070905] p-5 transition-colors hover:bg-white hover:text-black active:translate-y-px sm:min-h-44 sm:p-7"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <Icon className="h-6 w-6 text-volt transition group-hover:text-black" />
-                    <ArrowUpRight className="h-5 w-5 text-white/30 transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-black" />
+                    <Icon className="h-6 w-6 text-volt transition-colors group-hover:text-black" />
+                    <ArrowUpRight className="h-5 w-5 text-white/30 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-black" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold">{name}</h3>
-                    <p className="mt-2 text-sm text-white/70 transition group-hover:text-black/65">{handle}</p>
+                    <p className="mt-2 break-words text-sm text-white/70 transition-colors group-hover:text-black/65">{handle}</p>
                   </div>
                 </a>
               ))}
@@ -781,7 +940,7 @@ function InteractiveSite() {
             <h2 id="interactive-closing-title" className="mt-5 max-w-3xl text-4xl font-semibold leading-tight sm:text-6xl">We build games that feel bigger together.</h2>
           </div>
           <div className="flex flex-col justify-end">
-            <p className="text-base leading-7 text-white/75">Beyond 90 is our current focus. More from Drixil Interactive will be revealed when it is ready.</p>
+            <p className="text-base leading-7 text-white/75">Beyond 90 is our current focus, while Volleyball Rally expands the studio into a second team sport with its own controls, pace, and identity.</p>
             <RouteLink to="/" className="mt-8 inline-flex w-fit items-center gap-2 border-b border-white/25 pb-2 text-sm font-bold transition hover:border-volt hover:text-volt">
               Explore Drixil Group
               <ArrowUpRight className="h-4 w-4" />
@@ -834,6 +993,20 @@ function DivisionPlaceholder({ division }: { division: Division }) {
         </div>
         <h1 className="mt-10 max-w-5xl text-5xl font-semibold leading-[0.94] sm:text-7xl lg:text-8xl">{division.name}</h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">{division.descriptor}</p>
+        {division.slug === "studio" && (
+          <section aria-labelledby="studio-motion-title" className="mt-10 max-w-2xl rounded-3xl border border-white/10 bg-white/[0.04] p-5 sm:p-7">
+            <div className="flex items-start gap-4">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-cyan/10 text-cyan">
+                <Sparkles className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-cyan">Creative capability</p>
+                <h2 id="studio-motion-title" className="mt-2 text-2xl font-semibold">Motion design</h2>
+                <p className="mt-3 text-sm leading-6 text-white/65">Motion design for product showcases, launches, trailers, and brand campaigns. Portfolio links and project content will be added as they become available.</p>
+              </div>
+            </div>
+          </section>
+        )}
         <div className="mt-14 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em]" style={{ color: division.accent }}>
           <span className="h-2 w-2 rounded-full bg-[var(--division-accent)]" />
           Website in development

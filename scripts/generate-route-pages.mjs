@@ -6,15 +6,15 @@ const routes = [
   {
     file: "interactive.html",
     pathname: "/interactive",
-    title: "Beyond 90 | Drixil Interactive",
-    description: "Beyond 90 is Drixil Interactive’s competitive Roblox football experience, currently in development.",
+    title: "Drixil Interactive | Roblox Games",
+    description: "Explore Beyond 90 and Volleyball Rally, two multiplayer Roblox sports games in development at Drixil Interactive.",
     image: `${origin}/media/beyond-90-1254.webp`,
   },
   {
     file: "studio.html",
     pathname: "/studio",
     title: "Drixil Studio | Drixil Group",
-    description: "Drixil Studio focuses on editing, motion graphics, commercials, trailers, branding, UI/UX, web, and graphic design. Its website is in development.",
+    description: "Drixil Studio focuses on editing, motion design for product showcases and launches, commercials, trailers, branding, UI/UX, web, and graphic design.",
   },
   {
     file: "labs.html",
