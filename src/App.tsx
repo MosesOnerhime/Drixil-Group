@@ -179,6 +179,29 @@ const ROBLOX_COMMUNITY_URL = "https://www.roblox.com/share/g/451345789";
 const BEYOND_90_GAME_URL = "https://www.roblox.com/games/138362130200118/Beyond-90";
 const VOLLEYBALL_RALLY_GAME_URL = "https://www.roblox.com/games/87714615725428/Volleyball-Rally";
 
+const volleyballRallyGallery = [
+  {
+    asset: "block",
+    caption: "At the net",
+    alt: "Volleyball Rally artwork of a blue-team player jumping to block a red-team attack at the net",
+  },
+  {
+    asset: "teamwork",
+    caption: "Better together",
+    alt: "Volleyball Rally artwork of three teammates celebrating with a high five on an indoor court",
+  },
+  {
+    asset: "dive",
+    caption: "Keep it alive",
+    alt: "Volleyball Rally artwork of a player diving across the gym floor to reach the ball",
+  },
+  {
+    asset: "receive",
+    caption: "Read the rally",
+    alt: "Volleyball Rally artwork from a receiver's viewpoint, with an incoming ball and the opposing team across the net",
+  },
+];
+
 const beyond90Modes = ["3v3", "5v5", "7v7", "11v11", "Clubs", "Training"];
 
 const beyond90Features: Array<{ icon: LucideIcon; title: string; text: string }> = [
@@ -683,7 +706,7 @@ function InteractiveSite() {
 
           <div className="grid gap-5 lg:grid-cols-2">
             <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#0b0d08]">
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <img
                   src="/media/beyond-90-1254.webp"
                   srcSet="/media/beyond-90-640.webp 640w, /media/beyond-90-1254.webp 1254w"
@@ -714,12 +737,12 @@ function InteractiveSite() {
             </article>
 
             <article className="group overflow-hidden rounded-3xl border border-[#55a8ff]/25 bg-[#07101e]">
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <img
-                  src="/media/volleyball-rally-1672.webp"
-                  srcSet="/media/volleyball-rally-768.webp 768w, /media/volleyball-rally-1672.webp 1672w"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  alt="Volleyball Rally players competing at the net in a packed indoor arena"
+                  src="/media/volleyball-rally-spike-1672.webp"
+                  srcSet="/media/volleyball-rally-spike-768.webp 768w, /media/volleyball-rally-spike-1672.webp 1672w"
+                  sizes="(min-width: 1280px) 598px, (min-width: 1024px) calc((100vw - 84px) / 2), (min-width: 640px) calc(100vw - 48px), calc(100vw - 32px)"
+                  alt="Volleyball Rally promotional artwork of a player leaping above the net to spike a blue and yellow ball"
                   width="1672"
                   height="941"
                   loading="lazy"
@@ -727,7 +750,7 @@ function InteractiveSite() {
                   className="h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-[1.025]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#020813]/90 via-transparent to-transparent" />
-                <span className="absolute left-4 top-4 rounded-full border border-[#55a8ff]/40 bg-[#020813]/80 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#7bc7ff] backdrop-blur-md">In development</span>
+                <span className="absolute bottom-4 left-4 rounded-full border border-[#55a8ff]/40 bg-[#020813]/80 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#7bc7ff] backdrop-blur-md">In development</span>
               </div>
               <div className="p-5 sm:p-7">
                 <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/50">Volleyball / Project 002</p>
@@ -881,6 +904,31 @@ function InteractiveSite() {
               </div>
             </div>
           </div>
+
+          <section aria-labelledby="volleyball-artwork-title" className="mt-12 border-t border-white/10 pt-8 sm:mt-16 sm:pt-10">
+            <div className="mb-6 flex flex-col justify-between gap-3 sm:mb-8 sm:flex-row sm:items-end">
+              <h3 id="volleyball-artwork-title" className="text-2xl font-semibold sm:text-4xl">Inside Volleyball Rally</h3>
+              <p className="text-sm leading-6 text-white/65">Promotional artwork for Volleyball Rally.</p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
+              {volleyballRallyGallery.map(({ asset, caption, alt }) => (
+                <figure key={asset} className="overflow-hidden rounded-3xl border border-white/10 bg-[#081426]">
+                  <img
+                    src={`/media/volleyball-rally-${asset}-1672.webp`}
+                    srcSet={`/media/volleyball-rally-${asset}-768.webp 768w, /media/volleyball-rally-${asset}-1672.webp 1672w`}
+                    sizes="(min-width: 1280px) 598px, (min-width: 1024px) calc((100vw - 84px) / 2), (min-width: 640px) calc((100vw - 68px) / 2), calc(100vw - 32px)"
+                    alt={alt}
+                    width="1672"
+                    height="941"
+                    loading="lazy"
+                    decoding="async"
+                    className="h-auto w-full"
+                  />
+                  <figcaption className="border-t border-white/10 p-4 text-sm font-semibold text-white/90 sm:p-5">{caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
         </div>
       </section>
 
