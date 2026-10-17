@@ -34,18 +34,7 @@ import {
 } from "react";
 import drixilFlatBlack from "./assets/brand/drixil-flat-black.jpeg";
 import drixilMetallic from "./assets/brand/drixil-metallic.jpeg";
-
-const SITE_ORIGIN = "https://drixil-group.vercel.app";
-const DEFAULT_DESCRIPTION =
-  "Drixil Group is a creative entertainment company building interactive entertainment, digital media, software, original IP, and consumer brands.";
-
-type PageMetadata = {
-  title: string;
-  description: string;
-  pathname: string;
-  image?: string;
-  noIndex?: boolean;
-};
+import { getPageMetadata, normalizePathname, serializeSchema, SITE_ORIGIN, type PageMetadata } from "./site";
 
 function setMeta(selector: string, attribute: "content" | "href", value: string) {
   const element = document.head.querySelector<HTMLMetaElement | HTMLLinkElement>(selector);
@@ -68,6 +57,8 @@ function usePageMetadata({ title, description, pathname, image = "/og.png", noIn
     setMeta('meta[name="twitter:image"]', "content", imageUrl);
     setMeta('meta[name="robots"]', "content", noIndex ? "noindex, nofollow" : "index, follow");
     setMeta('link[rel="canonical"]', "href", url);
+    const schema = document.getElementById("site-schema");
+    if (schema) schema.textContent = serializeSchema(pathname);
   }, [description, image, noIndex, pathname, title]);
 }
 
@@ -333,7 +324,7 @@ function BrandLink() {
   );
 }
 
-function ParentSite() {
+function ParentSite({ year }: { year: number }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const navLinks = [
@@ -343,11 +334,7 @@ function ParentSite() {
     ["Contact", "#contact"],
   ];
 
-  usePageMetadata({
-    title: "Drixil Group | Creative Entertainment and Technology",
-    description: DEFAULT_DESCRIPTION,
-    pathname: "/",
-  });
+  usePageMetadata(getPageMetadata("/"));
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -607,7 +594,7 @@ function ParentSite() {
 
       <footer className="border-t border-white/10 bg-black px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 text-xs uppercase tracking-[0.18em] text-white/65 sm:flex-row">
-          <p>© {new Date().getFullYear()} Drixil Group</p>
+          <p>© {year} Drixil Group</p>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {divisions.map((division) => <RouteLink key={division.slug} to={`/${division.slug}`} className="transition hover:text-white">{division.shortName}</RouteLink>)}
             <a href="mailto:mosesonerhime11@gmail.com" className="transition hover:text-white">Contact</a>
@@ -618,13 +605,8 @@ function ParentSite() {
   );
 }
 
-function InteractiveSite() {
-  usePageMetadata({
-    title: "Drixil Interactive | Roblox Games",
-    description: "Explore Beyond 90 and Volleyball Rally, two multiplayer Roblox sports games in development at Drixil Interactive.",
-    pathname: "/interactive",
-    image: "/media/beyond-90-1254.webp",
-  });
+function InteractiveSite({ year }: { year: number }) {
+  usePageMetadata(getPageMetadata("/interactive"));
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#070905] text-white selection:bg-volt selection:text-black">
@@ -1001,7 +983,7 @@ function InteractiveSite() {
 
       <footer className="border-t border-white/10 px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs uppercase tracking-[0.18em] text-white/65 sm:flex-row">
-          <p>© {new Date().getFullYear()} Drixil Interactive</p>
+          <p>© {year} Drixil Interactive</p>
           <p>A Drixil Group division</p>
         </div>
       </footer>
@@ -1009,14 +991,10 @@ function InteractiveSite() {
   );
 }
 
-function DivisionPlaceholder({ division }: { division: Division }) {
+function DivisionPlaceholder({ division, year }: { division: Division; year: number }) {
   const Icon = division.icon;
 
-  usePageMetadata({
-    title: `${division.name} | Drixil Group`,
-    description: `${division.name}: ${division.descriptor} The division website is currently in development.`,
-    pathname: `/${division.slug}`,
-  });
+  usePageMetadata(getPageMetadata(`/${division.slug}`));
 
   return (
     <div className="relative flex min-h-svh flex-col overflow-hidden bg-[#050505] text-white" style={{ "--division-accent": division.accent } as CSSProperties}>
@@ -1073,7 +1051,7 @@ function DivisionPlaceholder({ division }: { division: Division }) {
 
       <footer className="relative z-10 border-t border-white/10 px-4 py-7 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs uppercase tracking-[0.18em] text-white/60 sm:flex-row">
-          <p>© {new Date().getFullYear()} {division.name}</p>
+          <p>© {year} {division.name}</p>
           <p>A Drixil Group division</p>
         </div>
       </footer>
@@ -1081,13 +1059,8 @@ function DivisionPlaceholder({ division }: { division: Division }) {
   );
 }
 
-function NotFoundSite() {
-  usePageMetadata({
-    title: "Page not found | Drixil Group",
-    description: "The page you requested could not be found.",
-    pathname: window.location.pathname,
-    noIndex: true,
-  });
+function NotFoundSite({ pathname }: { pathname: string }) {
+  usePageMetadata(getPageMetadata(pathname));
 
   return (
     <div className="flex min-h-svh flex-col bg-ink text-white">
@@ -1114,20 +1087,20 @@ function NotFoundSite() {
   );
 }
 
-function App() {
-  const [pathname, setPathname] = useState(() => window.location.pathname.replace(/\/+$/, "") || "/");
+function App({ initialPathname, year }: { initialPathname: string; year: number }) {
+  const [pathname, setPathname] = useState(() => normalizePathname(initialPathname));
 
   useEffect(() => {
-    const syncPath = () => setPathname(window.location.pathname.replace(/\/+$/, "") || "/");
+    const syncPath = () => setPathname(normalizePathname(window.location.pathname));
     window.addEventListener("popstate", syncPath);
     return () => window.removeEventListener("popstate", syncPath);
   }, []);
 
   const activeDivision = divisions.find((division) => `/${division.slug}` === pathname);
-  if (activeDivision?.slug === "interactive") return <InteractiveSite />;
-  if (activeDivision) return <DivisionPlaceholder division={activeDivision} />;
-  if (pathname === "/") return <ParentSite />;
-  return <NotFoundSite />;
+  if (activeDivision?.slug === "interactive") return <InteractiveSite year={year} />;
+  if (activeDivision) return <DivisionPlaceholder division={activeDivision} year={year} />;
+  if (pathname === "/") return <ParentSite year={year} />;
+  return <NotFoundSite pathname={pathname} />;
 }
 
 export default App;

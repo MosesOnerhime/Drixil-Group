@@ -1,14 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
-import App from "./App";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import SiteRoot from "./SiteRoot";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-    <Analytics />
-    <SpeedInsights />
-  </React.StrictMode>,
-);
+const container = document.getElementById("root")!;
+const year = Number(container.dataset.renderYear) || new Date().getFullYear();
+const app = <SiteRoot pathname={window.location.pathname} year={year} />;
+
+if (container.hasChildNodes()) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc && vite build && node scripts/generate-route-pages.mjs",
+    "build": "tsc && vite build && vite build --ssr src/entry-server.tsx --outDir .cache/prerender && node scripts/generate-route-pages.mjs && node scripts/check-seo.mjs",
+    "check:seo": "node scripts/check-seo.mjs",
     "lint": "eslint .",
     "preview": "vite preview --host 127.0.0.1"
   },

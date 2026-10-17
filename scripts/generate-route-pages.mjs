@@ -1,77 +1,56 @@
+import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
+import { loadEnv } from "vite";
+import { renderPage, staticPaths, SITE_ORIGIN } from "../.cache/prerender/entry-server.js";
 
-const origin = "https://drixil-group.vercel.app";
-const defaultImage = `${origin}/og.png`;
-const routes = [
-  {
-    file: "interactive.html",
-    pathname: "/interactive",
-    title: "Drixil Interactive | Roblox Games",
-    description: "Explore Beyond 90 and Volleyball Rally, two multiplayer Roblox sports games in development at Drixil Interactive.",
-    image: `${origin}/media/beyond-90-1254.webp`,
-  },
-  {
-    file: "studio.html",
-    pathname: "/studio",
-    title: "Drixil Studio | Drixil Group",
-    description: "Drixil Studio focuses on editing, motion design for product showcases and launches, commercials, trailers, branding, UI/UX, web, and graphic design.",
-  },
-  {
-    file: "labs.html",
-    pathname: "/labs",
-    title: "Drixil Labs | Drixil Group",
-    description: "Drixil Labs focuses on AI, software, SaaS, automation, and internal tools. Its website is in development.",
-  },
-  {
-    file: "originals.html",
-    pathname: "/originals",
-    title: "Drixil Originals | Drixil Group",
-    description: "Drixil Originals focuses on original IP, animation, stories, music, and worlds. Its website is in development.",
-  },
-  {
-    file: "store.html",
-    pathname: "/store",
-    title: "Drixil Store | Drixil Group",
-    description: "Drixil Store focuses on merchandise, apparel, accessories, and fan objects. Its website is in development.",
-  },
-  {
-    file: "ventures.html",
-    pathname: "/ventures",
-    title: "Drixil Ventures | Drixil Group",
-    description: "Drixil Ventures is planned for future publishing, investment, acquisitions, and venture building. Its website is in development.",
-  },
-  {
-    file: "404.html",
-    pathname: "/404",
-    title: "Page not found | Drixil Group",
-    description: "The page you requested could not be found.",
-    noIndex: true,
-  },
-];
+const dist = new URL("../dist/", import.meta.url);
+const source = await readFile(new URL("index.html", dist), "utf8");
+const verificationToken = loadEnv("production", process.cwd(), "GOOGLE_").GOOGLE_SITE_VERIFICATION?.trim();
 
-const source = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");
-
-function replaceMeta(html, selector, content) {
-  const pattern = new RegExp(`(<meta\\s+${selector}\\s+content=")[^"]*("\\s*\\/?>)`, "i");
-  return html.replace(pattern, `$1${content}$2`);
+function escapeHtml(value) {
+  return value.replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  })[character]);
 }
 
-for (const route of routes) {
-  const canonical = `${origin}${route.pathname}`;
-  const image = route.image ?? defaultImage;
+function replaceMeta(html, selector, value) {
+  const pattern = new RegExp(`(<meta\\s+${selector}\\s+content=")[^"]*("\\s*\\/?>)`, "i");
+  assert.ok(pattern.test(html), `Missing metadata template: ${selector}`);
+  return html.replace(pattern, (_, start, end) => `${start}${escapeHtml(value)}${end}`);
+}
+
+for (const pathname of staticPaths) {
+  const { html: content, metadata, schema, year } = renderPage(pathname);
+  const canonical = `${SITE_ORIGIN}${metadata.pathname}`;
+  const image = new URL(metadata.image ?? "/og.png", SITE_ORIGIN).href;
+  const filename = pathname === "/" ? "index.html" : `${pathname.slice(1)}.html`;
+
+  assert.ok(content.includes("<main"), `No page content generated for ${pathname}`);
+  assert.ok(source.includes('<div id="root"></div>'), "Missing React root template");
   let html = source
-    .replace(/<title>[^<]*<\/title>/i, `<title>${route.title}</title>`)
-    .replace(/(<link\s+rel="canonical"\s+href=")[^"]*("\s*\/?>)/i, `$1${canonical}$2`);
+    .replace(/<title>[^<]*<\/title>/i, () => `<title>${escapeHtml(metadata.title)}</title>`)
+    .replace(/(<link\s+rel="canonical"\s+href=")[^"]*("\s*\/?>)/i, (_, start, end) => `${start}${escapeHtml(canonical)}${end}`)
+    .replace(/(<script\s+id="site-schema"\s+type="application\/ld\+json">)[\s\S]*?(<\/script>)/i, (_, start, end) => `${start}${schema}${end}`)
+    .replace('<div id="root"></div>', () => `<div id="root" data-render-year="${year}">${content}</div>`);
 
-  html = replaceMeta(html, 'name="description"', route.description);
-  html = replaceMeta(html, 'name="robots"', route.noIndex ? "noindex, nofollow" : "index, follow");
-  html = replaceMeta(html, 'property="og:title"', route.title);
-  html = replaceMeta(html, 'property="og:description"', route.description);
-  html = replaceMeta(html, 'property="og:url"', canonical);
-  html = replaceMeta(html, 'property="og:image"', image);
-  html = replaceMeta(html, 'name="twitter:title"', route.title);
-  html = replaceMeta(html, 'name="twitter:description"', route.description);
-  html = replaceMeta(html, 'name="twitter:image"', image);
+  for (const [selector, value] of [
+    ['name="description"', metadata.description],
+    ['name="robots"', metadata.noIndex ? "noindex, nofollow" : "index, follow"],
+    ['property="og:title"', metadata.title],
+    ['property="og:description"', metadata.description],
+    ['property="og:url"', canonical],
+    ['property="og:image"', image],
+    ['name="twitter:title"', metadata.title],
+    ['name="twitter:description"', metadata.description],
+    ['name="twitter:image"', image],
+  ]) {
+    html = replaceMeta(html, selector, value);
+  }
 
-  await writeFile(new URL(`../dist/${route.file}`, import.meta.url), html);
+  if (verificationToken) {
+    html = html.replace("</head>", () => `  <meta name="google-site-verification" content="${escapeHtml(verificationToken)}" />\n  </head>`);
+  }
+
+  await writeFile(new URL(filename, dist), html);
+  console.log(`Prerendered ${pathname} (${Buffer.byteLength(content).toLocaleString("en-US")} bytes of HTML)`);
 }

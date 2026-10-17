@@ -22,4 +22,9 @@ export default tseslint.config(
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
     },
   },
+  {
+    files: ["src/entry-server.tsx"],
+    // This build-only entry exports rendering helpers, not browser components.
+    rules: { "react-refresh/only-export-components": "off" },
+  },
 );
