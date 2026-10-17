@@ -619,6 +619,7 @@ function InteractiveSite({ year }: { year: number }) {
             <a href="#games" className="transition-colors hover:text-white">Games</a>
             <a href="#beyond-90" className="transition-colors hover:text-white">Beyond 90</a>
             <a href="#volleyball-rally" className="transition-colors hover:text-white">Volleyball Rally</a>
+            <a href="#partners" className="transition-colors hover:text-white">Partners</a>
             <a href="#community" className="transition-colors hover:text-white">Follow</a>
           </div>
           <RouteLink to="/" ariaLabel="Return to all Drixil Group divisions" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-white/65 transition hover:text-white">
@@ -911,6 +912,38 @@ function InteractiveSite({ year }: { year: number }) {
               ))}
             </div>
           </section>
+        </div>
+      </section>
+
+      <section id="partners" aria-labelledby="partners-title" className="scroll-mt-16 border-b border-white/10 bg-black py-12 sm:py-16">
+        <div className="mx-auto grid max-w-7xl gap-7 px-4 sm:px-6 md:grid-cols-[0.72fr_1fr] md:items-center lg:gap-20 lg:px-8">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Drixil Interactive</p>
+            <h2 id="partners-title" className="mt-4 text-3xl font-semibold leading-tight sm:text-5xl">Our partners</h2>
+          </div>
+          <a
+            href="https://www.novatraxstudio.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Novatrax Studio website (opens in a new tab)"
+            className="group inline-flex min-h-32 w-full max-w-md flex-col items-start justify-center gap-5 rounded-2xl px-4 py-6 transition-colors hover:bg-white/[0.04] active:bg-white/[0.07] sm:px-6"
+          >
+            <img
+              src="/media/novatrax-logo-800.webp"
+              srcSet="/media/novatrax-logo-800.webp 800w, /media/novatrax-logo-1600.webp 1600w"
+              sizes="(min-width: 640px) 400px, calc(100vw - 64px)"
+              alt="Novatrax Studio"
+              width="1600"
+              height="246"
+              loading="lazy"
+              decoding="async"
+              className="h-auto w-full"
+            />
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-white/65 transition-colors group-hover:text-white">
+              Visit Novatrax Studio
+              <ArrowUpRight aria-hidden="true" className="h-4 w-4 transition-transform motion-safe:group-hover:translate-x-0.5 motion-safe:group-hover:-translate-y-0.5" />
+            </span>
+          </a>
         </div>
       </section>
 

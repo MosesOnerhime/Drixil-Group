@@ -41,9 +41,9 @@ Moses asked what can be done independently now to improve Drixil's visibility in
 
 ## Delivery and remaining account tasks
 
-Publish using the GitHub/Vercel workflow Moses previously authorized for website updates. The implementation commit includes only this task's source, configuration, checks, and documentation. Pre-existing `AGENTS.md`, nested skill directory, and addendum deletion remain outside the commit.
+Published in commit `af01da4` using the GitHub/Vercel workflow Moses previously authorized for website updates. The implementation commit includes only this task's source, configuration, checks, and documentation. Pre-existing `AGENTS.md`, nested skill directory, and addendum deletion remain outside the commit.
 
-After publication, confirm that the live homepage and division routes deliver nonempty HTML before JavaScript, retain the expected metadata/sitemap/robots behavior, and return a real 404 for a missing page.
+Post-deploy checks passed on the public production origin: all seven public pages returned HTTP 200 with complete HTML, one H1, the expected titles, indexable robots metadata, and page-specific JSON-LD. Sitemap and robots endpoints returned HTTP 200 and retained the seven-page coverage. A deliberately missing page returned HTTP 404 with the prerendered custom error content and `noindex, nofollow`. All referenced browser JavaScript, CSS, and imported brand-image assets checked on the homepage returned HTTP 200. The live evidence is recorded in ignored `.cache/seo-qa/live-results.json`.
 
 Moses still needs to open the URL-prefix property in Google Search Console, supply or configure Google's verification token if ownership is not already verified, submit the sitemap, and inspect/request indexing for important pages. These changes improve crawlability and consistency; they do not prove Google has indexed the site or guarantee rankings.
 
