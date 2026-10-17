@@ -29,7 +29,9 @@ Moses confirmed Novatrax Studio as a partner of Drixil Interactive and requested
 
 ## Delivery
 
-Publish through the existing GitHub/Vercel workflow. Commit scope: the Interactive page, original supplied PNG, two optimized WebPs, this handoff, and the preceding search-readiness handoff's verified production results. Existing unrelated agent/skill-file changes stay outside the commit.
+Published in commit `9a6376d` through the existing GitHub/Vercel workflow. Commit scope: the Interactive page, original supplied PNG, two optimized WebPs, this handoff, and the preceding search-readiness handoff's verified production results. Existing unrelated agent/skill-file changes stayed outside the commit.
+
+Post-deploy verification passed: `/interactive` returned HTTP 200 with the Partners section and Novatrax destination in its prerendered HTML. Both optimized logo URLs returned HTTP 200 with the expected 9,398-byte and 18,446-byte payloads. The local branch and `origin/main` were aligned after publication.
 
 ## Reference
 
