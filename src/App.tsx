@@ -34,7 +34,7 @@ import {
 } from "react";
 import drixilFlatBlack from "./assets/brand/drixil-flat-black.jpeg";
 import drixilMetallic from "./assets/brand/drixil-metallic.jpeg";
-import { getPageMetadata, normalizePathname, serializeSchema, SITE_ORIGIN, type PageMetadata } from "./site";
+import { getPageMetadata, INTERACTIVE_MISSION, normalizePathname, serializeSchema, SITE_ORIGIN, type PageMetadata } from "./site";
 
 function setMeta(selector: string, attribute: "content" | "href", value: string) {
   const element = document.head.querySelector<HTMLMetaElement | HTMLLinkElement>(selector);
@@ -80,7 +80,7 @@ const divisions: Division[] = [
     shortName: "Interactive",
     slug: "interactive",
     number: "01",
-    descriptor: "Roblox games, future PC/mobile games, and publishing.",
+    descriptor: "An Africa-based game studio building for a global audience, starting with Roblox.",
     icon: Gamepad2,
     accent: "#d8ff1f",
     accentClass: "text-volt",
@@ -633,15 +633,16 @@ function InteractiveSite({ year }: { year: number }) {
       <main id="main-content" tabIndex={-1}>
 
       <section aria-labelledby="interactive-title" className="relative border-b border-white/10 pt-16 lg:min-h-svh">
-        <div className="mx-auto grid max-w-[1600px] lg:min-h-[calc(100svh-4rem)] lg:grid-cols-[0.82fr_1.18fr]">
+        <div className="mx-auto grid max-w-[1600px] lg:min-h-[calc(100svh-4rem)] lg:grid-cols-2">
           <div className="relative z-10 flex flex-col justify-center px-4 py-12 sm:px-8 sm:py-16 lg:px-14 xl:px-20">
-            <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/65">Drixil Interactive presents</p>
-            <div className="mt-8 inline-flex w-fit items-center gap-2 border border-volt/30 bg-volt/10 px-3 py-2 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-volt sm:text-xs">
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/65">Drixil Interactive</p>
+            <h1 id="interactive-title" className="mt-5 text-[2.5rem] font-black uppercase leading-[0.98] tracking-[-0.05em] min-[360px]:text-5xl sm:text-6xl xl:text-7xl">Games for players <span className="text-volt">everywhere.</span></h1>
+            <p className="mt-6 max-w-xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">{INTERACTIVE_MISSION}</p>
+            <div className="mt-7 inline-flex w-fit items-center gap-2 border border-volt/30 bg-volt/10 px-3 py-2 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-volt sm:text-xs">
               <span className="h-2 w-2 rounded-full bg-volt shadow-[0_0_14px_#d6ff4b]" />
               Currently working on
             </div>
-            <h1 id="interactive-title" className="mt-5 text-6xl font-black uppercase leading-[0.82] tracking-[-0.07em] sm:text-8xl lg:text-[7.8rem]">Beyond<br /><span className="text-volt">90</span></h1>
-            <p className="mt-7 max-w-xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">A competitive Roblox football experience where every position is played by a real person, and every touch can change the match.</p>
+            <p className="mt-3 max-w-xl text-sm leading-6 text-white/75"><strong className="font-semibold text-white">Beyond 90</strong> — competitive Roblox football where every position is played by a real person, and every touch can change the match.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a href="#games" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-volt px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-white active:translate-y-px">
                 Explore our games
@@ -663,7 +664,7 @@ function InteractiveSite({ year }: { year: number }) {
             <img
               src="/media/beyond-90-1254.webp"
               srcSet="/media/beyond-90-640.webp 640w, /media/beyond-90-1254.webp 1254w"
-              sizes="(min-width: 1024px) 60vw, 100vw"
+              sizes="(min-width: 1600px) 800px, (min-width: 1024px) 50vw, 100vw"
               alt="Beyond 90 Roblox football game artwork"
               width="1254"
               height="1254"
@@ -672,7 +673,7 @@ function InteractiveSite({ year }: { year: number }) {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#070905] lg:bg-gradient-to-r lg:from-[#070905] lg:via-transparent lg:to-transparent" />
-            <span className="absolute bottom-5 right-5 border border-white/15 bg-black/70 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.2em] text-white/75 backdrop-blur-md sm:bottom-8 sm:right-8">Project 001 / Roblox</span>
+            <span className="absolute bottom-5 right-5 border border-white/15 bg-black/70 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.2em] text-white/75 backdrop-blur-md sm:bottom-8 sm:right-8">Current focus / Beyond 90</span>
           </div>
         </div>
       </section>
@@ -1000,10 +1001,10 @@ function InteractiveSite({ year }: { year: number }) {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.75fr] lg:px-8">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-volt">Drixil Interactive</p>
-            <h2 id="interactive-closing-title" className="mt-5 max-w-3xl text-4xl font-semibold leading-tight sm:text-6xl">We build games that feel bigger together.</h2>
+            <h2 id="interactive-closing-title" className="mt-5 max-w-3xl text-4xl font-semibold leading-tight sm:text-6xl">Roblox is our starting point.</h2>
           </div>
           <div className="flex flex-col justify-end">
-            <p className="text-base leading-7 text-white/75">Beyond 90 is our current focus, while Volleyball Rally expands the studio into a second team sport with its own controls, pace, and identity.</p>
+            <p className="text-base leading-7 text-white/75">Our long-term ambition is a focused portfolio of original games, with room to grow into PC, mobile, and console development, alongside future publishing. We aim to put quality before quantity, using playtesting and player feedback to build games and communities that last.</p>
             <RouteLink to="/" className="mt-8 inline-flex w-fit items-center gap-2 border-b border-white/25 pb-2 text-sm font-bold transition hover:border-volt hover:text-volt">
               Explore Drixil Group
               <ArrowUpRight className="h-4 w-4" />

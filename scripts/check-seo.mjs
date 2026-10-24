@@ -68,9 +68,20 @@ for (const pathname of staticPaths) {
 
   if (!metadata.noIndex) indexedPaths.push(pathname);
   if (pathname === "/interactive") {
-    assert.ok(html.includes("Volleyball Rally") && html.includes("Beyond"));
+    const mainContent = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "";
+    assert.ok(mainContent.includes("Volleyball Rally") && mainContent.includes("Beyond"));
+    const heading = headings[0][1].replace(/<[^>]+>/g, "");
+    assert.equal(heading, "Games for players everywhere.", "Interactive must lead with the studio-wide audience");
+    assert.ok(mainContent.includes("Africa-based game studio building for a global audience"));
+    assert.ok(mainContent.includes("Our goal is to create original games that meet international standards"));
+    assert.ok(mainContent.includes("Currently working on") && mainContent.includes("Current focus / Beyond 90"));
+    assert.ok(mainContent.includes("Roblox is our starting point."));
+    assert.ok(mainContent.includes("Our long-term ambition"));
+    const studioSchema = schema["@graph"].find((item) => item["@id"] === `${SITE_ORIGIN}/interactive#organization`);
+    assert.ok(studioSchema.description.includes("Africa-based game studio building for a global audience"));
     assert.ok(html.includes("https://www.roblox.com/games/138362130200118/Beyond-90"));
     assert.ok(html.includes("https://www.roblox.com/games/87714615725428/Volleyball-Rally"));
+    assert.ok(html.includes("https://www.roblox.com/share/g/451345789"));
   }
 }
 

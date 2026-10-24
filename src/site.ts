@@ -1,5 +1,7 @@
 export const SITE_ORIGIN = "https://drixil-group.vercel.app";
 
+export const INTERACTIVE_MISSION = "Drixil Interactive is an Africa-based game studio building for a global audience. Our goal is to create original games that meet international standards in gameplay, presentation, and performance.";
+
 export type PageMetadata = {
   name: string;
   title: string;
@@ -19,8 +21,8 @@ export const PUBLIC_PAGES: ReadonlyArray<PageMetadata> = [
   {
     name: "Drixil Interactive",
     pathname: "/interactive",
-    title: "Drixil Interactive | Beyond 90 & Volleyball Rally",
-    description: "Explore Beyond 90 and Volleyball Rally, Roblox football and volleyball games in development at Drixil Interactive, a Drixil Group division.",
+    title: "Drixil Interactive | Games for a Global Audience",
+    description: "An Africa-based game studio building for a global audience. Explore Beyond 90 and Volleyball Rally, our Roblox games in development.",
     image: "/media/beyond-90-1254.webp",
   },
   {
@@ -93,6 +95,7 @@ export function getPageSchema(pathname: string) {
         "@id": interactiveId,
         name: "Drixil Interactive",
         url: `${SITE_ORIGIN}/interactive`,
+        description: INTERACTIVE_MISSION,
         parentOrganization: { "@id": groupId },
         sameAs: [
           "https://www.tiktok.com/@drixil.interactive",
