@@ -683,11 +683,25 @@ a.editorial-link:hover {
 .footer-bottom p {
   font-size: 11px;
 }
+.game-showcase {
+  background: var(--publisher-ground);
+}
 .showcase-art {
+  --showcase-edge-fade: clamp(32px, 6vw, 112px);
   width: 100%;
   height: clamp(340px, 29.56vw, 580px);
   object-fit: cover;
   object-position: center top;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 calc(100% - var(--showcase-edge-fade)),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 calc(100% - var(--showcase-edge-fade)),
+    transparent
+  );
 }
 .showcase-caption {
   display: flex;

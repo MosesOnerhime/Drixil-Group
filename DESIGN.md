@@ -276,6 +276,8 @@ The interface is flat by default. Ground/panel tone changes, thin rules, artwork
 
 The Group hero and ecosystem share Publisher Ground without a dividing border. Screen compositing maps the hero artwork's black background into that canvas; a static lower-edge mask follows the image's own transformed bounds, fading its floor reflection over 48px on desktop and 36px on phones. This is an integration treatment for the existing raster, not new artwork or an animated effect. Keep the monogram and violet floor light visible above the fade.
 
+Interactive's lead Beyond 90 image likewise fades into Publisher Ground above the solid title/action row. Its static image-only mask spans `clamp(32px, 6vw, 112px)` at the lower edge, preserving the existing responsive panorama/phone sources and leaving the title and buttons unmasked. Unlike the black Group atmosphere, football art uses normal compositing to preserve its supplied colours. Group's feature card and all gallery artwork remain unmasked; the subsequent purpose panel retains its existing boundaries.
+
 ### Shadow Vocabulary
 
 - **Mobile navigation overlay** (`0 18px 28px #0006`): the expanded native menu separates from the page below the masthead.
