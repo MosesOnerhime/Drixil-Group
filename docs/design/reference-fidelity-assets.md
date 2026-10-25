@@ -72,5 +72,4 @@ Use case: compositing. Asset type: very wide Beyond 90 promotional website BANNE
 
 ## Selection review
 
-All four generated outputs were visually inspected before integration: hero mark silhouette/orientation, silver material, violet core, ground reflection, empty copy area and no baked text; Studio dark copy area and diagonal metallic detail; both game variants preserve composition and readable original wording while replacing lime branding with blue. Promotional artwork is labelled as artwork. Final rendered-fit and mobile checks are recorded in the dated handoff.
-
+All five generated outputs were visually inspected before integration: hero mark silhouette/orientation, silver material, violet core, ground reflection, empty copy area and no baked text; Studio dark copy area and diagonal metallic detail; two16:9 game variants preserve composition and readable original wording while replacing lime branding with blue; the panoramic banner keeps the full football action visible in shallow desktop slots. Promotional artwork is labelled as artwork. Final rendered-fit and mobile checks are recorded in the dated handoff.

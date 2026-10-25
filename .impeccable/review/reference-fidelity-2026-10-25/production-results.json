@@ -1,0 +1,161 @@
+{
+  "checkedAt": "2026-10-25T14:16:31.394Z",
+  "origin": "https://drixil-group.vercel.app",
+  "bundle": "/assets/index-DgxozE5P.js",
+  "pages": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "title": "Drixil Group | Games, Motion Design & Creative Technology",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/interactive",
+      "status": 200,
+      "title": "Drixil Interactive | Games for a Global Audience",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/studio",
+      "status": 200,
+      "title": "Drixil Studio | Motion Design & Creative Services",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/labs",
+      "status": 200,
+      "title": "Drixil Labs | Drixil Group",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/originals",
+      "status": 200,
+      "title": "Drixil Originals | Drixil Group",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/store",
+      "status": 200,
+      "title": "Drixil Store | Drixil Group",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/ventures",
+      "status": 200,
+      "title": "Drixil Ventures | Drixil Group",
+      "prerendered": true,
+      "reviewedBundle": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "/assets/index-DgxozE5P.js",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/assets/index-CtCHHp8w.css",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/assets/inter-latin-variable-DIDQkJxP.woff2",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/assets/merriweather-sans-latin-variable-C4-R6WM8.woff2",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/assets/mitr-latin-700-ChTVkFRU.woff2",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/drixil-hero-v2-1080.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/drixil-hero-v2-1536.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/drixil-hero-v2-2172.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/drixil-studio-v2-960.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-main-blue-768.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-main-blue-1672.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-matchday-blue-v2-768.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-matchday-blue-v2-1672.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-broadcast-blue-v2-768.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-broadcast-blue-v2-1672.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-current-icon-640.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-current-icon-1254.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-panorama-blue-v3-960.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-panorama-blue-v3-1536.webp",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/media/beyond-90-panorama-blue-v3-2172.webp",
+      "status": 200,
+      "sha256Match": true
+    }
+  ],
+  "missingPageStatus": 404,
+  "sitemap": true,
+  "robots": true
+}

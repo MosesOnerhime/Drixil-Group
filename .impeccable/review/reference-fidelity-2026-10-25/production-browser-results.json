@@ -1,0 +1,239 @@
+{
+  "checkedAt": "2026-10-25T14:15:07.495Z",
+  "origin": "https://drixil-group.vercel.app",
+  "analyticsStubbed": false,
+  "results": [
+    {
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "title": "Drixil Group | Games, Motion Design & Creative Technology",
+      "currentSource": "https://drixil-group.vercel.app/media/beyond-90-matchday-blue-v2-768.webp",
+      "menuVerified": true,
+      "brands": [
+        {
+          "text": "Drixil Group",
+          "label": "Drixil Group home"
+        },
+        {
+          "text": "Drixil Group",
+          "label": "Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/interactive",
+      "width": 390,
+      "status": 200,
+      "title": "Drixil Interactive | Games for a Global Audience",
+      "currentSource": "https://drixil-group.vercel.app/media/beyond-90-matchday-blue-v2-768.webp",
+      "menuVerified": true,
+      "brands": [
+        {
+          "text": "Drixil Interactive",
+          "label": "Drixil Interactive home"
+        },
+        {
+          "text": "Drixil Interactive",
+          "label": "Drixil Interactive home"
+        }
+      ]
+    },
+    {
+      "route": "/studio",
+      "width": 390,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Studio",
+          "label": "Drixil Studio, Drixil Group home"
+        },
+        {
+          "text": "Drixil Studio",
+          "label": "Drixil Studio, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/labs",
+      "width": 390,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Labs",
+          "label": "Drixil Labs, Drixil Group home"
+        },
+        {
+          "text": "Drixil Labs",
+          "label": "Drixil Labs, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/originals",
+      "width": 390,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Originals",
+          "label": "Drixil Originals, Drixil Group home"
+        },
+        {
+          "text": "Drixil Originals",
+          "label": "Drixil Originals, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/store",
+      "width": 390,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Store",
+          "label": "Drixil Store, Drixil Group home"
+        },
+        {
+          "text": "Drixil Store",
+          "label": "Drixil Store, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/ventures",
+      "width": 390,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Ventures",
+          "label": "Drixil Ventures, Drixil Group home"
+        },
+        {
+          "text": "Drixil Ventures",
+          "label": "Drixil Ventures, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "route": "/",
+      "width": 1536,
+      "status": 200,
+      "title": "Drixil Group | Games, Motion Design & Creative Technology",
+      "currentSource": "https://drixil-group.vercel.app/media/beyond-90-panorama-blue-v3-960.webp",
+      "menuVerified": false,
+      "brands": [
+        {
+          "text": "Drixil Group",
+          "label": "Drixil Group home"
+        },
+        {
+          "text": "Drixil Group",
+          "label": "Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/interactive",
+      "width": 1536,
+      "status": 200,
+      "title": "Drixil Interactive | Games for a Global Audience",
+      "currentSource": "https://drixil-group.vercel.app/media/beyond-90-panorama-blue-v3-1536.webp",
+      "menuVerified": false,
+      "brands": [
+        {
+          "text": "Drixil Interactive",
+          "label": "Drixil Interactive home"
+        },
+        {
+          "text": "Drixil Interactive",
+          "label": "Drixil Interactive home"
+        }
+      ]
+    },
+    {
+      "route": "/studio",
+      "width": 1536,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Studio",
+          "label": "Drixil Studio, Drixil Group home"
+        },
+        {
+          "text": "Drixil Studio",
+          "label": "Drixil Studio, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/labs",
+      "width": 1536,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Labs",
+          "label": "Drixil Labs, Drixil Group home"
+        },
+        {
+          "text": "Drixil Labs",
+          "label": "Drixil Labs, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/originals",
+      "width": 1536,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Originals",
+          "label": "Drixil Originals, Drixil Group home"
+        },
+        {
+          "text": "Drixil Originals",
+          "label": "Drixil Originals, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/store",
+      "width": 1536,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Store",
+          "label": "Drixil Store, Drixil Group home"
+        },
+        {
+          "text": "Drixil Store",
+          "label": "Drixil Store, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "route": "/ventures",
+      "width": 1536,
+      "status": 200,
+      "brands": [
+        {
+          "text": "Drixil Ventures",
+          "label": "Drixil Ventures, Drixil Group home"
+        },
+        {
+          "text": "Drixil Ventures",
+          "label": "Drixil Ventures, Drixil Group home"
+        }
+      ]
+    },
+    {
+      "width": 1536,
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ]
+}
