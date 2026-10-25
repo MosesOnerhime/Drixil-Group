@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-25T11:13:02.642Z",
+  "origin": "https://drixil-group.vercel.app",
+  "analyticsStubbed": false,
+  "results": [
+    {
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "title": "Drixil Group | Games, Motion Design & Creative Technology",
+      "publisherLayout": true,
+      "nativeMenu": true
+    },
+    {
+      "route": "/interactive",
+      "width": 390,
+      "status": 200,
+      "title": "Drixil Interactive | Games for a Global Audience",
+      "publisherLayout": true,
+      "nativeMenu": true
+    },
+    {
+      "width": 390,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "title": "Drixil Group | Games, Motion Design & Creative Technology",
+      "publisherLayout": true
+    },
+    {
+      "route": "/interactive",
+      "width": 1440,
+      "status": 200,
+      "title": "Drixil Interactive | Games for a Global Audience",
+      "publisherLayout": true
+    },
+    {
+      "width": 1440,
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ]
+}

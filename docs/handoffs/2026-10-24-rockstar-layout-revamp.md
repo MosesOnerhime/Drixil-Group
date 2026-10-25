@@ -112,3 +112,17 @@ Delivery is not yet claimed: review and local QA are complete; final documentati
 - Excluded local-only derived inspection/capture/component files and duplicate PNG review copies through task-scoped ignores. Retained the approved comps, their prompts/approval sidecars, direction contract, measured spec, four legible desktop/phone viewport captures, concise QA reports, final review and design documentation in Git. Unrelated user instruction-file changes remain outside staging.
 
 Next delivery step: review and commit the task-only staged files, push the redesign and production refs without force, wait for Vercel, then verify actual production HTML/assets/routes/SEO endpoints. Only then report the redesign live.
+
+## Delivery completed — 2026-10-25
+
+- Implementation commit: `74e89a595a13c4c11d214a7cd2310eee381485de` — `feat: revamp Drixil publisher layouts and game discovery`.
+- Pushed to GitHub `main` and `redesign/rockstar-inspired`, without force. The first feature-branch upload hit a transient connection reset; the production push succeeded, then the feature push was retried and both remote refs were verified at the implementation commit. No pull request was created or required for the authorized production publication.
+- Verified the previous design remains on `backup-pre-rockstar-revamp-2026-10-24` at `78b51fc584a25e175cfec3cf651755ad919abe66`.
+- Vercel serves the new implementation at `https://drixil-group.vercel.app/`. Production HTTP checks completed at `2026-10-25T11:09:02Z`: all seven public routes returned 200 with complete prerendered HTML, unique expected titles, organization/page schema, one H1, and the exact reviewed bundle `/assets/index-BYojtjC9.js`.
+- Downloaded production JS, CSS, metallic logo and both WOFF2 files and verified their SHA-256 values match the reviewed local build. Both actual game URLs, the separate Roblox community action, and Novatrax attribution are present on the deployed Interactive page.
+- Verified an actual missing URL returns HTTP 404 with the custom page and noindex/nofollow. Sitemap and robots returned 200 with the expected seven public routes and production sitemap origin.
+- Final live Chrome checks completed at `2026-10-25T11:13:02Z` on Group and Interactive at 390 and 1440 px. Correct publisher layouts and titles rendered; no horizontal overflow, page exceptions or console errors. Native mobile navigation opened/closed with Escape. Production analytics were **not** stubbed. Visually inspected the live desktop Group and mobile Interactive viewport captures.
+- Production reports are committed as `.impeccable/review/production-results.json` and `.impeccable/review/production-browser-results.json`. Full local browser captures remain ignored process evidence.
+- Only task-owned files were committed. The pre-existing deletion of `AGENTS_UI_ADDENDUM.md`, untracked `AGENTS.md`, and nested skill files remain untouched and uncommitted. No dependency/lockfile or production metadata/analytics integration was removed.
+
+The requested redesign is implemented, reviewed, documented, pushed and verified live. Remaining limitations are explicit: generated-comp pixel matching did not mechanically pass; original factual art and nearest available fonts are retained. Automated scans are not accessibility certification, local timing observations are not field Core Web Vitals, and search indexing/rankings cannot be guaranteed.

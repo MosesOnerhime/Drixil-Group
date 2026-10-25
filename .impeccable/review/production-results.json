@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-10-25T11:09:02.825Z",
+  "origin": "https://drixil-group.vercel.app",
+  "bundle": "/assets/index-BYojtjC9.js",
+  "pages": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "title": "Drixil Group | Games, Motion Design & Creative Technology",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/interactive",
+      "status": 200,
+      "title": "Drixil Interactive | Games for a Global Audience",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/studio",
+      "status": 200,
+      "title": "Drixil Studio | Motion Design & Creative Services",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/labs",
+      "status": 200,
+      "title": "Drixil Labs | Drixil Group",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/originals",
+      "status": 200,
+      "title": "Drixil Originals | Drixil Group",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/store",
+      "status": 200,
+      "title": "Drixil Store | Drixil Group",
+      "prerendered": true,
+      "reviewedBundle": true
+    },
+    {
+      "pathname": "/ventures",
+      "status": 200,
+      "title": "Drixil Ventures | Drixil Group",
+      "prerendered": true,
+      "reviewedBundle": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "/assets/index-BYojtjC9.js",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/assets/index-CoY2aUcg.css",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/assets/drixil-metallic-CbrU__-K.jpeg",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/assets/merriweather-sans-latin-variable-C4-R6WM8.woff2",
+      "status": 200,
+      "sha256Match": true
+    },
+    {
+      "path": "/assets/mitr-latin-700-ChTVkFRU.woff2",
+      "status": 200,
+      "sha256Match": true
+    }
+  ],
+  "missingPageStatus": 404,
+  "sitemap": true,
+  "robots": true
+}

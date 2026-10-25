@@ -32,6 +32,8 @@
 !review/qa-results.json
 !review/accessibility-results.json
 !review/performance-results.json
+!review/production-results.json
+!review/production-browser-results.json
 !review/detector-results.json
 !review/group-1536-hero.png
 !review/interactive-1536-hero.png
