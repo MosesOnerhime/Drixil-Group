@@ -56,7 +56,7 @@ Use case: compositing. Asset type: production background image for the Drixil St
 
 `src/assets/beyond-90-main-blue.png` is a byte-preserved copy of `D:/repos/Drixil Interactive/Beyond-90/assets/media/thumbnail main.png`, not generated here. It supplies `/media/beyond-90-main-blue-{768,1672}.webp` for the full-width main gallery artwork and social preview. The lead desktop banner instead uses the purpose-built panorama; phone banners use the complete16:9 blue matchday artwork.
 
-`src/assets/beyond-90-current-icon.png` is a byte-preserved copy of that repository's `assets/media/icon.png`. Its blue stadium setting and red/black football kit are original content, not a new palette decision. Runtime variants: `/media/beyond-90-current-icon-{640,1254}.webp`.
+The earlier `src/assets/beyond-90-current-icon.png` copy of that repository's `assets/media/icon.png` is retained as historical artwork, not the active website icon. Moses subsequently selected `assets/media/icon v2.0.png`. It is copied byte-for-byte as `src/assets/beyond-90-icon-v2.png`; proportional WebP variants `/media/beyond-90-icon-v2-{640,1254}.webp` now supply both the Group current-work and Interactive detail icons. The supplied black kit, blue trim and blue/violet title remain unchanged. No generation, recolouring or crop was applied. See [the icon replacement handoff](../handoffs/2026-10-25-beyond90-icon-v2.md) for source verification and QA.
 
 ## Reviewer-requested panoramic banner
 

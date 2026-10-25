@@ -769,8 +769,8 @@ function ParentSite({ year }: { year: number }) {
           aria-labelledby="current-project-title"
         >
           <img
-            src="/media/beyond-90-current-icon-640.webp"
-            srcSet="/media/beyond-90-current-icon-640.webp 640w, /media/beyond-90-current-icon-1254.webp 1254w"
+            src="/media/beyond-90-icon-v2-640.webp"
+            srcSet="/media/beyond-90-icon-v2-640.webp 640w, /media/beyond-90-icon-v2-1254.webp 1254w"
             sizes="(max-width: 359px) calc(100vw - 40px), 320px"
             alt="Beyond 90 Roblox football game icon"
             width="1254"
@@ -985,8 +985,8 @@ function InteractiveSite({ year }: { year: number }) {
             <div className="project-heading">
               <div className="project-identity">
                 <img
-                  src="/media/beyond-90-current-icon-640.webp"
-                  srcSet="/media/beyond-90-current-icon-640.webp 640w, /media/beyond-90-current-icon-1254.webp 1254w"
+                  src="/media/beyond-90-icon-v2-640.webp"
+                  srcSet="/media/beyond-90-icon-v2-640.webp 640w, /media/beyond-90-icon-v2-1254.webp 1254w"
                   sizes="120px"
                   alt="Beyond 90 game icon"
                   width="640"
