@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-25T10:53:38Z",
+  "generatedAt": "2026-10-25T14:04:03.632Z",
   "title": "Design System: Drixil Publisher System",
   "extensions": {
     "colorMeta": {
@@ -146,44 +146,44 @@
       },
       "interactive-accent": {
         "role": "secondary",
-        "displayName": "Interactive Volt",
+        "displayName": "Beyond 90 Blue",
         "tonalRamp": [
-          "oklch(15% 0.2016 121.68)",
-          "oklch(26.43% 0.2016 121.68)",
-          "oklch(37.86% 0.2016 121.68)",
-          "oklch(49.29% 0.2016 121.68)",
-          "oklch(60.71% 0.2016 121.68)",
-          "oklch(72.14% 0.2016 121.68)",
-          "oklch(83.57% 0.2016 121.68)",
-          "oklch(95% 0.2016 121.68)"
+          "oklch(15% 0.1783 254.05)",
+          "oklch(26.43% 0.1783 254.05)",
+          "oklch(37.86% 0.1783 254.05)",
+          "oklch(49.29% 0.1783 254.05)",
+          "oklch(60.71% 0.1783 254.05)",
+          "oklch(72.14% 0.1783 254.05)",
+          "oklch(83.57% 0.1783 254.05)",
+          "oklch(95% 0.1783 254.05)"
         ]
       },
       "interactive-action-hover": {
         "role": "secondary",
-        "displayName": "Volt Hover",
+        "displayName": "Beyond 90 Blue Hover",
         "tonalRamp": [
-          "oklch(15% 0.1527 119.52)",
-          "oklch(26.43% 0.1527 119.52)",
-          "oklch(37.86% 0.1527 119.52)",
-          "oklch(49.29% 0.1527 119.52)",
-          "oklch(60.71% 0.1527 119.52)",
-          "oklch(72.14% 0.1527 119.52)",
-          "oklch(83.57% 0.1527 119.52)",
-          "oklch(95% 0.1527 119.52)"
+          "oklch(15% 0.1356 252.36)",
+          "oklch(26.43% 0.1356 252.36)",
+          "oklch(37.86% 0.1356 252.36)",
+          "oklch(49.29% 0.1356 252.36)",
+          "oklch(60.71% 0.1356 252.36)",
+          "oklch(72.14% 0.1356 252.36)",
+          "oklch(83.57% 0.1356 252.36)",
+          "oklch(95% 0.1356 252.36)"
         ]
       },
       "interactive-action-active": {
         "role": "secondary",
-        "displayName": "Volt Active",
+        "displayName": "Beyond 90 Blue Active",
         "tonalRamp": [
-          "oklch(15% 0.1987 121.83)",
-          "oklch(26.43% 0.1987 121.83)",
-          "oklch(37.86% 0.1987 121.83)",
-          "oklch(49.29% 0.1987 121.83)",
-          "oklch(60.71% 0.1987 121.83)",
-          "oklch(72.14% 0.1987 121.83)",
-          "oklch(83.57% 0.1987 121.83)",
-          "oklch(95% 0.1987 121.83)"
+          "oklch(15% 0.1854 254.55)",
+          "oklch(26.43% 0.1854 254.55)",
+          "oklch(37.86% 0.1854 254.55)",
+          "oklch(49.29% 0.1854 254.55)",
+          "oklch(60.71% 0.1854 254.55)",
+          "oklch(72.14% 0.1854 254.55)",
+          "oklch(83.57% 0.1854 254.55)",
+          "oklch(95% 0.1854 254.55)"
         ]
       },
       "outline-stroke": {
@@ -302,7 +302,7 @@
     "typographyMeta": {
       "company-display": {
         "displayName": "Company Display",
-        "purpose": "Group masthead in Merriweather Sans; responsive mobile override remains documented in DESIGN.md."
+        "purpose": "Group hero title in self-hosted Inter at weight 700; responsive mobile override remains documented in DESIGN.md."
       },
       "game-display": {
         "displayName": "Game Display",
@@ -310,19 +310,19 @@
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Shared section headings, with the actual mobile size override."
+        "purpose": "Base Interactive section headings; Group has its own Inter heading role."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Subordinate content headings; individual card contexts can be smaller."
+        "purpose": "Subordinate content headings; inherits Inter on Group and Merriweather Sans on Interactive."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Muted descriptive paragraphs, with comfortable reading line height."
+        "purpose": "Base Interactive muted paragraphs; Group has its own Inter body role."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Uppercase, tracked context labels; written status remains visible."
+        "purpose": "Uppercase, tracked existing context labels; inherits the page typeface and does not authorize extra generic eyebrows."
       },
       "button": {
         "displayName": "Action",
@@ -331,6 +331,26 @@
       "navigation": {
         "displayName": "Navigation",
         "purpose": "Compact desktop section links with visible hover underlines."
+      },
+      "company-tagline": {
+        "displayName": "Company Tagline",
+        "purpose": "Regular Inter companion to the Group title; live HTML, not baked into the hero plate."
+      },
+      "group-headline": {
+        "displayName": "Group Headline",
+        "purpose": "Inter section headings at weight 700, with the actual 32px mobile override."
+      },
+      "group-body": {
+        "displayName": "Group Body",
+        "purpose": "Inter body copy on Group-themed surfaces; the hero summary is a context-specific variant."
+      },
+      "group-button": {
+        "displayName": "Group Action",
+        "purpose": "Uppercase Inter action labels at weight 700 with 0.12em tracking."
+      },
+      "group-navigation": {
+        "displayName": "Group Navigation",
+        "purpose": "Uppercase tracked Inter section links; lighter violet hover, no invented selected state."
       }
     },
     "shadows": [
@@ -390,17 +410,25 @@
       "name": "Group Filled Action",
       "kind": "button",
       "refersTo": "button-group",
-      "description": "The implemented Group action: white text on the darker violet fill, not the lighter text accent.",
+      "description": "The Group hero action: uppercase Inter, 2px corners and white text on the darker violet fill.",
       "html": "<a class=\"ds-group-button\" href=\"#ecosystem\">Explore the divisions<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
-      "css": ".ds-group-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:52px;padding:0 20px;border:1px solid transparent;border-radius:4px;font-family:\"Merriweather Sans\",sans-serif;font-size:14px;font-weight:800;line-height:20px;text-decoration:none;white-space:nowrap;transition:background-color 160ms ease-out,border-color 160ms ease-out,color 160ms ease-out}.ds-group-button svg{display:block;flex:none;width:20px;height:20px}.ds-group-button:focus-visible{outline:3px solid var(--publisher-accent,#d6ff4b);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:767px){.ds-group-button{min-height:48px;padding-inline:16px;font-size:12px;gap:10px}.ds-group-button svg{width:18px;height:18px}}@media(max-width:479px){.ds-group-button{white-space:normal}}@media(prefers-reduced-motion:reduce){.ds-group-button{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}.ds-group-button{color:#fff;background:#7250ed}.ds-group-button:hover{background:#6542dc}.ds-group-button:active{background:#5835c8}.ds-group-button:focus-visible{outline-color:var(--publisher-accent,#7b5cff)}"
+      "css": ".ds-group-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:52px;padding:0 27px;border:1px solid transparent;border-radius:2px;color:#fff;background:#7250ed;font-family:\"Inter\",sans-serif;font-size:12px;font-weight:700;line-height:20px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background-color 160ms ease-out,border-color 160ms ease-out,color 160ms ease-out}.ds-group-button svg{display:block;flex:none;width:18px;height:18px}.ds-group-button:hover{background:#6542dc}.ds-group-button:active{background:#5835c8}.ds-group-button:focus-visible{outline:3px solid var(--publisher-accent,#7b5cff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:767px){.ds-group-button{min-height:48px;padding-inline:18px;font-size:11px;gap:10px}}@media(max-width:479px){.ds-group-button{white-space:normal}}@media(prefers-reduced-motion:reduce){.ds-group-button{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
     },
     {
       "name": "Interactive Game Action",
       "kind": "button",
       "refersTo": "button-interactive",
-      "description": "The separate game-page destination, with the source Roblox mark and outward arrow.",
+      "description": "The separate game-page destination in the confirmed Beyond 90 blue, with dark text, Roblox mark and outward arrow.",
       "html": "<a class=\"ds-game-button\" href=\"https://www.roblox.com/games/138362130200118/Beyond-90\" target=\"_blank\" rel=\"noopener noreferrer\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"M5 1 23 6 18 24 0 19Zm5.1 8.6-1.3 4.6 4.6 1.3 1.3-4.6Z\"/></svg>View game on Roblox<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
-      "css": ".ds-game-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:52px;padding:0 20px;border:1px solid transparent;border-radius:4px;font-family:\"Merriweather Sans\",sans-serif;font-size:14px;font-weight:800;line-height:20px;text-decoration:none;white-space:nowrap;transition:background-color 160ms ease-out,border-color 160ms ease-out,color 160ms ease-out}.ds-game-button svg{display:block;flex:none;width:20px;height:20px}.ds-game-button:focus-visible{outline:3px solid var(--publisher-accent,#d6ff4b);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:767px){.ds-game-button{min-height:48px;padding-inline:16px;font-size:12px;gap:10px}.ds-game-button svg{width:18px;height:18px}}@media(max-width:479px){.ds-game-button{white-space:normal}}@media(prefers-reduced-motion:reduce){.ds-game-button{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}.ds-game-button{color:#080808;background:var(--publisher-accent,#d6ff4b)}.ds-game-button:hover{background:#e4ff83}.ds-game-button:active{background:#c4ec36}"
+      "css": ".ds-game-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:52px;padding:0 20px;border:1px solid transparent;border-radius:4px;font-family:\"Merriweather Sans\",sans-serif;font-size:14px;font-weight:800;line-height:20px;text-decoration:none;white-space:nowrap;transition:background-color 160ms ease-out,border-color 160ms ease-out,color 160ms ease-out}.ds-game-button svg{display:block;flex:none;width:20px;height:20px}.ds-game-button:focus-visible{outline:3px solid var(--publisher-accent,#3896ff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:767px){.ds-game-button{min-height:48px;padding-inline:16px;font-size:12px;gap:10px}.ds-game-button svg{width:18px;height:18px}}@media(max-width:479px){.ds-game-button{white-space:normal}}@media(prefers-reduced-motion:reduce){.ds-game-button{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}.ds-game-button{color:#080808;background:var(--publisher-accent,#3896ff)}.ds-game-button:hover{background:#69b0ff}.ds-game-button:active{background:#2589f6}"
+    },
+    {
+      "name": "Group Outline Action",
+      "kind": "button",
+      "refersTo": "button-group-outline",
+      "description": "The Group hero secondary action, with the live current-work destination and 2px corners.",
+      "html": "<a class=\"ds-group-outline\" href=\"#current-project\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><polygon points=\"6 3 20 12 6 21 6 3\"/></svg>View current work</a>",
+      "css": ".ds-group-outline{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:52px;min-width:259px;padding:0 27px;border:1px solid #b3b3b8;border-radius:2px;color:var(--publisher-text,#f7f7f7);background:transparent;font-family:\"Inter\",sans-serif;font-size:12px;font-weight:700;line-height:20px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background-color 160ms ease-out,border-color 160ms ease-out,color 160ms ease-out}.ds-group-outline svg{display:block;flex:none;width:18px;height:18px}.ds-group-outline:hover{border-color:var(--publisher-text,#f7f7f7);background:#242424}.ds-group-outline:active{background:#303030}.ds-group-outline:focus-visible{outline:3px solid var(--publisher-accent,#7b5cff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:767px){.ds-group-outline{min-width:0;min-height:48px;padding-inline:18px;font-size:11px;gap:10px}}@media(max-width:479px){.ds-group-outline{white-space:normal}}@media(prefers-reduced-motion:reduce){.ds-group-outline{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
     },
     {
       "name": "Outline Community Action",
@@ -408,7 +436,7 @@
       "refersTo": "button-outline",
       "description": "The implemented secondary destination; community access remains distinct from the game page.",
       "html": "<a class=\"ds-outline-button\" href=\"https://www.roblox.com/share/g/451345789\" target=\"_blank\" rel=\"noopener noreferrer\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/></svg>Roblox community<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
-      "css": ".ds-outline-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:52px;padding:0 20px;border:1px solid transparent;border-radius:4px;font-family:\"Merriweather Sans\",sans-serif;font-size:14px;font-weight:800;line-height:20px;text-decoration:none;white-space:nowrap;transition:background-color 160ms ease-out,border-color 160ms ease-out,color 160ms ease-out}.ds-outline-button svg{display:block;flex:none;width:20px;height:20px}.ds-outline-button:focus-visible{outline:3px solid var(--publisher-accent,#d6ff4b);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:767px){.ds-outline-button{min-height:48px;padding-inline:16px;font-size:12px;gap:10px}.ds-outline-button svg{width:18px;height:18px}}@media(max-width:479px){.ds-outline-button{white-space:normal}}@media(prefers-reduced-motion:reduce){.ds-outline-button{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}.ds-outline-button{border-color:#909092;color:var(--publisher-text,#f7f7f7);background:transparent}.ds-outline-button:hover{border-color:var(--publisher-text,#f7f7f7);color:var(--publisher-text,#f7f7f7);background:#242424}.ds-outline-button:active{background:#303030}"
+      "css": ".ds-outline-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:52px;padding:0 20px;border:1px solid transparent;border-radius:4px;font-family:\"Merriweather Sans\",sans-serif;font-size:14px;font-weight:800;line-height:20px;text-decoration:none;white-space:nowrap;transition:background-color 160ms ease-out,border-color 160ms ease-out,color 160ms ease-out}.ds-outline-button svg{display:block;flex:none;width:20px;height:20px}.ds-outline-button:focus-visible{outline:3px solid var(--publisher-accent,#3896ff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:767px){.ds-outline-button{min-height:48px;padding-inline:16px;font-size:12px;gap:10px}.ds-outline-button svg{width:18px;height:18px}}@media(max-width:479px){.ds-outline-button{white-space:normal}}@media(prefers-reduced-motion:reduce){.ds-outline-button{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}.ds-outline-button{border-color:#909092;color:var(--publisher-text,#f7f7f7);background:transparent}.ds-outline-button:hover{border-color:var(--publisher-text,#f7f7f7);color:var(--publisher-text,#f7f7f7);background:#242424}.ds-outline-button:active{background:#303030}"
     },
     {
       "name": "Group Editorial Link",
@@ -416,22 +444,22 @@
       "refersTo": "editorial-link-group",
       "description": "Compact uppercase exploration link with a hover underline; the source uses lighter violet for text.",
       "html": "<a class=\"ds-editorial-link\" href=\"/studio\">Explore Studio<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
-      "css": ".ds-editorial-link{display:inline-flex;align-items:center;gap:8px;width:fit-content;min-height:44px;color:#a995ff;font-family:\"Merriweather Sans\",sans-serif;font-size:12px;font-weight:700;line-height:1.4;letter-spacing:0.08em;text-transform:uppercase;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px;transition:text-decoration-color 160ms ease-out}.ds-editorial-link svg{width:18px;height:18px;flex:none}.ds-editorial-link:hover{text-decoration-color:currentColor}.ds-editorial-link:focus-visible{outline:3px solid var(--publisher-accent,#7b5cff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(prefers-reduced-motion:reduce){.ds-editorial-link{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
+      "css": ".ds-editorial-link{display:inline-flex;align-items:center;gap:8px;width:fit-content;min-height:44px;color:#a995ff;font-family:\"Inter\",sans-serif;font-size:12px;font-weight:700;line-height:1.4;letter-spacing:0.08em;text-transform:uppercase;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px;transition:text-decoration-color 160ms ease-out}.ds-editorial-link svg{width:18px;height:18px;flex:none}.ds-editorial-link:hover{text-decoration-color:currentColor}.ds-editorial-link:focus-visible{outline:3px solid var(--publisher-accent,#7b5cff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(prefers-reduced-motion:reduce){.ds-editorial-link{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
     },
     {
       "name": "Desktop Section Navigation",
       "kind": "nav",
-      "refersTo": "navigation-link",
+      "refersTo": "navigation-link-group",
       "description": "The actual Group section labels, 44px targets, and accent underline on hover; no invented active tab.",
       "html": "<nav class=\"ds-desktop-nav\" aria-label=\"Primary navigation\"><a href=\"#ecosystem\">Ecosystem</a><a href=\"#current-project\">Current project</a><a href=\"#roadmap\">Roadmap</a><a href=\"#contact\">Contact</a></nav>",
-      "css": ".ds-desktop-nav{display:flex;align-items:center;gap:clamp(24px,3.15vw,48px);background:#080808}.ds-desktop-nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--publisher-text,#f7f7f7);font-family:\"Merriweather Sans\",sans-serif;font-size:13px;font-weight:600;line-height:17px;text-decoration:none;text-underline-offset:5px;white-space:nowrap;transition:color 160ms ease-out}.ds-desktop-nav a:hover{color:var(--publisher-accent,#7b5cff);text-decoration:underline}.ds-desktop-nav a:focus-visible{outline:3px solid var(--publisher-accent,#7b5cff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:1279px){.ds-desktop-nav{gap:24px}}@media(prefers-reduced-motion:reduce){.ds-desktop-nav a{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
+      "css": ".ds-desktop-nav{display:flex;align-items:center;gap:38px;background:#080808}.ds-desktop-nav a{display:inline-flex;align-items:center;min-height:44px;color:#c6c6cf;font-family:\"Inter\",sans-serif;font-size:12px;font-weight:600;line-height:17px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;text-underline-offset:5px;white-space:nowrap;transition:color 160ms ease-out}.ds-desktop-nav a:hover{color:#a995ff;text-decoration:underline}.ds-desktop-nav a:focus-visible{outline:3px solid var(--publisher-accent,#7b5cff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(prefers-reduced-motion:reduce){.ds-desktop-nav a{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
     },
     {
       "name": "Native Mobile Disclosure",
       "kind": "nav",
       "description": "The shipped details/summary interaction in a local masthead-sized preview. Source switches to it below 1100px; Escape/link/desktop-resize closing is a React enhancement.",
       "html": "<div class=\"ds-mobile-header\"><details class=\"ds-mobile-menu\"><summary aria-label=\"Navigation menu\"><svg class=\"ds-menu-open\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\"/></svg><svg class=\"ds-menu-close\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"m6 6 12 12M6 18 18 6\"/></svg></summary><nav class=\"ds-mobile-navigation\" aria-label=\"Mobile navigation\"><a href=\"#games\">Games<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-7-7 7 7-7 7\"/></svg></a><a href=\"#beyond-90\">Beyond 90<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-7-7 7 7-7 7\"/></svg></a><a href=\"#volleyball-rally\">Volleyball Rally<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-7-7 7 7-7 7\"/></svg></a><a href=\"#partners\">Partners<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-7-7 7 7-7 7\"/></svg></a><a href=\"#community\">Follow<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-7-7 7 7-7 7\"/></svg></a><a href=\"mailto:mosesonerhime11@gmail.com\">Contact Drixil<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a></nav></details></div>",
-      "css": ".ds-mobile-header{position:relative;display:flex;align-items:center;justify-content:flex-end;min-height:64px;padding-inline:20px;color:var(--publisher-text,#f7f7f7);background:#080808;font-family:\"Merriweather Sans\",sans-serif}.ds-mobile-menu summary{display:grid;width:44px;height:44px;place-items:center;border:1px solid #555;border-radius:4px;cursor:pointer;list-style:none}.ds-mobile-menu summary::-webkit-details-marker{display:none}.ds-mobile-menu summary svg{width:24px;height:24px}.ds-mobile-menu summary:hover{border-color:#fff}.ds-mobile-menu summary:focus-visible{outline:3px solid var(--publisher-accent,#d6ff4b);outline-offset:3px}.ds-menu-close,.ds-mobile-menu[open] .ds-menu-open{display:none}.ds-mobile-menu[open] .ds-menu-close{display:block}.ds-mobile-navigation{position:absolute;top:64px;right:0;left:0;max-height:calc(100svh - 65px);overflow-y:auto;border-bottom:1px solid #555;padding:16px 24px;background:#111;box-shadow:0 18px 28px #0006}.ds-mobile-navigation a{display:flex;align-items:center;justify-content:space-between;min-height:52px;border-bottom:1px solid var(--publisher-rule,#2b2b2d);color:inherit;font-size:15px;font-weight:600;text-decoration:none}.ds-mobile-navigation a svg{width:18px;height:18px}.ds-mobile-navigation a:hover{color:var(--publisher-accent,#d6ff4b)}.ds-mobile-navigation a:focus-visible{outline:3px solid var(--publisher-accent,#d6ff4b);outline-offset:4px;box-shadow:0 0 0 5px #050505}"
+      "css": ".ds-mobile-header{position:relative;display:flex;align-items:center;justify-content:flex-end;min-height:64px;padding-inline:20px;color:var(--publisher-text,#f7f7f7);background:#080808;font-family:\"Merriweather Sans\",sans-serif}.ds-mobile-menu summary{display:grid;width:44px;height:44px;place-items:center;border:1px solid #555;border-radius:4px;cursor:pointer;list-style:none}.ds-mobile-menu summary::-webkit-details-marker{display:none}.ds-mobile-menu summary svg{width:24px;height:24px}.ds-mobile-menu summary:hover{border-color:#fff}.ds-mobile-menu summary:focus-visible{outline:3px solid var(--publisher-accent,#3896ff);outline-offset:3px}.ds-menu-close,.ds-mobile-menu[open] .ds-menu-open{display:none}.ds-mobile-menu[open] .ds-menu-close{display:block}.ds-mobile-navigation{position:absolute;top:64px;right:0;left:0;max-height:calc(100svh - 65px);overflow-y:auto;border-bottom:1px solid #555;padding:16px 24px;background:#111;box-shadow:0 18px 28px #0006}.ds-mobile-navigation a{display:flex;align-items:center;justify-content:space-between;min-height:52px;border-bottom:1px solid var(--publisher-rule,#2b2b2d);color:inherit;font-size:15px;font-weight:600;text-decoration:none}.ds-mobile-navigation a svg{width:18px;height:18px}.ds-mobile-navigation a:hover{color:var(--publisher-accent,#3896ff)}.ds-mobile-navigation a:focus-visible{outline:3px solid var(--publisher-accent,#3896ff);outline-offset:4px;box-shadow:0 0 0 5px #050505}"
     },
     {
       "name": "Development Status",
@@ -439,15 +467,15 @@
       "refersTo": "development-status",
       "description": "Noninteractive written status plus a dot, shown in both actual Interactive variants. It is not a pill or filter.",
       "html": "<div class=\"ds-status-examples\"><p class=\"ds-status\">Currently working on</p><p class=\"ds-status ds-status-blue\">In development</p></div>",
-      "css": ".ds-status-examples{display:grid;gap:16px}.ds-status{display:inline-flex;align-items:center;gap:12px;margin:0;color:var(--publisher-muted,#c0c0c4);font-family:\"Merriweather Sans\",sans-serif;font-size:12px;font-weight:700;line-height:1.4;letter-spacing:0.2em;text-transform:uppercase}.ds-status::before{flex:none;width:9px;height:9px;border-radius:50%;background:var(--publisher-accent,#d6ff4b);content:\"\"}.ds-status-blue::before{background:#66baff}@media(max-width:767px){.ds-status{font-size:10px}}"
+      "css": ".ds-status-examples{display:grid;gap:16px}.ds-status{display:inline-flex;align-items:center;gap:12px;margin:0;color:var(--publisher-muted,#c0c0c4);font-family:\"Merriweather Sans\",sans-serif;font-size:12px;font-weight:700;line-height:1.4;letter-spacing:0.2em;text-transform:uppercase}.ds-status::before{flex:none;width:9px;height:9px;border-radius:50%;background:var(--publisher-accent,#3896ff);content:\"\"}.ds-status-blue::before{background:#66baff}@media(max-width:767px){.ds-status{font-size:10px}}"
     },
     {
       "name": "Division Directory Card",
       "kind": "card",
       "refersTo": "division-card",
-      "description": "A compact existing Group directory entry with honest development status and a hover-only fill/border change.",
+      "description": "The Group directory entry: Inter text, subdued route-tinted metallic backdrop, truthful status, and hover-only fill/border change. The raster backdrop is documented in DESIGN.md; this isolated snippet shows its controls and type.",
       "html": "<a class=\"ds-division-entry\" href=\"/labs\"><div><h3>Drixil Labs</h3><p>AI, software, SaaS, automation, and internal tools.</p><span>Website in development</span></div><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
-      "css": ".ds-division-entry{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;border:1px solid var(--publisher-rule,#2b2b2d);border-radius:6px;padding:22px;background:#080808;color:var(--publisher-text,#f7f7f7);font-family:\"Merriweather Sans\",sans-serif;text-decoration:none;transition:border-color 160ms ease-out,background-color 160ms ease-out}.ds-division-entry h3{margin:0;font-size:18px;font-weight:700;line-height:1.25;letter-spacing:-0.025em;text-wrap:balance}.ds-division-entry p{margin:10px 0 0;color:var(--publisher-muted,#c0c0c4);font-size:12px;line-height:1.7}.ds-division-entry span{display:block;margin-top:14px;color:#aaaab2;font-size:11px}.ds-division-entry svg{width:20px;height:20px;flex:none}.ds-division-entry:hover{border-color:#8a72e8;background:#18131f}.ds-division-entry:focus-visible{outline:3px solid var(--publisher-accent,#7b5cff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:767px){.ds-division-entry{padding:20px}.ds-division-entry h3{font-size:16px}}@media(max-width:479px){.ds-division-entry{min-height:120px}}@media(prefers-reduced-motion:reduce){.ds-division-entry{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
+      "css": ".ds-division-entry{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;border:1px solid var(--publisher-rule,#2b2b2d);border-radius:6px;padding:22px;background:#080808;color:var(--publisher-text,#f7f7f7);font-family:\"Inter\",sans-serif;text-decoration:none;transition:border-color 160ms ease-out,background-color 160ms ease-out}.ds-division-entry h3{margin:0;font-size:18px;font-weight:700;line-height:1.25;letter-spacing:-0.025em;text-wrap:balance}.ds-division-entry p{margin:10px 0 0;color:var(--publisher-muted,#c0c0c4);font-size:12px;line-height:1.7}.ds-division-entry span{display:block;margin-top:14px;color:#aaaab2;font-size:11px}.ds-division-entry svg{width:20px;height:20px;flex:none}.ds-division-entry:hover{border-color:#8a72e8;background:#18131f}.ds-division-entry:focus-visible{outline:3px solid var(--publisher-accent,#7b5cff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(max-width:767px){.ds-division-entry{padding:20px}.ds-division-entry h3{font-size:16px}}@media(max-width:479px){.ds-division-entry{min-height:120px}}@media(prefers-reduced-motion:reduce){.ds-division-entry{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
     },
     {
       "name": "Community Destination Row",
@@ -455,16 +483,17 @@
       "refersTo": "community-row",
       "description": "The implemented large ruled destination pattern, keeping platform name and explanatory copy together.",
       "html": "<a class=\"ds-community-row\" href=\"https://discord.gg/63ZZBdW8p\" target=\"_blank\" rel=\"noopener noreferrer\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\"/></svg><span><strong>Beyond 90 Discord</strong><span>Talk with the Beyond 90 community</span></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
-      "css": ".ds-community-row{display:flex;align-items:center;gap:20px;min-height:94px;border-top:1px solid var(--publisher-rule,#2b2b2d);padding-block:18px;color:var(--publisher-text,#f7f7f7);font-family:\"Merriweather Sans\",sans-serif;text-decoration:none;transition:color 160ms ease-out}.ds-community-row>span{flex:1;min-width:0}.ds-community-row>svg{width:22px;height:22px;flex:none}.ds-community-row>svg:last-child{width:20px;height:20px}.ds-community-row strong{display:block;font-size:18px}.ds-community-row span span{display:block;margin-top:6px;overflow-wrap:anywhere;font-size:13px;line-height:1.6;color:var(--publisher-muted,#c0c0c4)}.ds-community-row:hover{color:var(--publisher-accent,#d6ff4b)}.ds-community-row:focus-visible{outline:3px solid var(--publisher-accent,#d6ff4b);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(prefers-reduced-motion:reduce){.ds-community-row{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
+      "css": ".ds-community-row{display:flex;align-items:center;gap:20px;min-height:94px;border-top:1px solid var(--publisher-rule,#2b2b2d);padding-block:18px;color:var(--publisher-text,#f7f7f7);font-family:\"Merriweather Sans\",sans-serif;text-decoration:none;transition:color 160ms ease-out}.ds-community-row>span{flex:1;min-width:0}.ds-community-row>svg{width:22px;height:22px;flex:none}.ds-community-row>svg:last-child{width:20px;height:20px}.ds-community-row strong{display:block;font-size:18px}.ds-community-row span span{display:block;margin-top:6px;overflow-wrap:anywhere;font-size:13px;line-height:1.6;color:var(--publisher-muted,#c0c0c4)}.ds-community-row:hover{color:var(--publisher-accent,#3896ff)}.ds-community-row:focus-visible{outline:3px solid var(--publisher-accent,#3896ff);outline-offset:4px;box-shadow:0 0 0 5px #050505}@media(prefers-reduced-motion:reduce){.ds-community-row{transition-duration:0.01ms!important;animation-duration:0.01ms!important;animation-iteration-count:1!important}}"
     }
   ],
   "narrative": {
     "northStar": "Drixil Publisher System",
-    "overview": "Drixil's publisher system pairs dark, flat surfaces with bold type and the supplied company marks. The Group identity uses violet; Interactive uses volt. Real game artwork carries the richest colour, while the surrounding interface stays legible and direct.\n\nThe system connects the parent company, its divisions, and game discovery without treating them as the same page. Large headings establish hierarchy, compact labels explain context, and visible development status keeps the presentation honest. Page-specific composition belongs in .impeccable/surfaces/src-app-tsx.md; this document records the shared visual language implemented in the source.",
+    "overview": "Drixil's publisher system pairs dark, flat surfaces with bold type and the supplied company marks. The Group identity uses violet; Interactive uses Beyond 90 blue. Original game artwork and authorized blue variants carry the richest colour, while the surrounding interface stays legible and direct.\n\nThe system connects the parent company, its divisions, and game discovery without treating them as the same page. Large headings establish hierarchy, compact labels explain context, and visible development status keeps the presentation honest. Page-specific composition belongs in .impeccable/surfaces/src-app-tsx.md; this document records the shared visual language implemented in the source.",
     "keyCharacteristics": [
       "Black and charcoal surfaces, off-white headings, and readable muted copy.",
-      "Violet Group actions and volt Interactive actions with separate text-safe treatments.",
-      "Local Merriweather Sans for the interface; local Mitr for uppercase game display type.",
+      "Violet Group actions and blue Interactive actions with separate text-safe treatments.",
+      "Local Inter for Group; local Merriweather Sans and uppercase Mitr for Interactive.",
+      "Integrated silver/violet brand atmosphere behind live Group copy, with readable mobile translation.",
       "Crisp controls, softly rounded artwork, and restrained hover feedback.",
       "Native disclosure navigation, visible keyboard focus, and mobile reading-order continuity."
     ],
@@ -475,8 +504,8 @@
         "section": "colors"
       },
       {
-        "name": "Two Faces",
-        "body": "Use Merriweather Sans for company headings, body copy, labels, and controls. Use Mitr for the implemented uppercase Interactive display roles, not for paragraphs.",
+        "name": "Division Type",
+        "body": "Use Inter throughout Group-themed surfaces. Use Merriweather Sans for Interactive's body, labels, and controls, with Mitr reserved for its implemented uppercase display roles, not paragraphs.",
         "section": "typography"
       },
       {
@@ -486,7 +515,7 @@
       }
     ],
     "dos": [
-      "Do preserve the supplied Drixil marks, real project artwork, and confirmed partner assets.",
+      "Do preserve the supplied Drixil marks, original project artwork, and confirmed partner assets; retain provenance for authorized generated atmosphere and blue variants.",
       "Do keep Group's text-safe violet and white-on-violet action fill in their documented roles.",
       "Do use the filled game action and outline community action as distinct destinations.",
       "Do retain visible focus, native disclosure semantics, descriptive link names, and written development status.",
@@ -494,7 +523,7 @@
       "Do use the existing local fonts and respect reduced-motion preferences."
     ],
     "donts": [
-      "Don't replace Drixil identity or game art with another publisher's branding or invented imagery.",
+      "Don't replace Drixil identity with another publisher's branding or present generated atmosphere and promotional artwork as factual projects or shipped gameplay.",
       "Don't infer a release date, shipped game, client portfolio, review, award, or metric from promotional artwork.",
       "Don't add pill-shaped controls or diffuse card shadows as if they were established patterns.",
       "Don't turn noninteractive status labels or game-mode text into controls without a product requirement.",

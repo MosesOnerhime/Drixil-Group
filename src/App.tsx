@@ -13,6 +13,7 @@ import {
   MousePointer2,
   Music2,
   PenTool,
+  Play,
   Phone,
   Store,
   Trophy,
@@ -107,8 +108,8 @@ const divisions: Division[] = [
     descriptor:
       "An Africa-based game studio building for a global audience, starting with Roblox.",
     icon: Gamepad2,
-    accent: "#d8ff1f",
-    accentClass: "text-volt",
+    accent: "#3896ff",
+    accentClass: "text-blue-400",
     stage: "active",
   },
   {
@@ -377,7 +378,9 @@ function Brand({ division = "Group" }: { division?: string }) {
       ariaLabel={
         division === "Interactive"
           ? "Drixil Interactive home"
-          : "Drixil Group home"
+          : division === "Group"
+            ? "Drixil Group home"
+            : `Drixil ${division}, Drixil Group home`
       }
     >
       <img
@@ -388,7 +391,7 @@ function Brand({ division = "Group" }: { division?: string }) {
         className="publisher-mark"
       />
       <span className="publisher-brand-name">
-        Drixil<span>{division}</span>
+        Drixil <span>{division}</span>
       </span>
     </RouteLink>
   );
@@ -608,6 +611,33 @@ function Artwork({
   );
 }
 
+function MatchdayBanner({
+  sizes,
+  className,
+}: {
+  sizes: string;
+  className?: string;
+}) {
+  return (
+    <picture className="matchday-banner">
+      <source
+        media="(min-width: 768px)"
+        srcSet="/media/beyond-90-panorama-blue-v3-960.webp 960w, /media/beyond-90-panorama-blue-v3-1536.webp 1536w, /media/beyond-90-panorama-blue-v3-2172.webp 2172w"
+        sizes={sizes}
+        width="2172"
+        height="724"
+      />
+      <Artwork
+        asset="beyond-90-matchday-blue-v2"
+        alt="Beyond 90 football artwork, with the ball, a goalkeeper, and players competing under stadium lights"
+        priority
+        sizes={sizes}
+        className={className}
+      />
+    </picture>
+  );
+}
+
 function ParentSite({ year }: { year: number }) {
   usePageMetadata(getPageMetadata("/"));
   return (
@@ -615,41 +645,45 @@ function ParentSite({ year }: { year: number }) {
       <SkipLink />
       <PublisherHeader />
       <main id="main-content" tabIndex={-1}>
-        <section
-          id="top"
-          className="page-shell company-hero"
-          aria-labelledby="home-title"
-        >
-          <div className="company-intro">
-            <h1 id="home-title">Drixil Group</h1>
-            <p className="company-tagline">Games. Media. Technology.</p>
-            <p className="company-summary">
-              A creative entertainment company building games, digital media,
-              software, and original IP for a global audience.
-            </p>
-            <div className="action-row">
-              <a href="#ecosystem" className="publisher-button">
-                Explore the divisions
-                <ArrowUpRight aria-hidden="true" className="publisher-icon" />
-              </a>
-              <a
-                href="#current-project"
-                className="publisher-button publisher-button--outline"
-              >
-                View current work
-                <ArrowRight aria-hidden="true" className="publisher-icon" />
-              </a>
-            </div>
-          </div>
-          <div className="company-mark" aria-hidden="true">
+        <section id="top" className="company-hero" aria-labelledby="home-title">
+          <picture className="company-scene" aria-hidden="true">
+            <source
+              media="(max-width: 767px)"
+              srcSet="/media/drixil-hero-v2-1080.webp"
+            />
             <img
-              src={drixilMetallic}
+              src="/media/drixil-hero-v2-2172.webp"
+              srcSet="/media/drixil-hero-v2-1536.webp 1536w, /media/drixil-hero-v2-2172.webp 2172w"
+              sizes="100vw"
               alt=""
-              width="1254"
-              height="1254"
+              width="2172"
+              height="724"
               fetchPriority="high"
               decoding="async"
             />
+          </picture>
+          <div className="page-shell company-hero-content">
+            <div className="company-intro">
+              <h1 id="home-title">Drixil Group</h1>
+              <p className="company-tagline">Games. Media. Technology.</p>
+              <p className="company-summary">
+                A creative entertainment company building games, digital media,
+                software, and original IP for a global audience.
+              </p>
+              <div className="action-row">
+                <a href="#ecosystem" className="publisher-button">
+                  Explore the divisions
+                  <ArrowUpRight aria-hidden="true" className="publisher-icon" />
+                </a>
+                <a
+                  href="#current-project"
+                  className="publisher-button publisher-button--outline"
+                >
+                  <Play aria-hidden="true" className="publisher-icon" />
+                  View current work
+                </a>
+              </div>
+            </div>
           </div>
         </section>
         <section
@@ -671,12 +705,7 @@ function ParentSite({ year }: { year: number }) {
             <div className="division-features">
               <RouteLink to="/interactive" className="interactive-feature">
                 <div className="feature-art">
-                  <Artwork
-                    asset="beyond-90-matchday"
-                    alt="Beyond 90 football artwork from Drixil Interactive"
-                    priority
-                    sizes="(min-width: 1100px) 57vw, 100vw"
-                  />
+                  <MatchdayBanner sizes="(min-width: 1100px) 57vw, 100vw" />
                 </div>
                 <div className="feature-caption">
                   <div>
@@ -691,10 +720,10 @@ function ParentSite({ year }: { year: number }) {
               </RouteLink>
               <RouteLink to="/studio" className="studio-feature">
                 <img
-                  src={drixilMetallic}
+                  src="/media/drixil-studio-v2-960.webp"
                   alt=""
-                  width="1254"
-                  height="1254"
+                  width="960"
+                  height="640"
                   loading="lazy"
                   decoding="async"
                 />
@@ -740,9 +769,9 @@ function ParentSite({ year }: { year: number }) {
           aria-labelledby="current-project-title"
         >
           <img
-            src="/media/beyond-90-640.webp"
-            srcSet="/media/beyond-90-640.webp 640w, /media/beyond-90-1254.webp 1254w"
-            sizes="(min-width: 768px) 320px, 100vw"
+            src="/media/beyond-90-current-icon-640.webp"
+            srcSet="/media/beyond-90-current-icon-640.webp 640w, /media/beyond-90-current-icon-1254.webp 1254w"
+            sizes="(max-width: 359px) calc(100vw - 40px), 320px"
             alt="Beyond 90 Roblox football game icon"
             width="1254"
             height="1254"
@@ -880,13 +909,7 @@ function InteractiveSite({ year }: { year: number }) {
           aria-labelledby="lead-game-title"
           className="game-showcase"
         >
-          <Artwork
-            asset="beyond-90-matchday"
-            alt="Beyond 90 matchday artwork, with football players competing in a packed stadium"
-            sizes="100vw"
-            priority
-            className="showcase-art"
-          />
+          <MatchdayBanner sizes="100vw" className="showcase-art" />
           <div className="page-shell showcase-caption">
             <div>
               <p id="lead-game-title" className="publisher-display">
@@ -962,7 +985,9 @@ function InteractiveSite({ year }: { year: number }) {
             <div className="project-heading">
               <div className="project-identity">
                 <img
-                  src="/media/beyond-90-640.webp"
+                  src="/media/beyond-90-current-icon-640.webp"
+                  srcSet="/media/beyond-90-current-icon-640.webp 640w, /media/beyond-90-current-icon-1254.webp 1254w"
+                  sizes="120px"
                   alt="Beyond 90 game icon"
                   width="640"
                   height="640"
@@ -1013,9 +1038,20 @@ function InteractiveSite({ year }: { year: number }) {
                 </p>
               </div>
               <div className="artwork-grid">
+                <figure className="artwork-main">
+                  <Artwork
+                    asset="beyond-90-main-blue"
+                    alt="Beyond 90's current blue-and-violet artwork, with a footballer striking the ball under stadium lights"
+                    sizes="100vw"
+                  />
+                  <figcaption>
+                    <span>Beyond 90</span>
+                    <span>Current game artwork</span>
+                  </figcaption>
+                </figure>
                 <figure>
                   <Artwork
-                    asset="beyond-90-matchday"
+                    asset="beyond-90-matchday-blue-v2"
                     alt="Beyond 90 players competing in a packed Roblox football stadium"
                   />
                   <figcaption>
@@ -1025,7 +1061,7 @@ function InteractiveSite({ year }: { year: number }) {
                 </figure>
                 <figure>
                   <Artwork
-                    asset="beyond-90-broadcast"
+                    asset="beyond-90-broadcast-blue-v2"
                     alt="Beyond 90 broadcast camera overlooking a full football pitch"
                   />
                   <figcaption>

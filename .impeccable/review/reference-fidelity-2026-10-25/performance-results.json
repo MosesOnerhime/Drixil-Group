@@ -1,0 +1,45 @@
+{
+  "environment": "Local headless Chrome, cold contexts, no network/CPU throttling; not field Core Web Vitals.",
+  "results": [
+    {
+      "route": "/",
+      "vitals": {
+        "cls": 0,
+        "lcp": {
+          "ms": 544,
+          "tag": "IMG",
+          "src": "/media/drixil-hero-v2-2172.webp"
+        }
+      },
+      "fonts": [
+        {
+          "url": "http://127.0.0.1:4173/assets/inter-latin-variable-DIDQkJxP.woff2",
+          "bytes": 77356
+        }
+      ],
+      "dom": 5599
+    },
+    {
+      "route": "/interactive",
+      "vitals": {
+        "cls": 0.001664545080713855,
+        "lcp": {
+          "ms": 264,
+          "tag": "IMG",
+          "src": "/media/beyond-90-matchday-blue-v2-1672.webp"
+        }
+      },
+      "fonts": [
+        {
+          "url": "http://127.0.0.1:4173/assets/merriweather-sans-latin-variable-C4-R6WM8.woff2",
+          "bytes": 38528
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/mitr-latin-700-ChTVkFRU.woff2",
+          "bytes": 21768
+        }
+      ],
+      "dom": 8323
+    }
+  ]
+}

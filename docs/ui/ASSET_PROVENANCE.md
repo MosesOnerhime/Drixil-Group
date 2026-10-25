@@ -1,6 +1,6 @@
 # Website asset provenance
 
-Recorded for the 2026-10-25 publisher-layout revamp. This update reuses the supplied company and game artwork; it adds no stock photographs, invented portfolio pieces, or regenerated game scenes.
+The first table is a historical record of the initial 2026-10-25 publisher-layout revamp, not the current source selection. The later reference-fidelity correction explicitly authorizes generated brand atmosphere and blue game-art variants; the current source/runtime mapping is recorded in the correction section below. No stock photographs, invented portfolio projects, or claims of shipped gameplay are added.
 
 | Website asset | Source / status | Use and treatment |
 | --- | --- | --- |
@@ -24,8 +24,29 @@ The supplied Volleyball Rally source directory was `D:/repos/Drixil Interactive/
 
 Approved Group A and Interactive B mockups live under `.impeccable/approved-group/` and `.impeccable/mocks/`. They were generated with the built-in image tool from the existing identity and project assets. Exact prompts, input roles, dates and the user's explicit selection are recorded in their PNG metadata and JSON sidecars. Unselected drafts and derived inspection/QA files are local process evidence, not website content.
 
-Generated mockups changed some game-art geometry. Production uses the factual originals, not crops of those mockups. The font matcher supplied reference measurements and proof sheets; final browser captures and independent review assess the implemented layout. No numeric fidelity score is represented as a human approval.
+Generated mockups changed some game-art geometry. The initial production used factual originals rather than crops of those mockups. The later authorized production images below are separately generated assets derived from the supplied identity/art and composition references; no website screenshot is shipped as a flattened page. The font matcher supplied reference measurements and proof sheets; final browser captures and independent review assess the implemented layout. No numeric fidelity score is represented as a human approval.
 
 ## Fonts and icons
 
-Mitr Bold and variable Merriweather Sans Latin WOFF2 files are self-hosted in `src/assets/fonts/`, alongside their original SIL OFL texts and source notes. Icons use the existing Lucide dependency. The compact Roblox pictogram is a simple inline SVG identifying the linked platform; it is not a redrawn game or company logo.
+Inter, Mitr Bold and variable Merriweather Sans Latin WOFF2 files are self-hosted in `src/assets/fonts/`, alongside their original SIL OFL texts and source notes. Group uses Inter; Interactive retains Merriweather Sans and Mitr. Icons use the existing Lucide dependency. The compact Roblox pictogram is a simple inline SVG identifying the linked platform; it is not a redrawn game or company logo.
+
+## Reference-fidelity and blue identity correction (2026-10-25)
+
+The user supplied Group A again and explicitly authorized image generation. This replaces the earlier restriction on generated atmosphere/colour variants, not the requirement to preserve identity and facts. Exact prompts, input roles, selected outputs and stored source paths are in [reference-fidelity-assets.md](../design/reference-fidelity-assets.md).
+
+| Preserved production source | Runtime asset | Origin and current use |
+| --- | --- | --- |
+| `src/assets/brand/drixil-hero-v2.png` | `public/media/drixil-hero-v2-{1080,1536,2172}.webp` | Built-in image generation from approved Group A composition and original metallic D identity. Text-free continuous black/silver/violet environment, smoke and floor reflection; live copy/controls are HTML. Full-width desktop atmosphere and the lower phone plate replace the old cropped JPEG hero. |
+| `src/assets/brand/drixil-studio-v2.png` | `public/media/drixil-studio-v2-960.webp` | Built-in image generation from the approved Studio backdrop and original metallic mark. Dark diagonal metal and violet lighting behind actual service copy, not a portfolio piece. Also supplies low-opacity, route-tinted directory backgrounds. |
+| `src/assets/beyond-90-matchday-blue-v2.png` | `public/media/beyond-90-matchday-blue-v2-{768,1672}.webp` | Built-in colour update of original `src/assets/beyond-90-thumbnail-1.png`, with the current main thumbnail as palette reference. Complete 16:9 source used in the gallery and as both banners' phone fallback; no longer the desktop shallow-banner source. Original wording and scene remain recognizable; originals are preserved. |
+| `src/assets/beyond-90-panorama-blue-v3.png` | `public/media/beyond-90-panorama-blue-v3-{960,1536,2172}.webp` | Reviewer-requested, built-in 3:1 recreation of the blue matchday composition. Group A and Interactive B guide focal scale only. Smaller complete BEYOND/90, visible ball, pitch and shooting action fit the shallow desktop slots. `MatchdayBanner` selects it at widths from 768px for the Group feature and Interactive lead; it is not substituted into the full gallery. |
+| `src/assets/beyond-90-broadcast-blue-v2.png` | `public/media/beyond-90-broadcast-blue-v2-{768,1672}.webp` | Built-in colour update of original `src/assets/beyond-90-thumbnail-3.png`. Existing complete broadcast gallery retained with blue branding. |
+| `src/assets/beyond-90-main-blue.png` | `public/media/beyond-90-main-blue-{768,1672}.webp` | Byte-preserved copy of current original `D:/repos/Drixil Interactive/Beyond-90/assets/media/thumbnail main.png`. Full composition spans the main gallery row and supplies Interactive social preview. Not generated and not the desktop lead-banner source. |
+| `src/assets/beyond-90-current-icon.png` | `public/media/beyond-90-current-icon-{640,1254}.webp` | Byte-preserved copy of current original `D:/repos/Drixil Interactive/Beyond-90/assets/media/icon.png`. Group current-work and Interactive detail icons. |
+| Official Google Fonts Inter normal variable | `src/assets/fonts/inter-latin-variable.woff2` | Latin-subset with fontTools, self-hosted for Group reference typography. SIL OFL retained as `Inter-OFL.txt`. Interactive's Mitr/Merriweather pairing remains. |
+
+All old supplied artwork is retained, but old lime Beyond 90 derivatives are no longer referenced by page content or metadata. Generated source PNGs remain in `src/assets/` and are not imported into the browser bundle. Runtime WebP files have exact-prompt/origin sidecars; generated PNGs embed exact prompts. Production assets are proportionally resized and compressed with FFmpeg. No game source file was modified.
+
+Beyond 90's `Theme.luau` confirms RGB (56, 150, 255), used as the Interactive interaction blue (`#3896ff`). Its secondary violet (`#8254f4`) is present in artwork, not promoted to a universal UI token. The original current main image and icon remain distinct from the generated palette updates and panorama.
+
+At this documentation merge, the fresh finish review remains **fix**, pending re-verification of the panorama, brand accessible names and these records. The original review and single truncated detector summary remain in `.impeccable/review/reference-fidelity-2026-10-25/`; the failed native phase state is archived unchanged under `.impeccable/archive/publisher-2026-10-25/`. Provenance is not a new ship, pixel-perfect or clean-detector certificate. Final QA/review/deployment evidence belongs in the dated handoff.

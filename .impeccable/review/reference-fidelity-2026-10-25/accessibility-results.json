@@ -1,0 +1,124 @@
+[
+  {
+    "route": "/",
+    "width": 390,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 17
+      }
+    ],
+    "passes": 24
+  },
+  {
+    "route": "/interactive",
+    "width": 390,
+    "violations": [],
+    "incomplete": [],
+    "passes": 22
+  },
+  {
+    "route": "/studio",
+    "width": 390,
+    "violations": [],
+    "incomplete": [],
+    "passes": 21
+  },
+  {
+    "route": "/labs",
+    "width": 390,
+    "violations": [],
+    "incomplete": [],
+    "passes": 18
+  },
+  {
+    "route": "/originals",
+    "width": 390,
+    "violations": [],
+    "incomplete": [],
+    "passes": 18
+  },
+  {
+    "route": "/store",
+    "width": 390,
+    "violations": [],
+    "incomplete": [],
+    "passes": 18
+  },
+  {
+    "route": "/ventures",
+    "width": 390,
+    "violations": [],
+    "incomplete": [],
+    "passes": 18
+  },
+  {
+    "route": "/404",
+    "width": 390,
+    "violations": [],
+    "incomplete": [],
+    "passes": 17
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 17
+      }
+    ],
+    "passes": 23
+  },
+  {
+    "route": "/interactive",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [],
+    "passes": 21
+  },
+  {
+    "route": "/studio",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [],
+    "passes": 21
+  },
+  {
+    "route": "/labs",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [],
+    "passes": 18
+  },
+  {
+    "route": "/originals",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [],
+    "passes": 18
+  },
+  {
+    "route": "/store",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [],
+    "passes": 18
+  },
+  {
+    "route": "/ventures",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [],
+    "passes": 18
+  },
+  {
+    "route": "/404",
+    "width": 1440,
+    "violations": [],
+    "incomplete": [],
+    "passes": 17
+  }
+]

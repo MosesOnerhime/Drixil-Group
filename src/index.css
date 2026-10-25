@@ -67,7 +67,7 @@ html {
 }
 
 :where(a, button, [tabindex]):focus-visible {
-  outline: 3px solid #d6ff4b;
+  outline: 3px solid #3896ff;
   outline-offset: 3px;
   box-shadow: 0 0 0 5px #050505;
 }

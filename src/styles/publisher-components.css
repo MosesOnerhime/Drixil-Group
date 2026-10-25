@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-variable.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "Merriweather Sans";
   font-style: normal;
   font-weight: 300 800;
@@ -21,7 +29,7 @@
   --publisher-text: #f7f7f7;
   --publisher-muted: #c0c0c4;
   --publisher-rule: #2b2b2d;
-  --publisher-accent: #d6ff4b;
+  --publisher-accent: #3896ff;
   color: var(--publisher-text);
   background: var(--publisher-ground);
   font-family: "Merriweather Sans", sans-serif;
@@ -120,7 +128,7 @@
   border-radius: 4px;
   color: #080808;
   background: var(--publisher-accent);
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 800;
   line-height: 20px;
@@ -133,11 +141,11 @@
 }
 
 .publisher-button:hover {
-  background: #e4ff83;
+  background: #69b0ff;
 }
 
 .publisher-button:active {
-  background: #c4ec36;
+  background: #2589f6;
 }
 
 .publisher-button--outline {

@@ -12,9 +12,9 @@ colors:
   group-action: "#7250ed"
   group-action-hover: "#6542dc"
   group-action-active: "#5835c8"
-  interactive-accent: "#d6ff4b"
-  interactive-action-hover: "#e4ff83"
-  interactive-action-active: "#c4ec36"
+  interactive-accent: "#3896ff"
+  interactive-action-hover: "#69b0ff"
+  interactive-action-active: "#2589f6"
   outline-stroke: "#909092"
   outline-hover: "#242424"
   outline-active: "#303030"
@@ -25,11 +25,23 @@ colors:
   directory-hover-rule: "#8a72e8"
 typography:
   company-display:
-    fontFamily: "Merriweather Sans, sans-serif"
-    fontSize: "clamp(54px, 6.5vw, 100px)"
-    fontWeight: 800
-    lineHeight: 1.04
-    letterSpacing: "-0.04em"
+    fontFamily: "Inter, sans-serif"
+    fontSize: "clamp(54px, 6.8vw, 104px)"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "0"
+  company-tagline:
+    fontFamily: "Inter, sans-serif"
+    fontSize: "clamp(26px, 3.5vw, 54px)"
+    fontWeight: 400
+    lineHeight: 1.11
+    letterSpacing: "-0.01em"
+  group-headline:
+    fontFamily: "Inter, sans-serif"
+    fontSize: "clamp(30px, 3.25vw, 50px)"
+    fontWeight: 700
+    lineHeight: 1.15
+    letterSpacing: "-0.02em"
   game-display:
     fontFamily: "Mitr, sans-serif"
     fontSize: "clamp(44px, 4.5vw, 69px)"
@@ -52,6 +64,10 @@ typography:
     fontFamily: "Merriweather Sans, sans-serif"
     fontSize: "16px"
     lineHeight: 1.8
+  group-body:
+    fontFamily: "Inter, sans-serif"
+    fontSize: "16px"
+    lineHeight: 1.8
   label:
     fontFamily: "Merriweather Sans, sans-serif"
     fontSize: "12px"
@@ -63,12 +79,25 @@ typography:
     fontSize: "14px"
     fontWeight: 800
     lineHeight: "20px"
+  group-button:
+    fontFamily: "Inter, sans-serif"
+    fontSize: "12px"
+    fontWeight: 700
+    lineHeight: "20px"
+    letterSpacing: "0.12em"
   navigation:
     fontFamily: "Merriweather Sans, sans-serif"
     fontSize: "13px"
     fontWeight: 600
     lineHeight: "17px"
+  group-navigation:
+    fontFamily: "Inter, sans-serif"
+    fontSize: "12px"
+    fontWeight: 600
+    lineHeight: "17px"
+    letterSpacing: "0.16em"
 rounded:
+  group-control: "2px"
   control: "4px"
   directory: "6px"
   artwork: "8px"
@@ -91,8 +120,8 @@ components:
   button-group:
     backgroundColor: "{colors.group-action}"
     textColor: "#fff"
-    typography: "{typography.button}"
-    rounded: "{rounded.control}"
+    typography: "{typography.group-button}"
+    rounded: "{rounded.group-control}"
     padding: "0 20px"
   button-group-hover:
     backgroundColor: "{colors.group-action-hover}"
@@ -118,11 +147,20 @@ components:
     backgroundColor: "{colors.outline-hover}"
   button-outline-active:
     backgroundColor: "{colors.outline-active}"
+  button-group-outline:
+    backgroundColor: "transparent"
+    textColor: "{colors.text}"
+    typography: "{typography.group-button}"
+    rounded: "{rounded.group-control}"
+    padding: "0 20px"
   editorial-link-group:
     textColor: "{colors.group-text}"
   navigation-link:
     textColor: "{colors.text}"
     typography: "{typography.navigation}"
+  navigation-link-group:
+    textColor: "#c6c6cf"
+    typography: "{typography.group-navigation}"
   development-status:
     textColor: "{colors.muted}"
   division-card:
@@ -141,23 +179,24 @@ components:
 
 **Creative North Star: "Drixil Publisher System"**
 
-Drixil's publisher system pairs dark, flat surfaces with bold type and the supplied company marks. The Group identity uses violet; Interactive uses volt. Real game artwork carries the richest colour, while the surrounding interface stays legible and direct.
+Drixil's publisher system pairs dark, flat surfaces with bold type and the supplied company marks. The Group identity uses violet; Interactive uses Beyond 90 blue. Original game artwork and authorized blue variants carry the richest colour, while the surrounding interface stays legible and direct.
 
 The system connects the parent company, its divisions, and game discovery without treating them as the same page. Large headings establish hierarchy, compact labels explain context, and visible development status keeps the presentation honest. Page-specific composition belongs in .impeccable/surfaces/src-app-tsx.md; this document records the shared visual language implemented in the source.
 
-This is the implemented replacement publisher layout, not the superseded evolution-only direction. Source of truth: `src/styles/publisher-components.css`, `src/styles/publisher-layout.css`, `src/index.css`, and the actual components in `src/App.tsx`. The YAML above owns normative tokens; the companion `.impeccable/design.json` adds preview snippets and extension metadata.
+This merges the user's 2026-10-25 reference-fidelity correction into the implemented publisher layout; it is not a new identity. Source of truth: `src/styles/publisher-components.css`, `src/styles/publisher-layout.css`, `src/index.css`, and the actual components in `src/App.tsx`. The YAML above owns normative tokens; the companion `.impeccable/design.json` adds preview snippets and extension metadata. Review and delivery status belong in the dated surface evidence and handoff, not in this token record.
 
 **Key Characteristics:**
 
 - Black and charcoal surfaces, off-white headings, and readable muted copy.
-- Violet Group actions and volt Interactive actions with separate text-safe treatments.
-- Local Merriweather Sans for the interface; local Mitr for uppercase game display type.
+- Violet Group actions and blue Interactive actions with separate text-safe treatments.
+- Local Inter for Group; local Merriweather Sans and uppercase Mitr for Interactive.
+- Integrated silver/violet brand atmosphere behind live Group copy, with readable mobile translation.
 - Crisp controls, softly rounded artwork, and restrained hover feedback.
 - Native disclosure navigation, visible keyboard focus, and mobile reading-order continuity.
 
 ## Colors
 
-The palette keeps the interface dark and lets violet, volt, and real project imagery establish identity. Frontmatter values are normative; names below explain their use.
+The palette keeps the interface dark and lets violet, Beyond 90 blue, and project imagery establish identity. Frontmatter values are normative; names below explain their use.
 
 ### Primary
 
@@ -167,7 +206,7 @@ The palette keeps the interface dark and lets violet, volt, and real project ima
 
 ### Secondary
 
-- **Interactive Volt** (`interactive-accent`): Interactive filled actions, accent display text, focus outlines, and current-focus status dots. Its hover and active siblings are action feedback, not new brand colours.
+- **Beyond 90 Blue** (`interactive-accent`): Interactive filled actions with dark text, accent display text, focus outlines, and current-focus status dots. Its hover and active siblings are action feedback, not new brand colours. The value is confirmed by Beyond 90's `Theme.luau`; the artwork's secondary violet is not a universal interface token.
 
 ### Tertiary
 
@@ -190,24 +229,25 @@ The sidecar's generated eight-step tonal strips are inspection aids, not additio
 
 ## Typography
 
-**Display Font:** local Merriweather Sans for company headings; local Mitr for uppercase Interactive display roles.
-**Body Font:** local Merriweather Sans, with sans-serif fallback.
+**Display Font:** local Inter for Group company headings; local Mitr for uppercase Interactive display roles.
+**Body Font:** local Inter on Group and Group-themed division pages; local Merriweather Sans on Interactive, with sans-serif fallbacks.
 
-Merriweather Sans is supplied as a normal variable WOFF2 (weights 300–800); Mitr is a normal WOFF2 (weight 700). Both use `font-display: swap`. The files are `src/assets/fonts/merriweather-sans-latin-variable.woff2` and `src/assets/fonts/mitr-latin-700.woff2`. The publisher wrapper overrides the root's Inter/system fallback; do not mistake the root fallback for the publisher's design face.
+Inter is supplied as a normal variable WOFF2 (weights 100–900), Merriweather Sans as a normal variable WOFF2 (weights 300–800), and Mitr as a normal WOFF2 (weight 700). All use `font-display: swap`. The self-hosted files are `src/assets/fonts/inter-latin-variable.woff2`, `src/assets/fonts/merriweather-sans-latin-variable.woff2`, and `src/assets/fonts/mitr-latin-700.woff2`. The Group theme explicitly selects Inter; the base publisher theme selects Merriweather Sans.
 
 ### Hierarchy
 
-- **Company display** (`company-display`): weight 800, tight tracking, for the Group masthead. Its mobile size becomes `clamp(44px, 10vw, 68px)`.
+- **Company display** (`company-display`): weight 700 with neutral tracking for the Group hero. Its mobile size becomes `clamp(44px, 10vw, 68px)`.
+- **Company tagline** (`company-tagline`): regular-weight companion to the company title; mobile becomes `clamp(23px, 4.6vw, 34px)` with an 8px top gap.
 - **Game display** (`game-display`): uppercase Mitr for the lead game caption. It becomes 44px below the mobile breakpoint and 42px below the narrow-mobile breakpoint. Other game display contexts have their own observed sizes.
-- **Headline** (`headline`): responsive section headings; 32px on mobile.
-- **Title** (`title`): compact subordinate headings; feature/card variants adjust size to their context.
-- **Body** (`body`): readable muted paragraphs, reduced to 15px on mobile. Split-section copy is limited to 65ch; the Group summary is limited to 660px. Large copy uses `clamp(20px, 1.8vw, 28px)` with a 1.5 line height.
-- **Label** (`label`): uppercase tracked context labels; 10px on mobile. Status labels share the tracked treatment but use a 1.4 line height.
-- **Navigation / button**: compact navigation at weight 600; filled and outlined actions at weight 800.
+- **Headline** (`headline`, `group-headline`): Interactive uses the base weight-800 heading; Group uses Inter at weight 700. Both become 32px on mobile.
+- **Title** (`title`): compact subordinate headings; Group inherits Inter, while Interactive uses Merriweather Sans. Feature/card variants adjust size to their context.
+- **Body** (`body`, `group-body`): readable muted paragraphs, reduced to 15px on mobile. Split-section copy is limited to 65ch. The Group summary is a 660px maximum, 21px/1.4 desktop variant, then 18px below 1100px and 16px on mobile. Large copy uses `clamp(20px, 1.8vw, 28px)` with a 1.5 line height.
+- **Label** (`label`): uppercase tracked context labels inheriting the page's typeface; 10px on mobile. Status labels share the tracked treatment but use a 1.4 line height. This records existing reference-pinned labels, not permission to add generic eyebrows.
+- **Navigation / button**: Interactive uses compact navigation at weight 600 and actions at weight 800. Group navigation is uppercase and tracked; Group actions use uppercase weight-700 Inter (`group-button`).
 
 Headings use balanced wrapping. The Interactive purpose heading deliberately has a tighter desktop line height (0.84), relaxed to 1.05 on mobile; that is a surface-specific display treatment, not a paragraph setting.
 
-**The Two Faces Rule.** Use Merriweather Sans for company headings, body copy, labels, and controls. Use Mitr for the implemented uppercase Interactive display roles, not for paragraphs.
+**The Division Type Rule.** Use Inter throughout Group-themed surfaces. Use Merriweather Sans for Interactive's body, labels, and controls, with Mitr reserved for its implemented uppercase display roles, not paragraphs.
 
 ## Layout
 
@@ -222,17 +262,17 @@ Responsive thresholds are literal implementation boundaries:
 | Up to 767px | Shell gutters are 24px; main two-column content and galleries stack; standard section padding becomes 56px. |
 | Up to 479px | Shell gutters are 20px; directory and feature lists become one column; principal action groups stack. |
 
-The masthead remains sticky and 64px tall. Desktop navigation links and mobile summary controls provide 44px targets. Default large actions are at least 52px tall; mobile actions are at least 48px. The compact Group header contact action is a distinct 40px-high variant, hidden below 768px.
+The masthead remains sticky and 64px tall. Desktop navigation links and mobile summary controls provide 44px targets. Default large actions are at least 52px tall; mobile actions are at least 48px. The compact Group header contact action is a distinct 42px-high variant, hidden below 768px. Header gutters use 20px on mobile and 16px below 480px; content gutters remain those in the table.
 
 Spacing uses the observed scale in frontmatter, with 12px action gaps, 16px paragraph rhythm, 24–32px local groupings, and 64–80px wide content rhythm. Use the existing layout context instead of forcing every relationship onto one gap. The base document supports widths from 320px.
 
-Content anchors have an 88px scroll margin; the root has 5rem scroll padding. The skip link precedes the header. Mobile keeps essential content and destinations, but omits the decorative metallic hero mark. Real artwork declares dimensions and responsive sources; mobile lead imagery returns to its full 1672:941 aspect ratio rather than retaining a desktop crop.
+Content anchors have an 88px scroll margin; the root has 5rem scroll padding. The skip link precedes the header. The Group hero has a 418px desktop minimum with 56px/48px top/bottom padding; on mobile, readable copy/actions precede a 235px lower atmospheric plate rather than removing the mark. Artwork declares dimensions and responsive sources. Group's football feature and Interactive's lead select a dedicated 3:1 panorama from 768px; phone fallbacks and the gallery retain full 16:9 art. The current original blue main artwork spans the full gallery row.
 
 See the surface brief for the approved company hero, feature pair, game showcase, and purpose-band compositions. Those arrangements are not global templates for every future page.
 
 ## Elevation & Depth
 
-The site is flat by default. Ground/panel tone changes, thin rules, artwork, and alignment establish depth. Buttons, directory entries, game panels, and media do not use decorative drop shadows. The low-opacity metallic mark in the Studio feature is an existing image treatment, not a new surface texture.
+The interface is flat by default. Ground/panel tone changes, thin rules, artwork, and alignment establish depth. Buttons, directory entries, game panels, and media do not use decorative drop shadows. Authorized raster artwork carries the Group hero's silver D, violet crossing, smoke and floor reflection, plus the Studio/directory diagonal-metal detail; this dimensional brand material does not introduce elevated UI cards.
 
 ### Shadow Vocabulary
 
@@ -243,7 +283,7 @@ The site is flat by default. Ground/panel tone changes, thin rules, artwork, and
 
 ## Shapes
 
-Controls and skip links have crisp, gently eased corners (`rounded.control`, 4px). Artwork and major visual features are softly rounded (`rounded.artwork`, 8px). Compact directory cards, the mark, and the partner link use the intermediate corner (`rounded.directory`, 6px). Status dots are circular (9px diameter), while status text and game modes remain unboxed.
+Group buttons have crisp corners (`rounded.group-control`, 2px); Interactive buttons, disclosure summaries and skip links use the gently eased control corner (`rounded.control`, 4px). Artwork and major visual features are softly rounded (`rounded.artwork`, 8px), except the full-width Group hero and Interactive banner. Compact directory cards, the mark, and the partner link use the intermediate corner (`rounded.directory`, 6px). Status dots are circular (9px diameter), while status text and game modes remain unboxed.
 
 Borders are generally 1px. Outlined actions use a visible neutral stroke; directory cards use the quiet rule and strengthen it on hover. Preserve the supplied monogram's silhouette rather than redrawing it as a generic icon.
 
@@ -253,8 +293,8 @@ Borders are generally 1px. Outlined actions use a visible neutral stroke; direct
 
 Direct, rectangular actions with a clear filled/outlined hierarchy. Default dimensions and type are in frontmatter; the full border, gap, and state details live in the sidecar.
 
-- **Group filled:** white text on Action Violet, with darker hover/active fills.
-- **Interactive filled:** dark text on Interactive Volt, with lighter hover and darker active fills.
+- **Group filled:** uppercase Inter at the Group control radius, white text on Action Violet, with darker hover/active fills. Hero actions use 27px horizontal padding; the mobile hero uses 18px padding and 11px labels.
+- **Interactive filled:** dark text on Beyond 90 Blue, with lighter hover and darker active fills.
 - **Outline:** off-white text, neutral stroke, transparent resting fill, and neutral hover/active fills.
 - **Focus:** visible accent outline; never remove keyboard feedback.
 - **Icons:** typically 20px inline SVG, separated from text by 13px; mobile uses 18px icons and a 10px gap. External game actions include the Roblox mark and an outward arrow; community actions remain separate.
@@ -268,21 +308,21 @@ Status is text plus a dot, not a chip-shaped button. The default dot follows the
 
 ### Cards / Containers
 
-Directory entries use a ground fill, 1px rule, 6px corners, and 22px desktop padding (20px mobile). Hover changes fill and border. A top-aligned outward arrow clarifies navigation. Feature cards instead give real artwork space; the Studio feature combines the supplied metallic mark at low opacity with real service copy. Hover underlines feature headings; it does not lift the cards.
+Directory entries use a ground fill, 1px rule, 6px corners, and 22px desktop padding (20px mobile). A low-opacity, route-tinted crop of the generated Studio diagonal-metal backdrop adds atmosphere; hover changes fill and border. A top-aligned outward arrow clarifies navigation. Feature cards give artwork space; the Studio feature combines its dark metallic backdrop and protective gradient with real service copy, not an invented portfolio. Hover underlines feature headings; it does not lift the cards.
 
 ### Links
 
-Group editorial links use Light Text Violet; Interactive editorial links use volt. Their uppercase labels gain an underline on hover. The game-exploration text link has a blue bottom rule and a light-blue hover state. Community/social rows are larger, ruled link targets with a leading icon, name, secondary handle or description, and outward arrow.
+Group editorial links use Light Text Violet; Interactive editorial links use Beyond 90 Blue. Their uppercase labels gain an underline on hover. The game-exploration text link has a blue bottom rule and a light-blue hover state. Community/social rows are larger, ruled link targets with a leading icon, name, secondary handle or description, and outward arrow.
 
 ### Navigation
 
-A sticky dark masthead holds the supplied mark, stacked Drixil/division word label, section links, and contact or Group-return action. Desktop links are compact and gain an accent colour plus underline on hover; no unimplemented selected-navigation variant is implied.
+A sticky dark masthead holds the supplied mark, stacked Drixil/division word label, section links, and contact or Group-return action. A real space separates Drixil and the division in the DOM; the brand accessible name includes the visible division and actual home destination. Desktop links are compact and gain an accent colour plus underline on hover; Group uses uppercase Inter and its lighter violet hover colour. No unimplemented selected-navigation variant is implied.
 
 Below 1100px, a native `details/summary` menu replaces the desktop links. Its bordered 44px summary switches menu/close icons. The expanded panel is scrollable within the viewport and provides 52px link rows. It opens without JavaScript; enhancement closes it after link activation, on Escape with focus returned to the summary, and on resize to desktop. Keep the semantic disclosure rather than replacing it with a click-only container.
 
 ### Artwork, Gallery, and Partner
 
-Game art is rendered from the repository's responsive WebP assets, with meaningful alternative text and explicit dimensions. Galleries are two columns on desktop and one on mobile; captions identify artwork without presenting it as shipped footage. The partner link uses the real Novatrax logo and confirmed destination.
+Game art is rendered from the repository's responsive WebP assets, with meaningful alternative text and explicit dimensions. `MatchdayBanner` art-directs the desktop panorama separately from the full phone source; it is not a shallow crop of the gallery thumbnail. Galleries are two columns on desktop and one on mobile, with the authoritative current blue main image spanning the full row. Captions identify artwork without presenting it as shipped footage. The partner link uses the real Novatrax logo and confirmed destination. Exact generated prompts, preserved originals and source/runtime mappings are recorded in `docs/design/reference-fidelity-assets.md` and `docs/ui/ASSET_PROVENANCE.md`.
 
 Only the Group Interactive feature image scales subtly on hover (1.025), at widths from 1100px and only when reduced motion is not requested. That transition is 350ms with `cubic-bezier(0.16, 1, 0.3, 1)`. Ordinary control feedback uses 160ms ease-out. Reduced motion changes transitions/animations to 0.01ms and disables smooth scrolling. The implemented system does not depend on entrance animations or autoplay.
 
@@ -290,7 +330,7 @@ Only the Group Interactive feature image scales subtly on hover (1.025), at widt
 
 ### Do:
 
-- Do preserve the supplied Drixil marks, real project artwork, and confirmed partner assets.
+- Do preserve the supplied Drixil marks, original project artwork, and confirmed partner assets; retain provenance for authorized generated atmosphere and blue variants.
 - Do keep Group's text-safe violet and white-on-violet action fill in their documented roles.
 - Do use the filled game action and outline community action as distinct destinations.
 - Do retain visible focus, native disclosure semantics, descriptive link names, and written development status.
@@ -299,7 +339,7 @@ Only the Group Interactive feature image scales subtly on hover (1.025), at widt
 
 ### Don't:
 
-- Don't replace Drixil identity or game art with another publisher's branding or invented imagery.
+- Don't replace Drixil identity with another publisher's branding or present generated atmosphere and promotional artwork as factual projects or shipped gameplay.
 - Don't infer a release date, shipped game, client portfolio, review, award, or metric from promotional artwork.
 - Don't add pill-shaped controls or diffuse card shadows as if they were established patterns.
 - Don't turn noninteractive status labels or game-mode text into controls without a product requirement.

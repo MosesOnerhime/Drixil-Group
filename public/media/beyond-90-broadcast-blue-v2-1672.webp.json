@@ -1,0 +1,4 @@
+{
+  "prompt": "Use case: style-transfer. Image 1 is the edit target, Beyond 90's broadcast-camera promotional artwork. Image 2 is the current official blue brand reference. Change ONLY the lime/yellow brand accents in Image 1 to the reference's electric blue/cyan (#3896ff, brighter cyan highlights, restrained violet edging). Keep EXACTLY the original 16:9 framing, stadium, football pitch green, camera angle, goal positions, players, pass-arrow paths, graphic layout and all lettering. White BROADCAST stays white; CAMERA becomes bright electric blue; the top-left BEYOND 90 logo's 90 becomes blue; branding stripes, advertising and players' target circles/passing arrows become blue. Preserve black panels, white text, natural grass and skin colours. No lime/yellow brand details, no new text, no new objects. A colour refresh, not a new composition. High-quality production website gallery artwork.",
+  "createdAt": "2026-10-25T13:32:34.811Z"
+}

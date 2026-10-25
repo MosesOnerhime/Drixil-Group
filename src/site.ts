@@ -23,7 +23,7 @@ export const PUBLIC_PAGES: ReadonlyArray<PageMetadata> = [
     pathname: "/interactive",
     title: "Drixil Interactive | Games for a Global Audience",
     description: "An Africa-based game studio building for a global audience. Explore Beyond 90 and Volleyball Rally, our Roblox games in development.",
-    image: "/media/beyond-90-1254.webp",
+    image: "/media/beyond-90-main-blue-1672.webp",
   },
   {
     name: "Drixil Studio",

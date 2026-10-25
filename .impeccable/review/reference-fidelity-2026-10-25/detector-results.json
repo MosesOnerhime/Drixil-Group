@@ -1,0 +1,13 @@
+{
+  "kind": "run-summary-not-full-detector-output",
+  "date": "2026-10-25",
+  "command": "impeccable detect --json src/App.tsx src/styles/publisher-components.css src/styles/publisher-layout.css src/index.css",
+  "runs": 1,
+  "limitation": "The detector JSON was returned in command output and truncated by the output limit; the full findings array was not persisted. This is not a clean-detector certificate. No second detector is run to manufacture a complete receipt.",
+  "observedFindings": [
+    "Inter is an overused-font warning; deliberately selected to match the user-pinned reference, not a new default aesthetic.",
+    "Inter missing from DESIGN.md typography; approved system correction awaits the finish documenter.",
+    "Numerous type-ramp and literal-colour advisories against the previous documented system; new blue and Group type changes must be documented.",
+    "Reference-pinned labels, atmosphere and directory patterns are intentional; actual rendered checks and fresh reviewer decide material defects."
+  ]
+}
