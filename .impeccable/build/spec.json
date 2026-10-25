@@ -1,0 +1,1636 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-10-25T00:16:19.597Z",
+  "comp": ".impeccable/mocks/b-interactive.png",
+  "warnings": [
+    "region masthead: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)",
+    "region beyond-art: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)",
+    "region project-caption: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)",
+    "region project-caption: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)",
+    "region beyond-status: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)",
+    "region purpose-band: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)",
+    "region also-band: \"container\": true set in the regions file (the region-size refusal is overridden: one undivided element)",
+    "region volleyball-art: \"bleed\": true set in the regions file (the clipped-artwork refusal is overridden: the page crops it there)"
+  ],
+  "uncoveredInkCells": [],
+  "compSize": {
+    "width": 1536,
+    "height": 1024
+  },
+  "aspect": 1.5,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#0a0b0c",
+      "coverage": 0.7983
+    },
+    {
+      "hex": "#f3f4f4",
+      "coverage": 0.0803
+    },
+    {
+      "hex": "#122b4c",
+      "coverage": 0.0443
+    },
+    {
+      "hex": "#0f4559",
+      "coverage": 0.0389
+    },
+    {
+      "hex": "#152a35",
+      "coverage": 0.0382
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0235,
+      "strength": 0.2346
+    },
+    {
+      "y": 0.0588,
+      "strength": 0.4447
+    },
+    {
+      "y": 0.1176,
+      "strength": 0.5337
+    },
+    {
+      "y": 0.1647,
+      "strength": 0.2001
+    },
+    {
+      "y": 0.2,
+      "strength": 0.2887
+    },
+    {
+      "y": 0.5059,
+      "strength": 0.9239
+    },
+    {
+      "y": 0.5294,
+      "strength": 0.8187
+    },
+    {
+      "y": 0.5765,
+      "strength": 0.5353
+    },
+    {
+      "y": 0.6824,
+      "strength": 0.6806
+    },
+    {
+      "y": 0.7176,
+      "strength": 0.9037
+    },
+    {
+      "y": 0.7529,
+      "strength": 0.2229
+    },
+    {
+      "y": 0.7765,
+      "strength": 0.3899
+    },
+    {
+      "y": 0.8471,
+      "strength": 0.9173
+    },
+    {
+      "y": 0.8824,
+      "strength": 0.3287
+    },
+    {
+      "y": 0.9882,
+      "strength": 0.7807
+    }
+  ],
+  "regions": [
+    {
+      "id": "masthead",
+      "kind": "chrome",
+      "note": "Full-width near-black navigation ground, subtle bottom rule.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.0635
+      },
+      "px": {
+        "x": 0,
+        "y": 0,
+        "w": 1536,
+        "h": 65
+      },
+      "aspect": 23.6308,
+      "palette": [
+        {
+          "hex": "#080808",
+          "coverage": 0.9706
+        },
+        {
+          "hex": "#f7f7f7",
+          "coverage": 0.0098
+        },
+        {
+          "hex": "#5f5f5f",
+          "coverage": 0.009
+        },
+        {
+          "hex": "#c0c0c0",
+          "coverage": 0.0074
+        },
+        {
+          "hex": "#8e8e8e",
+          "coverage": 0.0031
+        }
+      ],
+      "detail": {
+        "energy": 14.9084
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "brand-mark",
+      "kind": "image",
+      "note": "Original white Drixil monogram, with clear space around the mark.",
+      "grid": null,
+      "parentId": "masthead",
+      "box": {
+        "x": 0.0332,
+        "y": 0.0088,
+        "w": 0.0306,
+        "h": 0.0459
+      },
+      "px": {
+        "x": 51,
+        "y": 9,
+        "w": 47,
+        "h": 47
+      },
+      "aspect": 1,
+      "palette": [
+        {
+          "hex": "#090909",
+          "coverage": 0.8386
+        },
+        {
+          "hex": "#f8f8f8",
+          "coverage": 0.0866
+        },
+        {
+          "hex": "#848486",
+          "coverage": 0.0315
+        },
+        {
+          "hex": "#bfbfc1",
+          "coverage": 0.0276
+        },
+        {
+          "hex": "#4c4c4c",
+          "coverage": 0.0157
+        }
+      ],
+      "detail": {
+        "energy": 12.2142
+      },
+      "medium": "raster",
+      "plate": "assets/plates/brand-mark.png",
+      "text": null
+    },
+    {
+      "id": "brand-name",
+      "kind": "text",
+      "note": "Two-line tracked white DRIXIL INTERACTIVE wordmark.",
+      "grid": null,
+      "parentId": "masthead",
+      "box": {
+        "x": 0.0742,
+        "y": 0.0156,
+        "w": 0.0736,
+        "h": 0.0313
+      },
+      "px": {
+        "x": 114,
+        "y": 16,
+        "w": 113,
+        "h": 32
+      },
+      "aspect": 3.5313,
+      "palette": [
+        {
+          "hex": "#0a0a0a",
+          "coverage": 0.7995
+        },
+        {
+          "hex": "#f6f7f7",
+          "coverage": 0.0894
+        },
+        {
+          "hex": "#bbbcbd",
+          "coverage": 0.0652
+        },
+        {
+          "hex": "#474847",
+          "coverage": 0.0266
+        },
+        {
+          "hex": "#808282",
+          "coverage": 0.0193
+        }
+      ],
+      "detail": {
+        "energy": 38.7717
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 6,
+          "capHeightPx": 13.3,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.6766,
+          "advTall": 0.6766,
+          "advX": null,
+          "gap": 0.3759,
+          "xRatio": 0.7685,
+          "stemW": 0.247,
+          "contrast": 6.0131,
+          "serif": 0.589,
+          "densTall": 0.6811,
+          "densX": null,
+          "weight": 0.6811
+        },
+        "widthClass": "normal",
+        "weightClass": "black"
+      }
+    },
+    {
+      "id": "nav-games",
+      "kind": "control",
+      "note": "Games navigation text, no visible surrounding button chrome.",
+      "grid": null,
+      "parentId": "masthead",
+      "reviewGroup": "nav-link",
+      "box": {
+        "x": 0.3275,
+        "y": 0.0244,
+        "w": 0.0319,
+        "h": 0.0166
+      },
+      "px": {
+        "x": 503,
+        "y": 25,
+        "w": 49,
+        "h": 17
+      },
+      "aspect": 2.8824,
+      "palette": [
+        {
+          "hex": "#090909",
+          "coverage": 0.6275
+        },
+        {
+          "hex": "#f3f3f3",
+          "coverage": 0.2255
+        },
+        {
+          "hex": "#7e7e7e",
+          "coverage": 0.1078
+        },
+        {
+          "hex": "#bdbdbd",
+          "coverage": 0.0294
+        },
+        {
+          "hex": "#484858",
+          "coverage": 0.0098
+        }
+      ],
+      "detail": {
+        "energy": 29.5015
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-beyond",
+      "kind": "control",
+      "note": "Beyond 90 navigation text, no surrounding button chrome.",
+      "grid": null,
+      "parentId": "masthead",
+      "reviewGroup": "nav-link",
+      "box": {
+        "x": 0.3906,
+        "y": 0.0244,
+        "w": 0.0488,
+        "h": 0.0166
+      },
+      "px": {
+        "x": 600,
+        "y": 25,
+        "w": 75,
+        "h": 17
+      },
+      "aspect": 4.4118,
+      "palette": [
+        {
+          "hex": "#0a0a0a",
+          "coverage": 0.6803
+        },
+        {
+          "hex": "#f6f6f6",
+          "coverage": 0.2245
+        },
+        {
+          "hex": "#515151",
+          "coverage": 0.0476
+        },
+        {
+          "hex": "#989898",
+          "coverage": 0.034
+        },
+        {
+          "hex": "#302028",
+          "coverage": 0.0136
+        }
+      ],
+      "detail": {
+        "energy": 45.636
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-volleyball",
+      "kind": "control",
+      "note": "Volleyball Rally navigation text, no surrounding button chrome.",
+      "grid": null,
+      "parentId": "masthead",
+      "reviewGroup": "nav-link",
+      "box": {
+        "x": 0.4707,
+        "y": 0.0244,
+        "w": 0.0671,
+        "h": 0.0166
+      },
+      "px": {
+        "x": 723,
+        "y": 25,
+        "w": 103,
+        "h": 17
+      },
+      "aspect": 6.0588,
+      "palette": [
+        {
+          "hex": "#0a0a0a",
+          "coverage": 0.6143
+        },
+        {
+          "hex": "#f3f3f4",
+          "coverage": 0.181
+        },
+        {
+          "hex": "#b0b0b2",
+          "coverage": 0.0952
+        },
+        {
+          "hex": "#7b797b",
+          "coverage": 0.0762
+        },
+        {
+          "hex": "#4a4a4a",
+          "coverage": 0.0333
+        }
+      ],
+      "detail": {
+        "energy": 62.2941
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-partners",
+      "kind": "control",
+      "note": "Partners navigation text, no surrounding button chrome.",
+      "grid": null,
+      "parentId": "masthead",
+      "reviewGroup": "nav-link",
+      "box": {
+        "x": 0.5703,
+        "y": 0.0244,
+        "w": 0.0378,
+        "h": 0.0166
+      },
+      "px": {
+        "x": 876,
+        "y": 25,
+        "w": 58,
+        "h": 17
+      },
+      "aspect": 3.4118,
+      "palette": [
+        {
+          "hex": "#0b0b0b",
+          "coverage": 0.6581
+        },
+        {
+          "hex": "#f3f4f3",
+          "coverage": 0.1795
+        },
+        {
+          "hex": "#4b4b4c",
+          "coverage": 0.094
+        },
+        {
+          "hex": "#cbcece",
+          "coverage": 0.0427
+        },
+        {
+          "hex": "#838383",
+          "coverage": 0.0256
+        }
+      ],
+      "detail": {
+        "energy": 33.0721
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-follow",
+      "kind": "control",
+      "note": "Follow navigation text, no surrounding button chrome.",
+      "grid": null,
+      "parentId": "masthead",
+      "reviewGroup": "nav-link",
+      "box": {
+        "x": 0.64,
+        "y": 0.0244,
+        "w": 0.0306,
+        "h": 0.0166
+      },
+      "px": {
+        "x": 983,
+        "y": 25,
+        "w": 47,
+        "h": 17
+      },
+      "aspect": 2.7647,
+      "palette": [
+        {
+          "hex": "#090909",
+          "coverage": 0.6842
+        },
+        {
+          "hex": "#edeced",
+          "coverage": 0.1263
+        },
+        {
+          "hex": "#7f7f7f",
+          "coverage": 0.0947
+        },
+        {
+          "hex": "#bdbfc3",
+          "coverage": 0.0737
+        },
+        {
+          "hex": "#403840",
+          "coverage": 0.0211
+        }
+      ],
+      "detail": {
+        "energy": 27.6253
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "return-group",
+      "kind": "control",
+      "note": "Back arrow and tracked DRIXIL GROUP link aligned right.",
+      "grid": null,
+      "parentId": "masthead",
+      "box": {
+        "x": 0.862,
+        "y": 0.0225,
+        "w": 0.1035,
+        "h": 0.0186
+      },
+      "px": {
+        "x": 1324,
+        "y": 23,
+        "w": 159,
+        "h": 19
+      },
+      "aspect": 8.3684,
+      "palette": [
+        {
+          "hex": "#090909",
+          "coverage": 0.8081
+        },
+        {
+          "hex": "#cececf",
+          "coverage": 0.0784
+        },
+        {
+          "hex": "#737374",
+          "coverage": 0.0459
+        },
+        {
+          "hex": "#484949",
+          "coverage": 0.0432
+        },
+        {
+          "hex": "#9c9c9c",
+          "coverage": 0.0243
+        }
+      ],
+      "detail": {
+        "energy": 41.8019
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "beyond-art",
+      "kind": "image",
+      "note": "Supplied Beyond 90 matchday artwork; stadium and Roblox football players, title retained as part of original art. Intentionally cropped wide banner.",
+      "grid": null,
+      "bleed": true,
+      "box": {
+        "x": 0,
+        "y": 0.0635,
+        "w": 1,
+        "h": 0.4434
+      },
+      "px": {
+        "x": 0,
+        "y": 65,
+        "w": 1536,
+        "h": 454
+      },
+      "aspect": 3.3833,
+      "palette": [
+        {
+          "hex": "#0d1015",
+          "coverage": 0.5509
+        },
+        {
+          "hex": "#132b4e",
+          "coverage": 0.1281
+        },
+        {
+          "hex": "#0f4659",
+          "coverage": 0.1139
+        },
+        {
+          "hex": "#f0f1f1",
+          "coverage": 0.1053
+        },
+        {
+          "hex": "#142a35",
+          "coverage": 0.1017
+        }
+      ],
+      "detail": {
+        "energy": 68.9338
+      },
+      "medium": "raster",
+      "plate": "assets/plates/beyond-art.png",
+      "text": null
+    },
+    {
+      "id": "project-caption",
+      "kind": "chrome",
+      "note": "Solid black caption bar with a subtle lower border, rendered in CSS.",
+      "grid": null,
+      "codeDrawn": true,
+      "container": true,
+      "box": {
+        "x": 0,
+        "y": 0.5068,
+        "w": 1,
+        "h": 0.1152
+      },
+      "px": {
+        "x": 0,
+        "y": 519,
+        "w": 1536,
+        "h": 118
+      },
+      "aspect": 13.0169,
+      "palette": [
+        {
+          "hex": "#090908",
+          "coverage": 0.8359
+        },
+        {
+          "hex": "#f7f7f7",
+          "coverage": 0.0713
+        },
+        {
+          "hex": "#d9f848",
+          "coverage": 0.0668
+        },
+        {
+          "hex": "#333530",
+          "coverage": 0.0175
+        },
+        {
+          "hex": "#434a22",
+          "coverage": 0.0084
+        }
+      ],
+      "detail": {
+        "energy": 49.1421
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "beyond-title",
+      "kind": "text",
+      "note": "Large bold uppercase BEYOND 90 game title, white, one line with full line-box clearance.",
+      "grid": null,
+      "parentId": "project-caption",
+      "box": {
+        "x": 0.0352,
+        "y": 0.5195,
+        "w": 0.2617,
+        "h": 0.0625
+      },
+      "px": {
+        "x": 54,
+        "y": 532,
+        "w": 402,
+        "h": 64
+      },
+      "aspect": 6.2813,
+      "palette": [
+        {
+          "hex": "#090909",
+          "coverage": 0.5058
+        },
+        {
+          "hex": "#f8f8f8",
+          "coverage": 0.4592
+        },
+        {
+          "hex": "#c1c1c1",
+          "coverage": 0.015
+        },
+        {
+          "hex": "#4f4f4f",
+          "coverage": 0.0123
+        },
+        {
+          "hex": "#888886",
+          "coverage": 0.0078
+        }
+      ],
+      "detail": {
+        "energy": 65.8746
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 8,
+          "capHeightPx": 46.7,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.9626,
+          "advTall": 0.9626,
+          "advX": null,
+          "gap": 0.0642,
+          "xRatio": 0.8217,
+          "stemW": 0.367,
+          "contrast": 1.415,
+          "serif": null,
+          "densTall": 0.7714,
+          "densX": null,
+          "weight": 0.7714
+        },
+        "widthClass": "wide",
+        "weightClass": "black",
+        "chosen": {
+          "family": "Mitr",
+          "weight": 700,
+          "fontSizePx": 69,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 8,
+            "capHeightPx": 47,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.9043,
+            "advTall": 0.9043,
+            "advX": null,
+            "gap": 0.0851,
+            "xRatio": 0.7901,
+            "stemW": 0.3501,
+            "contrast": 1.4174,
+            "serif": null,
+            "densTall": 0.7668,
+            "densX": null,
+            "weight": 0.7668
+          },
+          "stamp": "b4ab9d806acf"
+        }
+      }
+    },
+    {
+      "id": "beyond-status",
+      "kind": "text",
+      "note": "Small volt CSS dot and tracked CURRENTLY WORKING ON text, truthful development status with complete wording.",
+      "grid": null,
+      "codeDrawn": true,
+      "parentId": "project-caption",
+      "reviewGroup": "development-status",
+      "box": {
+        "x": 0.0378,
+        "y": 0.5879,
+        "w": 0.1816,
+        "h": 0.0137
+      },
+      "px": {
+        "x": 58,
+        "y": 602,
+        "w": 279,
+        "h": 14
+      },
+      "aspect": 19.9286,
+      "palette": [
+        {
+          "hex": "#0a0a09",
+          "coverage": 0.7267
+        },
+        {
+          "hex": "#c7c6c7",
+          "coverage": 0.14
+        },
+        {
+          "hex": "#4f5050",
+          "coverage": 0.0644
+        },
+        {
+          "hex": "#8e8e91",
+          "coverage": 0.0444
+        },
+        {
+          "hex": "#222b0c",
+          "coverage": 0.0244
+        }
+      ],
+      "detail": {
+        "energy": 110.4154
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 19,
+          "capHeightPx": 11.6,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.7155,
+          "advTall": 0.7298,
+          "advX": 0.7012,
+          "gap": 0.4007,
+          "xRatio": 0.8276,
+          "stemW": 0.2035,
+          "contrast": 1.2075,
+          "serif": 0.4013,
+          "densTall": 0.4837,
+          "densX": 0.6554,
+          "weight": 0.4837
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "game-button",
+      "kind": "control",
+      "note": "Volt rectangular View game on Roblox link, Roblox pictogram and external arrow, softly rounded corners.",
+      "grid": null,
+      "parentId": "project-caption",
+      "box": {
+        "x": 0.6296,
+        "y": 0.5371,
+        "w": 0.1745,
+        "h": 0.0518
+      },
+      "px": {
+        "x": 967,
+        "y": 550,
+        "w": 268,
+        "h": 53
+      },
+      "aspect": 5.0566,
+      "palette": [
+        {
+          "hex": "#daf848",
+          "coverage": 0.9038
+        },
+        {
+          "hex": "#090a08",
+          "coverage": 0.0491
+        },
+        {
+          "hex": "#b2c934",
+          "coverage": 0.0182
+        },
+        {
+          "hex": "#2b320b",
+          "coverage": 0.0182
+        },
+        {
+          "hex": "#586715",
+          "coverage": 0.0107
+        }
+      ],
+      "detail": {
+        "energy": 26.6651
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "community-button",
+      "kind": "control",
+      "note": "Dark outlined Roblox community link, people pictogram and external arrow.",
+      "grid": null,
+      "parentId": "project-caption",
+      "box": {
+        "x": 0.8125,
+        "y": 0.5371,
+        "w": 0.1517,
+        "h": 0.0518
+      },
+      "px": {
+        "x": 1248,
+        "y": 550,
+        "w": 233,
+        "h": 53
+      },
+      "aspect": 4.3962,
+      "palette": [
+        {
+          "hex": "#080808",
+          "coverage": 0.8301
+        },
+        {
+          "hex": "#979796",
+          "coverage": 0.0958
+        },
+        {
+          "hex": "#f3f4f2",
+          "coverage": 0.0295
+        },
+        {
+          "hex": "#373635",
+          "coverage": 0.0295
+        },
+        {
+          "hex": "#c4c6c6",
+          "coverage": 0.0151
+        }
+      ],
+      "detail": {
+        "energy": 34.6278
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "purpose-band",
+      "kind": "chrome",
+      "note": "Charcoal studio-purpose section ground, no illustrative decoration.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0,
+        "y": 0.6221,
+        "w": 1,
+        "h": 0.1797
+      },
+      "px": {
+        "x": 0,
+        "y": 637,
+        "w": 1536,
+        "h": 184
+      },
+      "aspect": 8.3478,
+      "palette": [
+        {
+          "hex": "#0a0a0a",
+          "coverage": 0.855
+        },
+        {
+          "hex": "#f6f6f6",
+          "coverage": 0.0785
+        },
+        {
+          "hex": "#d8f749",
+          "coverage": 0.0511
+        },
+        {
+          "hex": "#818181",
+          "coverage": 0.009
+        },
+        {
+          "hex": "#434343",
+          "coverage": 0.0064
+        }
+      ],
+      "detail": {
+        "energy": 50.5678
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "studio-label",
+      "kind": "text",
+      "note": "Small tracked white DRIXIL INTERACTIVE studio label.",
+      "grid": null,
+      "parentId": "purpose-band",
+      "box": {
+        "x": 0.0384,
+        "y": 0.6514,
+        "w": 0.1276,
+        "h": 0.0127
+      },
+      "px": {
+        "x": 59,
+        "y": 667,
+        "w": 196,
+        "h": 13
+      },
+      "aspect": 15.0769,
+      "palette": [
+        {
+          "hex": "#0f0f0f",
+          "coverage": 0.7052
+        },
+        {
+          "hex": "#818283",
+          "coverage": 0.1733
+        },
+        {
+          "hex": "#494949",
+          "coverage": 0.076
+        },
+        {
+          "hex": "#bfbfbd",
+          "coverage": 0.0395
+        },
+        {
+          "hex": "#e8e8e8",
+          "coverage": 0.0061
+        }
+      ],
+      "detail": {
+        "energy": 65.7855
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 17,
+          "capHeightPx": 9.9,
+          "inkIsDark": false,
+          "allCaps": true,
+          "advance": 0.6714,
+          "advTall": 0.6714,
+          "advX": null,
+          "gap": 0.47,
+          "xRatio": null,
+          "stemW": 0.2392,
+          "contrast": 1.2222,
+          "serif": 0.2991,
+          "densTall": 0.6551,
+          "densX": null,
+          "weight": 0.6551
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "mission-first",
+      "kind": "text",
+      "note": "Heavy uppercase GAMES FOR PLAYERS headline, white, one line with line-box clearance.",
+      "grid": null,
+      "parentId": "purpose-band",
+      "box": {
+        "x": 0.0352,
+        "y": 0.6689,
+        "w": 0.4603,
+        "h": 0.0566
+      },
+      "px": {
+        "x": 54,
+        "y": 685,
+        "w": 707,
+        "h": 58
+      },
+      "aspect": 12.1897,
+      "palette": [
+        {
+          "hex": "#0e0e0d",
+          "coverage": 0.4838
+        },
+        {
+          "hex": "#f7f7f7",
+          "coverage": 0.4808
+        },
+        {
+          "hex": "#818181",
+          "coverage": 0.0151
+        },
+        {
+          "hex": "#414141",
+          "coverage": 0.0119
+        },
+        {
+          "hex": "#bbbbbb",
+          "coverage": 0.0083
+        }
+      ],
+      "detail": {
+        "energy": 120.2181
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-10-25T00:16:19.918Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "mission-second",
+      "kind": "text",
+      "note": "Heavy uppercase EVERYWHERE. headline continuation, volt, one line with line-box clearance.",
+      "grid": null,
+      "parentId": "purpose-band",
+      "box": {
+        "x": 0.0352,
+        "y": 0.7256,
+        "w": 0.3242,
+        "h": 0.0547
+      },
+      "px": {
+        "x": 54,
+        "y": 743,
+        "w": 498,
+        "h": 56
+      },
+      "aspect": 8.8929,
+      "palette": [
+        {
+          "hex": "#d8f749",
+          "coverage": 0.5309
+        },
+        {
+          "hex": "#0d0d0d",
+          "coverage": 0.4394
+        },
+        {
+          "hex": "#b2cd41",
+          "coverage": 0.0155
+        },
+        {
+          "hex": "#1c2817",
+          "coverage": 0.0071
+        },
+        {
+          "hex": "#7a892e",
+          "coverage": 0.0071
+        }
+      ],
+      "detail": {
+        "energy": 81.8354
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": null,
+        "measuredAt": "2026-10-25T00:16:49.846Z",
+        "note": "no separable lettering in the crop; size by the region box"
+      }
+    },
+    {
+      "id": "purpose-divider",
+      "kind": "chrome",
+      "note": "Quiet one-pixel vertical separator between studio title and mission copy.",
+      "grid": null,
+      "parentId": "purpose-band",
+      "box": {
+        "x": 0.5534,
+        "y": 0.6816,
+        "w": 0.0007,
+        "h": 0.0762
+      },
+      "px": {
+        "x": 850,
+        "y": 698,
+        "w": 1,
+        "h": 78
+      },
+      "aspect": 0.0128,
+      "palette": [
+        {
+          "hex": "#282828",
+          "coverage": 1
+        }
+      ],
+      "detail": {
+        "energy": 0.0022
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "mission-copy",
+      "kind": "text",
+      "note": "Two lines of light grey mission copy identifying an Africa-based game studio building original games for a global audience.",
+      "grid": null,
+      "parentId": "purpose-band",
+      "box": {
+        "x": 0.5898,
+        "y": 0.6904,
+        "w": 0.3678,
+        "h": 0.0625
+      },
+      "px": {
+        "x": 906,
+        "y": 707,
+        "w": 565,
+        "h": 64
+      },
+      "aspect": 8.8281,
+      "palette": [
+        {
+          "hex": "#0d0c0c",
+          "coverage": 0.8229
+        },
+        {
+          "hex": "#ebeced",
+          "coverage": 0.0594
+        },
+        {
+          "hex": "#6e6e6f",
+          "coverage": 0.0445
+        },
+        {
+          "hex": "#b1b3b4",
+          "coverage": 0.0435
+        },
+        {
+          "hex": "#383837",
+          "coverage": 0.0297
+        }
+      ],
+      "detail": {
+        "energy": 70.8451
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 2,
+          "glyphs": 81,
+          "capHeightPx": 19.3,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.5397,
+          "advTall": 0.1308,
+          "advX": 0.5495,
+          "gap": 0.1308,
+          "xRatio": 0.6912,
+          "stemW": 0.1224,
+          "contrast": 1.1325,
+          "serif": 0.9323,
+          "densTall": 0.7109,
+          "densX": 0.4754,
+          "weight": 0.7109
+        },
+        "widthClass": "condensed",
+        "weightClass": "black",
+        "chosen": {
+          "family": "Merriweather Sans",
+          "weight": 300,
+          "fontSizePx": 24,
+          "source": "index",
+          "fp": {
+            "lines": 1,
+            "glyphs": 42,
+            "capHeightPx": 19.2,
+            "inkIsDark": true,
+            "allCaps": false,
+            "advance": 0.5351,
+            "advTall": 0.1305,
+            "advX": 0.5481,
+            "gap": 0.1566,
+            "xRatio": 0.7219,
+            "stemW": 0.1264,
+            "contrast": 1.1823,
+            "serif": 1,
+            "densTall": 0.7554,
+            "densX": 0.4624,
+            "weight": 0.7554
+          },
+          "stamp": "c0e511a34b84"
+        }
+      }
+    },
+    {
+      "id": "also-band",
+      "kind": "chrome",
+      "note": "Black next-project section ground beneath purpose, continuing below viewport.",
+      "grid": null,
+      "container": true,
+      "box": {
+        "x": 0,
+        "y": 0.8018,
+        "w": 1,
+        "h": 0.1982
+      },
+      "px": {
+        "x": 0,
+        "y": 821,
+        "w": 1536,
+        "h": 203
+      },
+      "aspect": 7.5665,
+      "palette": [
+        {
+          "hex": "#090909",
+          "coverage": 0.7508
+        },
+        {
+          "hex": "#5db0f8",
+          "coverage": 0.0675
+        },
+        {
+          "hex": "#0e49c4",
+          "coverage": 0.0672
+        },
+        {
+          "hex": "#81d1f8",
+          "coverage": 0.06
+        },
+        {
+          "hex": "#f2f4f6",
+          "coverage": 0.0545
+        }
+      ],
+      "detail": {
+        "energy": 43.9845
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "also-label",
+      "kind": "text",
+      "note": "Tracked small uppercase ALSO IN DEVELOPMENT label.",
+      "grid": null,
+      "parentId": "also-band",
+      "box": {
+        "x": 0.0384,
+        "y": 0.8213,
+        "w": 0.1198,
+        "h": 0.0117
+      },
+      "px": {
+        "x": 59,
+        "y": 841,
+        "w": 184,
+        "h": 12
+      },
+      "aspect": 15.3333,
+      "palette": [
+        {
+          "hex": "#0b0a0a",
+          "coverage": 0.7016
+        },
+        {
+          "hex": "#b5b5b6",
+          "coverage": 0.1452
+        },
+        {
+          "hex": "#515153",
+          "coverage": 0.1089
+        },
+        {
+          "hex": "#6f7575",
+          "coverage": 0.0444
+        }
+      ],
+      "detail": {
+        "energy": 74.8084
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 17,
+          "capHeightPx": 8.7,
+          "inkIsDark": false,
+          "allCaps": true,
+          "advance": 0.727,
+          "advTall": 0.727,
+          "advX": null,
+          "gap": 0.4209,
+          "xRatio": null,
+          "stemW": 0.248,
+          "contrast": 1.2018,
+          "serif": 0.2297,
+          "densTall": 0.6254,
+          "densX": null,
+          "weight": 0.6254
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "volleyball-art",
+      "kind": "image",
+      "note": "Supplied Volleyball Rally spike artwork, blue court backdrop, player and yellow-blue volleyball. Wide cropped preview with rounded corners.",
+      "grid": null,
+      "bleed": true,
+      "parentId": "also-band",
+      "box": {
+        "x": 0.0384,
+        "y": 0.8438,
+        "w": 0.6348,
+        "h": 0.1406
+      },
+      "px": {
+        "x": 59,
+        "y": 864,
+        "w": 975,
+        "h": 144
+      },
+      "aspect": 6.7708,
+      "palette": [
+        {
+          "hex": "#5baff7",
+          "coverage": 0.2251
+        },
+        {
+          "hex": "#3f8df5",
+          "coverage": 0.2056
+        },
+        {
+          "hex": "#0e46be",
+          "coverage": 0.203
+        },
+        {
+          "hex": "#82d1f8",
+          "coverage": 0.1994
+        },
+        {
+          "hex": "#236bed",
+          "coverage": 0.1668
+        }
+      ],
+      "detail": {
+        "energy": 42.7431
+      },
+      "medium": "raster",
+      "plate": "assets/plates/volleyball-art.png",
+      "text": null
+    },
+    {
+      "id": "volleyball-title",
+      "kind": "text",
+      "note": "Bold uppercase VOLLEYBALL RALLY title aligned alongside its landscape preview, including line-box clearance.",
+      "grid": null,
+      "parentId": "also-band",
+      "box": {
+        "x": 0.6914,
+        "y": 0.8525,
+        "w": 0.2376,
+        "h": 0.041
+      },
+      "px": {
+        "x": 1062,
+        "y": 873,
+        "w": 365,
+        "h": 42
+      },
+      "aspect": 8.6905,
+      "palette": [
+        {
+          "hex": "#090909",
+          "coverage": 0.5767
+        },
+        {
+          "hex": "#f6f6f6",
+          "coverage": 0.3439
+        },
+        {
+          "hex": "#b5b5b6",
+          "coverage": 0.0364
+        },
+        {
+          "hex": "#6d6d6d",
+          "coverage": 0.0312
+        },
+        {
+          "hex": "#3e3f3e",
+          "coverage": 0.0118
+        }
+      ],
+      "detail": {
+        "energy": 83.5797
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 11,
+          "capHeightPx": 26.6,
+          "inkIsDark": false,
+          "allCaps": true,
+          "advance": 0.7523,
+          "advTall": 0.7523,
+          "advX": null,
+          "gap": 0.0752,
+          "xRatio": null,
+          "stemW": 0.3422,
+          "contrast": 1.3795,
+          "serif": null,
+          "densTall": 0.7028,
+          "densX": null,
+          "weight": 0.7028
+        },
+        "widthClass": "normal",
+        "weightClass": "black"
+      }
+    },
+    {
+      "id": "volleyball-status",
+      "kind": "text",
+      "note": "Small blue dot and tracked IN DEVELOPMENT status for Volleyball Rally.",
+      "grid": null,
+      "parentId": "also-band",
+      "reviewGroup": "development-status",
+      "box": {
+        "x": 0.6947,
+        "y": 0.9043,
+        "w": 0.1224,
+        "h": 0.0137
+      },
+      "px": {
+        "x": 1067,
+        "y": 926,
+        "w": 188,
+        "h": 14
+      },
+      "aspect": 13.4286,
+      "palette": [
+        {
+          "hex": "#090909",
+          "coverage": 0.701
+        },
+        {
+          "hex": "#bebfbf",
+          "coverage": 0.1196
+        },
+        {
+          "hex": "#4f4f4f",
+          "coverage": 0.0698
+        },
+        {
+          "hex": "#09162b",
+          "coverage": 0.0631
+        },
+        {
+          "hex": "#868887",
+          "coverage": 0.0465
+        }
+      ],
+      "detail": {
+        "energy": 61.6017
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 14,
+          "capHeightPx": 10.1,
+          "inkIsDark": false,
+          "allCaps": true,
+          "advance": 0.6945,
+          "advTall": 0.6945,
+          "advX": null,
+          "gap": 0.4299,
+          "xRatio": null,
+          "stemW": 0.2251,
+          "contrast": 1.2251,
+          "serif": null,
+          "densTall": 0.6546,
+          "densX": null,
+          "weight": 0.6546
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "volleyball-link",
+      "kind": "control",
+      "note": "Explore the game link with blue underline and right arrow.",
+      "grid": null,
+      "parentId": "also-band",
+      "box": {
+        "x": 0.6947,
+        "y": 0.9365,
+        "w": 0.1061,
+        "h": 0.0293
+      },
+      "px": {
+        "x": 1067,
+        "y": 959,
+        "w": 163,
+        "h": 30
+      },
+      "aspect": 5.4333,
+      "palette": [
+        {
+          "hex": "#08090a",
+          "coverage": 0.804
+        },
+        {
+          "hex": "#1569d7",
+          "coverage": 0.1091
+        },
+        {
+          "hex": "#f3f8f6",
+          "coverage": 0.0384
+        },
+        {
+          "hex": "#a3dcf8",
+          "coverage": 0.0242
+        },
+        {
+          "hex": "#0b0f31",
+          "coverage": 0.0242
+        }
+      ],
+      "detail": {
+        "energy": 46.8198
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    }
+  ],
+  "compSha256": "e03934c5407d3b674e6f3ab02b28063e0fabb5162b7c6cf675691c69fab83408",
+  "regionsSource": {
+    "path": ".impeccable/build/regions.json",
+    "sha256": "f7d5bfbd952fa180130490c1b84f14d6e1552158351bb247a3a6da16c13c3881"
+  }
+}

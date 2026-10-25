@@ -1,0 +1,563 @@
+{
+  "origin": "http://127.0.0.1:4173",
+  "responsive": [
+    {
+      "route": "/",
+      "width": 320,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 320,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 320,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 320,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 320,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 320,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 320,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 320,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 360,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 360,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 360,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 360,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 360,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 360,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 360,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 360,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 390,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 390,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 390,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 390,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 390,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 390,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 390,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 430,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 430,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 430,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 430,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 430,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 430,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 430,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 430,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 768,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 768,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 768,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 768,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 768,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 768,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 768,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 1024,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 1024,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 1024,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 1024,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 1024,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 1024,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 1024,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 1280,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 1280,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 1280,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 1280,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 1280,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 1280,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 1280,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 1440,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 1440,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 1440,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 1440,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 1440,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 1440,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 1440,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1536,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 1536,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 1536,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 1536,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 1536,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 1536,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 1536,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 1536,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1920,
+      "h1": "Drixil Group",
+      "overflow": false
+    },
+    {
+      "route": "/interactive",
+      "width": 1920,
+      "h1": "Games for players everywhere.",
+      "overflow": false
+    },
+    {
+      "route": "/studio",
+      "width": 1920,
+      "h1": "Drixil Studio",
+      "overflow": false
+    },
+    {
+      "route": "/labs",
+      "width": 1920,
+      "h1": "Drixil Labs",
+      "overflow": false
+    },
+    {
+      "route": "/originals",
+      "width": 1920,
+      "h1": "Drixil Originals",
+      "overflow": false
+    },
+    {
+      "route": "/store",
+      "width": 1920,
+      "h1": "Drixil Store",
+      "overflow": false
+    },
+    {
+      "route": "/ventures",
+      "width": 1920,
+      "h1": "Drixil Ventures",
+      "overflow": false
+    },
+    {
+      "route": "/404",
+      "width": 1920,
+      "h1": "This page is outside the Drixil ecosystem.",
+      "overflow": false
+    }
+  ],
+  "noJavaScript": [
+    {
+      "route": "/",
+      "content": true
+    },
+    {
+      "route": "/interactive",
+      "content": true
+    },
+    {
+      "route": "/studio",
+      "content": true
+    },
+    {
+      "route": "/labs",
+      "content": true
+    },
+    {
+      "route": "/originals",
+      "content": true
+    },
+    {
+      "route": "/store",
+      "content": true
+    },
+    {
+      "route": "/ventures",
+      "content": true
+    },
+    {
+      "route": "/404",
+      "content": true
+    }
+  ],
+  "hydration": [
+    {
+      "route": "/",
+      "preservedDOM": true
+    },
+    {
+      "route": "/interactive",
+      "preservedDOM": true
+    },
+    {
+      "route": "/studio",
+      "preservedDOM": true
+    },
+    {
+      "route": "/labs",
+      "preservedDOM": true
+    },
+    {
+      "route": "/originals",
+      "preservedDOM": true
+    },
+    {
+      "route": "/store",
+      "preservedDOM": true
+    },
+    {
+      "route": "/ventures",
+      "preservedDOM": true
+    },
+    {
+      "route": "/404",
+      "preservedDOM": true
+    }
+  ],
+  "navigation": {
+    "skipLink": true,
+    "nativeMobileMenu": true,
+    "escapeRestoresFocus": true,
+    "anchorClosesMenu": true,
+    "history": true,
+    "clientMetadata": true,
+    "studio": true
+  },
+  "findings": []
+}

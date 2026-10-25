@@ -1,0 +1,7 @@
+{
+  "checkedOn": "2026-10-25",
+  "tool": "impeccable detect --json",
+  "targets": ["src/App.tsx", "src/index.css", "src/styles/publisher-components.css", "src/styles/publisher-layout.css"],
+  "findings": [],
+  "rawOutput": []
+}

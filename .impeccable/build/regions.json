@@ -1,0 +1,31 @@
+{
+  "regions": [
+    {"id":"masthead","kind":"chrome","pixelBox":{"x":0,"y":0,"w":1536,"h":65},"container":true,"note":"Full-width near-black navigation ground, subtle bottom rule."},
+    {"id":"brand-mark","kind":"image","pixelBox":{"x":51,"y":9,"w":47,"h":47},"parentId":"masthead","note":"Original white Drixil monogram, with clear space around the mark."},
+    {"id":"brand-name","kind":"text","pixelBox":{"x":114,"y":16,"w":113,"h":32},"parentId":"masthead","note":"Two-line tracked white DRIXIL INTERACTIVE wordmark."},
+    {"id":"nav-games","kind":"control","pixelBox":{"x":503,"y":25,"w":49,"h":17},"parentId":"masthead","reviewGroup":"nav-link","note":"Games navigation text, no visible surrounding button chrome."},
+    {"id":"nav-beyond","kind":"control","pixelBox":{"x":600,"y":25,"w":75,"h":17},"parentId":"masthead","reviewGroup":"nav-link","note":"Beyond 90 navigation text, no surrounding button chrome."},
+    {"id":"nav-volleyball","kind":"control","pixelBox":{"x":723,"y":25,"w":103,"h":17},"parentId":"masthead","reviewGroup":"nav-link","note":"Volleyball Rally navigation text, no surrounding button chrome."},
+    {"id":"nav-partners","kind":"control","pixelBox":{"x":876,"y":25,"w":58,"h":17},"parentId":"masthead","reviewGroup":"nav-link","note":"Partners navigation text, no surrounding button chrome."},
+    {"id":"nav-follow","kind":"control","pixelBox":{"x":983,"y":25,"w":47,"h":17},"parentId":"masthead","reviewGroup":"nav-link","note":"Follow navigation text, no surrounding button chrome."},
+    {"id":"return-group","kind":"control","pixelBox":{"x":1324,"y":23,"w":159,"h":19},"parentId":"masthead","note":"Back arrow and tracked DRIXIL GROUP link aligned right."},
+    {"id":"beyond-art","kind":"image","pixelBox":{"x":0,"y":65,"w":1536,"h":454},"bleed":true,"note":"Supplied Beyond 90 matchday artwork; stadium and Roblox football players, title retained as part of original art. Intentionally cropped wide banner."},
+    {"id":"project-caption","kind":"chrome","pixelBox":{"x":0,"y":519,"w":1536,"h":118},"container":true,"codeDrawn":true,"note":"Solid black caption bar with a subtle lower border, rendered in CSS."},
+    {"id":"beyond-title","kind":"text","pixelBox":{"x":54,"y":532,"w":402,"h":64},"parentId":"project-caption","note":"Large bold uppercase BEYOND 90 game title, white, one line with full line-box clearance."},
+    {"id":"beyond-status","kind":"text","pixelBox":{"x":58,"y":602,"w":279,"h":14},"parentId":"project-caption","reviewGroup":"development-status","codeDrawn":true,"note":"Small volt CSS dot and tracked CURRENTLY WORKING ON text, truthful development status with complete wording."},
+    {"id":"game-button","kind":"control","pixelBox":{"x":967,"y":550,"w":268,"h":53},"parentId":"project-caption","note":"Volt rectangular View game on Roblox link, Roblox pictogram and external arrow, softly rounded corners."},
+    {"id":"community-button","kind":"control","pixelBox":{"x":1248,"y":550,"w":233,"h":53},"parentId":"project-caption","note":"Dark outlined Roblox community link, people pictogram and external arrow."},
+    {"id":"purpose-band","kind":"chrome","pixelBox":{"x":0,"y":637,"w":1536,"h":184},"container":true,"note":"Charcoal studio-purpose section ground, no illustrative decoration."},
+    {"id":"studio-label","kind":"text","pixelBox":{"x":59,"y":667,"w":196,"h":13},"parentId":"purpose-band","note":"Small tracked white DRIXIL INTERACTIVE studio label."},
+    {"id":"mission-first","kind":"text","pixelBox":{"x":54,"y":685,"w":707,"h":58},"parentId":"purpose-band","note":"Heavy uppercase GAMES FOR PLAYERS headline, white, one line with line-box clearance."},
+    {"id":"mission-second","kind":"text","pixelBox":{"x":54,"y":743,"w":498,"h":56},"parentId":"purpose-band","note":"Heavy uppercase EVERYWHERE. headline continuation, volt, one line with line-box clearance."},
+    {"id":"purpose-divider","kind":"chrome","pixelBox":{"x":850,"y":698,"w":1,"h":78},"parentId":"purpose-band","note":"Quiet one-pixel vertical separator between studio title and mission copy."},
+    {"id":"mission-copy","kind":"text","pixelBox":{"x":906,"y":707,"w":565,"h":64},"parentId":"purpose-band","note":"Two lines of light grey mission copy identifying an Africa-based game studio building original games for a global audience."},
+    {"id":"also-band","kind":"chrome","pixelBox":{"x":0,"y":821,"w":1536,"h":203},"container":true,"note":"Black next-project section ground beneath purpose, continuing below viewport."},
+    {"id":"also-label","kind":"text","pixelBox":{"x":59,"y":841,"w":184,"h":12},"parentId":"also-band","note":"Tracked small uppercase ALSO IN DEVELOPMENT label."},
+    {"id":"volleyball-art","kind":"image","pixelBox":{"x":59,"y":864,"w":975,"h":144},"parentId":"also-band","bleed":true,"note":"Supplied Volleyball Rally spike artwork, blue court backdrop, player and yellow-blue volleyball. Wide cropped preview with rounded corners."},
+    {"id":"volleyball-title","kind":"text","pixelBox":{"x":1062,"y":873,"w":365,"h":42},"parentId":"also-band","note":"Bold uppercase VOLLEYBALL RALLY title aligned alongside its landscape preview, including line-box clearance."},
+    {"id":"volleyball-status","kind":"text","pixelBox":{"x":1067,"y":926,"w":188,"h":14},"parentId":"also-band","reviewGroup":"development-status","note":"Small blue dot and tracked IN DEVELOPMENT status for Volleyball Rally."},
+    {"id":"volleyball-link","kind":"control","pixelBox":{"x":1067,"y":959,"w":163,"h":30},"parentId":"also-band","note":"Explore the game link with blue underline and right arrow."}
+  ]
+}

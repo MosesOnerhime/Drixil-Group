@@ -1,271 +1,307 @@
 ---
-name: Drixil Group
-designStrategy: "Evolution, not reinvention"
-primaryGoal: "Premium corporate clarity, trust, retention, and conversion"
-accessibilityTarget: "WCAG 2.2 AA"
-performanceTargets:
-  lcp: "<= 2.5s at p75"
-  inp: "<= 200ms at p75"
-  cls: "<= 0.1 at p75"
+name: Drixil Publisher System
+description: "The implemented dark publisher interface for Drixil Group and its divisions."
+colors:
+  ground: "#080808"
+  panel: "#111111"
+  text: "#f7f7f7"
+  muted: "#c0c0c4"
+  rule: "#2b2b2d"
+  group-accent: "#7b5cff"
+  group-text: "#a995ff"
+  group-action: "#7250ed"
+  group-action-hover: "#6542dc"
+  group-action-active: "#5835c8"
+  interactive-accent: "#d6ff4b"
+  interactive-action-hover: "#e4ff83"
+  interactive-action-active: "#c4ec36"
+  outline-stroke: "#909092"
+  outline-hover: "#242424"
+  outline-active: "#303030"
+  development-blue: "#66baff"
+  game-link-rule: "#4c9be9"
+  game-link-hover: "#a4d5ff"
+  directory-hover: "#18131f"
+  directory-hover-rule: "#8a72e8"
+typography:
+  company-display:
+    fontFamily: "Merriweather Sans, sans-serif"
+    fontSize: "clamp(54px, 6.5vw, 100px)"
+    fontWeight: 800
+    lineHeight: 1.04
+    letterSpacing: "-0.04em"
+  game-display:
+    fontFamily: "Mitr, sans-serif"
+    fontSize: "clamp(44px, 4.5vw, 69px)"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "-0.025em"
+  headline:
+    fontFamily: "Merriweather Sans, sans-serif"
+    fontSize: "clamp(30px, 3.1vw, 48px)"
+    fontWeight: 800
+    lineHeight: 1.15
+    letterSpacing: "-0.035em"
+  title:
+    fontFamily: "Merriweather Sans, sans-serif"
+    fontSize: "23px"
+    fontWeight: 700
+    lineHeight: 1.25
+    letterSpacing: "-0.025em"
+  body:
+    fontFamily: "Merriweather Sans, sans-serif"
+    fontSize: "16px"
+    lineHeight: 1.8
+  label:
+    fontFamily: "Merriweather Sans, sans-serif"
+    fontSize: "12px"
+    fontWeight: 700
+    lineHeight: 1.3
+    letterSpacing: "0.2em"
+  button:
+    fontFamily: "Merriweather Sans, sans-serif"
+    fontSize: "14px"
+    fontWeight: 800
+    lineHeight: "20px"
+  navigation:
+    fontFamily: "Merriweather Sans, sans-serif"
+    fontSize: "13px"
+    fontWeight: 600
+    lineHeight: "17px"
+rounded:
+  control: "4px"
+  directory: "6px"
+  artwork: "8px"
+  status-dot: "50%"
+spacing:
+  inline-tight: "8px"
+  action-gap: "12px"
+  paragraph-gap: "16px"
+  inset-small: "20px"
+  inset: "24px"
+  inset-large: "28px"
+  content-gap: "32px"
+  tablet-gap: "40px"
+  media-gap: "48px"
+  mobile-section: "56px"
+  wide-gap: "64px"
+  split-gap: "72px"
+  section: "80px"
+components:
+  button-group:
+    backgroundColor: "{colors.group-action}"
+    textColor: "#fff"
+    typography: "{typography.button}"
+    rounded: "{rounded.control}"
+    padding: "0 20px"
+  button-group-hover:
+    backgroundColor: "{colors.group-action-hover}"
+  button-group-active:
+    backgroundColor: "{colors.group-action-active}"
+  button-interactive:
+    backgroundColor: "{colors.interactive-accent}"
+    textColor: "{colors.ground}"
+    typography: "{typography.button}"
+    rounded: "{rounded.control}"
+    padding: "0 20px"
+  button-interactive-hover:
+    backgroundColor: "{colors.interactive-action-hover}"
+  button-interactive-active:
+    backgroundColor: "{colors.interactive-action-active}"
+  button-outline:
+    backgroundColor: "transparent"
+    textColor: "{colors.text}"
+    typography: "{typography.button}"
+    rounded: "{rounded.control}"
+    padding: "0 20px"
+  button-outline-hover:
+    backgroundColor: "{colors.outline-hover}"
+  button-outline-active:
+    backgroundColor: "{colors.outline-active}"
+  editorial-link-group:
+    textColor: "{colors.group-text}"
+  navigation-link:
+    textColor: "{colors.text}"
+    typography: "{typography.navigation}"
+  development-status:
+    textColor: "{colors.muted}"
+  division-card:
+    backgroundColor: "{colors.ground}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.directory}"
+    padding: "22px"
+  community-row:
+    textColor: "{colors.text}"
+    padding: "18px 0"
 ---
 
-# Drixil Group Design Direction
+# Design System: Drixil Publisher System
 
-## 1. Design intent
+## Overview
 
-The Drixil Group website should feel:
+**Creative North Star: "Drixil Publisher System"**
 
-- established;
-- capable;
-- modern;
-- composed;
-- premium;
-- credible;
-- precise;
-- easy to navigate.
+Drixil's publisher system pairs dark, flat surfaces with bold type and the supplied company marks. The Group identity uses violet; Interactive uses volt. Real game artwork carries the richest colour, while the surrounding interface stays legible and direct.
 
-It should **not** feel like a generic startup template, speculative tech landing page, or design-showcase experiment.
+The system connects the parent company, its divisions, and game discovery without treating them as the same page. Large headings establish hierarchy, compact labels explain context, and visible development status keeps the presentation honest. Page-specific composition belongs in .impeccable/surfaces/src-app-tsx.md; this document records the shared visual language implemented in the source.
 
-The current website is the visual baseline. Retain its strongest visual language, branding, palette, typography, imagery, and motion. Improve consistency and usability around it.
+This is the implemented replacement publisher layout, not the superseded evolution-only direction. Source of truth: `src/styles/publisher-components.css`, `src/styles/publisher-layout.css`, `src/index.css`, and the actual components in `src/App.tsx`. The YAML above owns normative tokens; the companion `.impeccable/design.json` adds preview snippets and extension metadata.
 
-## 2. The design test
+**Key Characteristics:**
 
-Every design change should answer at least one of these questions positively:
+- Black and charcoal surfaces, off-white headings, and readable muted copy.
+- Violet Group actions and volt Interactive actions with separate text-safe treatments.
+- Local Merriweather Sans for the interface; local Mitr for uppercase game display type.
+- Crisp controls, softly rounded artwork, and restrained hover feedback.
+- Native disclosure navigation, visible keyboard focus, and mobile reading-order continuity.
 
-- Does this make Drixil easier to understand?
-- Does this make the company feel more credible?
-- Does this improve scanning or information hierarchy?
-- Does this reduce friction in navigation or inquiry?
-- Does this improve mobile usability?
-- Does this improve accessibility?
-- Does this improve perceived or measured performance?
-- Does this make the current design more consistent?
+## Colors
 
-If the answer is no, the change is probably unnecessary.
+The palette keeps the interface dark and lets violet, volt, and real project imagery establish identity. Frontmatter values are normative; names below explain their use.
 
-## 3. Visual hierarchy
+### Primary
 
-A typical marketing page should provide:
+- **Group Violet** (`group-accent`): the Group focus outline and status marker.
+- **Light Text Violet** (`group-text`): Group accent labels, editorial links, and roadmap numbering.
+- **Action Violet** (`group-action`): filled Group actions with white text; its hover and active siblings darken the fill.
 
-1. one unmistakable page purpose;
-2. one dominant heading;
-3. concise supporting copy;
-4. a clear primary next action;
-5. optional secondary exploration;
-6. proof/context after the initial promise.
+### Secondary
 
-Avoid giving every heading, card, and metric the same visual weight.
+- **Interactive Volt** (`interactive-accent`): Interactive filled actions, accent display text, focus outlines, and current-focus status dots. Its hover and active siblings are action feedback, not new brand colours.
 
-## 4. Typography
+### Tertiary
 
-Preserve the current brand typefaces unless there is a technical or legibility problem.
+- **Development Blue** (`development-blue`): the Volleyball Rally development dot.
+- **Game-Link Blue** (`game-link-rule`, `game-link-hover`): the underlined game-exploration link and its hover treatment. Written labels carry meaning; colour is not the only distinction.
 
-Rules:
+### Neutral
 
-- use a deliberate type scale;
-- maintain comfortable line lengths for body copy;
-- avoid very thin font weights for body text;
-- avoid low-contrast grey body copy;
-- avoid all-caps for paragraphs;
-- use line-height appropriate for reading, not merely visual density;
-- do not use oversized marketing headings that push all useful information below the first viewport;
-- ensure heading levels map sensibly to semantic HTML.
+- **Publisher Ground** (`ground`): main canvas, masthead, footer, and compact directory cards.
+- **Publisher Panel** (`panel`): alternating content bands and the mobile navigation panel.
+- **Off-White Text** (`text`): headings, navigation, and outlined controls.
+- **Muted Text** (`muted`): explanatory copy, labels, and status text.
+- **Quiet Rule** (`rule`): panel boundaries, list separators, and directory strokes.
+- **Outline Stroke / Hover / Active** (`outline-stroke`, `outline-hover`, `outline-active`): secondary-action boundary and neutral interaction fills.
+- **Directory Hover** (`directory-hover`, `directory-hover-rule`): a dark violet-tinted card fill and clearer violet boundary on hover.
 
-Prefer editorial restraint over decorative typography.
+**The Accent Contrast Rule.** Group text accents use group-text, while white-on-violet filled actions use group-action. Do not substitute the focus/status violet for either role.
 
-## 5. Spacing
+The sidecar's generated eight-step tonal strips are inspection aids, not additional approved interface tokens.
 
-Consolidate spacing into a predictable scale.
+## Typography
 
-The page should feel generous but not empty.
+**Display Font:** local Merriweather Sans for company headings; local Mitr for uppercase Interactive display roles.
+**Body Font:** local Merriweather Sans, with sans-serif fallback.
 
-Audit for:
+Merriweather Sans is supplied as a normal variable WOFF2 (weights 300–800); Mitr is a normal WOFF2 (weight 700). Both use `font-display: swap`. The files are `src/assets/fonts/merriweather-sans-latin-variable.woff2` and `src/assets/fonts/mitr-latin-700.woff2`. The publisher wrapper overrides the root's Inter/system fallback; do not mistake the root fallback for the publisher's design face.
 
-- sections with excessive top/bottom whitespace;
-- inconsistent card padding;
-- unequal gaps between related elements;
-- mobile sections that retain desktop-sized whitespace;
-- headings visually detached from their content;
-- CTA groups with accidental spacing.
+### Hierarchy
 
-Spacing communicates hierarchy. Do not use empty space as a substitute for structure.
+- **Company display** (`company-display`): weight 800, tight tracking, for the Group masthead. Its mobile size becomes `clamp(44px, 10vw, 68px)`.
+- **Game display** (`game-display`): uppercase Mitr for the lead game caption. It becomes 44px below the mobile breakpoint and 42px below the narrow-mobile breakpoint. Other game display contexts have their own observed sizes.
+- **Headline** (`headline`): responsive section headings; 32px on mobile.
+- **Title** (`title`): compact subordinate headings; feature/card variants adjust size to their context.
+- **Body** (`body`): readable muted paragraphs, reduced to 15px on mobile. Split-section copy is limited to 65ch; the Group summary is limited to 660px. Large copy uses `clamp(20px, 1.8vw, 28px)` with a 1.5 line height.
+- **Label** (`label`): uppercase tracked context labels; 10px on mobile. Status labels share the tracked treatment but use a 1.4 line height.
+- **Navigation / button**: compact navigation at weight 600; filled and outlined actions at weight 800.
 
-## 6. Containers and grids
+Headings use balanced wrapping. The Interactive purpose heading deliberately has a tighter desktop line height (0.84), relaxed to 1.05 on mobile; that is a surface-specific display treatment, not a paragraph setting.
 
-Use a consistent page container strategy.
+**The Two Faces Rule.** Use Merriweather Sans for company headings, body copy, labels, and controls. Use Mitr for the implemented uppercase Interactive display roles, not for paragraphs.
 
-- Keep long-form copy readable.
-- Let imagery or media go wider only when it benefits the composition.
-- Avoid arbitrary one-off widths.
-- Align page sections to common vertical axes.
-- Ensure cards and columns collapse intentionally rather than simply wrapping.
+## Layout
 
-Wide screens should not cause content to float in an excessively large empty canvas.
+The common content width is capped at 1600px. Wide Interactive shells subtract 112px from the viewport; wide Group shells subtract 156px. Their masthead padding aligns with those same 56px and 78px side gutters.
 
-## 7. Color
+Responsive thresholds are literal implementation boundaries:
 
-Preserve Drixil's existing brand palette.
+| Viewport | Shared behaviour |
+| --- | --- |
+| Up to 1279px | Both shells use 40px side gutters; major gaps tighten. |
+| Up to 1099px | Desktop links give way to the native disclosure menu; four-item grids become two columns. |
+| Up to 767px | Shell gutters are 24px; main two-column content and galleries stack; standard section padding becomes 56px. |
+| Up to 479px | Shell gutters are 20px; directory and feature lists become one column; principal action groups stack. |
 
-Improvements should focus on:
+The masthead remains sticky and 64px tall. Desktop navigation links and mobile summary controls provide 44px targets. Default large actions are at least 52px tall; mobile actions are at least 48px. The compact Group header contact action is a distinct 40px-high variant, hidden below 768px.
 
-- accessible text contrast;
-- consistent semantic use;
-- consistent interaction states;
-- restraint with accent colors;
-- ensuring links and controls remain identifiable without relying only on color.
+Spacing uses the observed scale in frontmatter, with 12px action gaps, 16px paragraph rhythm, 24–32px local groupings, and 64–80px wide content rhythm. Use the existing layout context instead of forcing every relationship onto one gap. The base document supports widths from 320px.
 
-Do not introduce a new palette just to make the site look different.
+Content anchors have an 88px scroll margin; the root has 5rem scroll padding. The skip link precedes the header. Mobile keeps essential content and destinations, but omits the decorative metallic hero mark. Real artwork declares dimensions and responsive sources; mobile lead imagery returns to its full 1672:941 aspect ratio rather than retaining a desktop crop.
 
-## 8. Surfaces, cards, borders, and shadows
+See the surface brief for the approved company hero, feature pair, game showcase, and purpose-band compositions. Those arrangements are not global templates for every future page.
 
-Cards are for meaningful grouping, not decoration.
+## Elevation & Depth
 
-Use them when they help a visitor distinguish:
+The site is flat by default. Ground/panel tone changes, thin rules, artwork, and alignment establish depth. Buttons, directory entries, game panels, and media do not use decorative drop shadows. The low-opacity metallic mark in the Studio feature is an existing image treatment, not a new surface texture.
 
-- businesses/services;
-- projects/case studies;
-- people/leadership;
-- contact pathways;
-- structured data.
+### Shadow Vocabulary
 
-Avoid turning every section into a card.
+- **Mobile navigation overlay** (`0 18px 28px #0006`): the expanded native menu separates from the page below the masthead.
+- **Focus separation** (`0 0 0 5px #050505`): the global keyboard-focus backing separates the outline from nearby content. Publisher links/buttons add a 3px accent outline offset by 4px; the menu summary uses a 3px offset.
 
-Shadows should be subtle and physically coherent. Borders should be crisp. Nested radii should look concentric.
+**The Flat Surface Rule.** Separate content with ground/panel tone changes, spacing, and rules. The mobile navigation shadow is an overlay treatment, not a card-elevation system.
 
-## 9. Imagery and media
+## Shapes
 
-Corporate imagery should support trust and understanding.
+Controls and skip links have crisp, gently eased corners (`rounded.control`, 4px). Artwork and major visual features are softly rounded (`rounded.artwork`, 8px). Compact directory cards, the mark, and the partner link use the intermediate corner (`rounded.directory`, 6px). Status dots are circular (9px diameter), while status text and game modes remain unboxed.
 
-Prioritize, where available:
+Borders are generally 1px. Outlined actions use a visible neutral stroke; directory cards use the quiet rule and strengthen it on hover. Preserve the supplied monogram's silhouette rather than redrawing it as a generic icon.
 
-1. real company/project imagery;
-2. real team/operations imagery;
-3. high-quality branded diagrams;
-4. carefully selected supporting imagery.
+## Components
 
-Avoid adding generic stock imagery solely to fill space.
+### Buttons
 
-Technical requirements:
+Direct, rectangular actions with a clear filled/outlined hierarchy. Default dimensions and type are in frontmatter; the full border, gap, and state details live in the sidecar.
 
-- reserve dimensions to avoid CLS;
-- serve responsive sizes;
-- use modern formats where supported;
-- lazy-load below-the-fold media;
-- prioritize the true LCP hero asset;
-- avoid autoplay media with sound;
-- include poster images for video;
-- ensure media still makes sense with motion disabled.
+- **Group filled:** white text on Action Violet, with darker hover/active fills.
+- **Interactive filled:** dark text on Interactive Volt, with lighter hover and darker active fills.
+- **Outline:** off-white text, neutral stroke, transparent resting fill, and neutral hover/active fills.
+- **Focus:** visible accent outline; never remove keyboard feedback.
+- **Icons:** typically 20px inline SVG, separated from text by 13px; mobile uses 18px icons and a 10px gap. External game actions include the Roblox mark and an outward arrow; community actions remain separate.
+- **Mobile:** 12px type and 16px horizontal padding; narrow principal action groups stretch vertically.
 
-## 10. Motion
+There are no implemented form fields, loading buttons, disabled buttons, or validation states to extrapolate here. Contact is a mail link.
 
-Keep polished motion if it contributes to the existing Drixil identity.
+### Status and Mode Labels
 
-Motion rules:
+Status is text plus a dot, not a chip-shaped button. The default dot follows the page accent; Volleyball Rally uses Development Blue. The words “Currently working on”, “In development”, and “Website in development” remain visible. Game modes form a wrapping text list, not a filter bar.
 
-- use motion to communicate hierarchy, continuity, or feedback;
-- avoid animating every section simply because it enters the viewport;
-- avoid long delays before content becomes readable;
-- prefer opacity/transform;
-- never use `transition: all`;
-- respect `prefers-reduced-motion`;
-- avoid scroll hijacking;
-- avoid parallax that harms readability;
-- keep important controls usable before decorative animation completes.
+### Cards / Containers
 
-Visitors should never have to wait for the website to finish performing.
+Directory entries use a ground fill, 1px rule, 6px corners, and 22px desktop padding (20px mobile). Hover changes fill and border. A top-aligned outward arrow clarifies navigation. Feature cards instead give real artwork space; the Studio feature combines the supplied metallic mark at low opacity with real service copy. Hover underlines feature headings; it does not lift the cards.
 
-## 11. Navigation
+### Links
 
-Navigation should feel stable and predictable.
+Group editorial links use Light Text Violet; Interactive editorial links use volt. Their uppercase labels gain an underline on hover. The game-exploration text link has a blue bottom rule and a light-blue hover state. Community/social rows are larger, ruled link targets with a leading icon, name, secondary handle or description, and outward arrow.
 
-- logo returns home;
-- current location is understandable;
-- labels use visitor language, not internal org jargon;
-- dropdowns are keyboard accessible;
-- mobile navigation is easy to open, close, and traverse;
-- sticky navigation must not obscure anchored content or focused controls;
-- primary contact/engagement action is visually clear but not aggressive.
+### Navigation
 
-## 12. CTA hierarchy
+A sticky dark masthead holds the supplied mark, stacked Drixil/division word label, section links, and contact or Group-return action. Desktop links are compact and gain an accent colour plus underline on hover; no unimplemented selected-navigation variant is implied.
 
-Every page should have a sensible next step.
+Below 1100px, a native `details/summary` menu replaces the desktop links. Its bordered 44px summary switches menu/close icons. The expanded panel is scrollable within the viewport and provides 52px link rows. It opens without JavaScript; enhancement closes it after link activation, on Escape with focus returned to the summary, and on resize to desktop. Keep the semantic disclosure rather than replacing it with a click-only container.
 
-Use:
+### Artwork, Gallery, and Partner
 
-- one primary CTA per decision context;
-- secondary links for exploration;
-- descriptive labels such as “Explore our businesses”, “View projects”, or “Contact Drixil” rather than repeated vague “Learn more” links where context is unclear.
+Game art is rendered from the repository's responsive WebP assets, with meaningful alternative text and explicit dimensions. Galleries are two columns on desktop and one on mobile; captions identify artwork without presenting it as shipped footage. The partner link uses the real Novatrax logo and confirmed destination.
 
-Do not place multiple equally loud CTAs next to each other without hierarchy.
+Only the Group Interactive feature image scales subtly on hover (1.025), at widths from 1100px and only when reduced motion is not requested. That transition is 350ms with `cubic-bezier(0.16, 1, 0.3, 1)`. Ordinary control feedback uses 160ms ease-out. Reduced motion changes transitions/animations to 0.01ms and disables smooth scrolling. The implemented system does not depend on entrance animations or autoplay.
 
-## 13. Trust
+## Do's and Don'ts
 
-Trust should be distributed through the experience.
+### Do:
 
-Where verified content exists, use:
+- Do preserve the supplied Drixil marks, real project artwork, and confirmed partner assets.
+- Do keep Group's text-safe violet and white-on-violet action fill in their documented roles.
+- Do use the filled game action and outline community action as distinct destinations.
+- Do retain visible focus, native disclosure semantics, descriptive link names, and written development status.
+- Do stack content and actions in reading order at the implemented breakpoints, keeping essential content available without JavaScript.
+- Do use the existing local fonts and respect reduced-motion preferences.
 
-- specific business capabilities;
-- real project/case-study detail;
-- client/partner references with permission;
-- leadership/company information;
-- physical/contact details;
-- certifications;
-- dates/history;
-- measurable outcomes;
-- clear privacy/legal information.
+### Don't:
 
-Never fabricate proof.
-
-## 14. Forms
-
-Contact/inquiry forms should be low-friction.
-
-- ask only for information that is useful at first contact;
-- use visible labels;
-- use appropriate autocomplete;
-- show field-level errors;
-- focus the first invalid field after submission;
-- preserve entered data on recoverable errors;
-- provide clear success confirmation;
-- do not disable the submit button before the visitor has a chance to receive validation;
-- prevent duplicate submissions while a request is in flight.
-
-## 15. Responsive behavior
-
-Mobile is not a scaled-down desktop layout.
-
-At small widths:
-
-- collapse navigation intentionally;
-- reduce decorative whitespace;
-- stack content in logical reading order;
-- keep important CTAs easy to reach;
-- prevent awkward orphaned words and tiny columns;
-- maintain minimum target sizes;
-- prevent media from causing overflow;
-- preserve hierarchy without oversized headings.
-
-## 16. Accessibility
-
-Target WCAG 2.2 AA.
-
-At minimum:
-
-- keyboard-accessible primary journeys;
-- visible focus;
-- no focus hidden behind sticky UI;
-- semantic headings/landmarks;
-- descriptive link text;
-- accessible forms;
-- appropriate alt text;
-- sufficient contrast;
-- reduced motion;
-- no color-only meaning;
-- meaningful accessible names for icon-only controls;
-- a skip-to-content mechanism on multi-section pages.
-
-## 17. Page personality
-
-The site may be visually premium and distinctive, but the visitor should notice **Drixil**, not the UI designer.
-
-Restraint is part of the brand.
+- Don't replace Drixil identity or game art with another publisher's branding or invented imagery.
+- Don't infer a release date, shipped game, client portfolio, review, award, or metric from promotional artwork.
+- Don't add pill-shaped controls or diffuse card shadows as if they were established patterns.
+- Don't turn noninteractive status labels or game-mode text into controls without a product requirement.
+- Don't invent input, disabled, error, or light-theme variants; none are part of this implemented system.
+- Don't make either homepage's exact hero composition a global restriction on future surfaces.

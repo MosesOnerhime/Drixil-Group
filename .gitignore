@@ -37,6 +37,9 @@ lerna-debug.log*
 .turbo/
 .cache/
 
+# PNG-only design-tool copies; production uses the original optimized media.
+/assets/plates/
+
 # IDE and OS files
 .vscode/
 .idea/

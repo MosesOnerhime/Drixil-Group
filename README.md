@@ -2,6 +2,19 @@
 
 The Drixil Group company website and its division pages, built with React, TypeScript, Vite, and Tailwind CSS. Drixil Interactive showcases Beyond 90 and Volleyball Rally; the other division pages retain their published development status.
 
+## Layout and assets
+
+The current publisher-style layout follows the approved Group A and Interactive B concepts. The Group homepage explains the company and divisions; Interactive leads with the games, separate game/community actions, and the studio's global-audience mission. All seven routes share navigation and footer patterns. Mobile navigation uses native HTML disclosure, so it also works without JavaScript.
+
+- `src/styles/publisher-components.css` owns the shared fonts, controls, labels and states.
+- `src/styles/publisher-layout.css` owns the page grids, spacing and responsive adaptations.
+- `src/assets/fonts/` contains self-hosted WOFF2 files and their original SIL Open Font Licenses.
+- `DESIGN.md` and `.impeccable/design.json` describe the finished design system.
+- [Asset provenance](docs/ui/ASSET_PROVENANCE.md) distinguishes original project art from development-only concept images.
+- [The redesign handoff](docs/handoffs/2026-10-24-rockstar-layout-revamp.md) records decisions, QA, workflow limitations and delivery.
+
+The previous design remains recoverable from [the GitHub backup branch](https://github.com/MosesOnerhime/Drixil-Group/tree/backup-pre-rockstar-revamp-2026-10-24). Do not replace real project imagery with approximations from a generated mockup.
+
 ## Run locally
 
 ```sh
