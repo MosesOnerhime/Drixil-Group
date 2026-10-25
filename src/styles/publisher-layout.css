@@ -249,13 +249,15 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: #000;
+  background: var(--publisher-ground);
 }
 .company-scene {
+  --scene-floor-fade: 48px;
   position: absolute;
   z-index: -1;
   inset: 0;
   pointer-events: none;
+  mix-blend-mode: screen;
 }
 .company-scene img {
   width: 100%;
@@ -263,6 +265,16 @@
   object-fit: cover;
   object-position: center 72%;
   transform: scale(0.93) translateX(5.5%);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 calc(100% - var(--scene-floor-fade)),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 calc(100% - var(--scene-floor-fade)),
+    transparent
+  );
 }
 .company-hero-content {
   display: flex;
@@ -319,11 +331,10 @@
   height: 18px;
 }
 .ecosystem-section {
-  border-top: 1px solid #1c1c1f;
   padding-block: 28px 36px;
 }
 .group-theme .ecosystem-section {
-  background: #0b0b0c;
+  background: var(--publisher-ground);
 }
 .group-theme h2 {
   font-size: clamp(30px, 3.25vw, 50px);
@@ -1202,6 +1213,7 @@ a.editorial-link:hover {
     width: 100%;
   }
   .company-scene {
+    --scene-floor-fade: 36px;
     top: auto;
     height: 235px;
   }

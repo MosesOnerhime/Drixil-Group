@@ -274,6 +274,8 @@ See the surface brief for the approved company hero, feature pair, game showcase
 
 The interface is flat by default. Ground/panel tone changes, thin rules, artwork, and alignment establish depth. Buttons, directory entries, game panels, and media do not use decorative drop shadows. Authorized raster artwork carries the Group hero's silver D, violet crossing, smoke and floor reflection, plus the Studio/directory diagonal-metal detail; this dimensional brand material does not introduce elevated UI cards.
 
+The Group hero and ecosystem share Publisher Ground without a dividing border. Screen compositing maps the hero artwork's black background into that canvas; a static lower-edge mask follows the image's own transformed bounds, fading its floor reflection over 48px on desktop and 36px on phones. This is an integration treatment for the existing raster, not new artwork or an animated effect. Keep the monogram and violet floor light visible above the fade.
+
 ### Shadow Vocabulary
 
 - **Mobile navigation overlay** (`0 18px 28px #0006`): the expanded native menu separates from the page below the masthead.
