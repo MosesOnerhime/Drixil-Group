@@ -25,4 +25,10 @@ Repository inspection confirmed three causes: hero ground `#000`, ecosystem grou
 
 ## Delivery
 
-This is a scoped follow-up to Moses's previous instruction to commit/push the finished website correction and verify it live. Implementation is ready; record the commit and actual production checks below after they succeed.
+This is a scoped follow-up to Moses's previous instruction to commit/push the finished website correction and verify it live.
+
+- Implementation commit: `19b25a3ee1a271dde28a951b28aadf181688b2d3` (`fix: blend Group hero into the ecosystem canvas`). Successfully pushed to both `redesign/rockstar-inspired` and `main`; remote refs were checked.
+- Production verified at `2026-10-25T14:41:31.746Z`: https://drixil-group.vercel.app/. The deployed `/assets/index-Dn1rGYOf.css` bytes match the reviewed local build by SHA-256.
+- Real HTTPS browser checks at 390, 1536 and 1905px confirm both section backgrounds are RGB(8,8,8), the divider is 0px, screen compositing is active and the image mask uses the intended 36px/48px fade. No horizontal overflow or page errors. Analytics was not stubbed.
+- Live mobile menu/Escape works, and Interactive retains its blue game identity. Desktop and phone production screenshots were opened and visually checked; the junction is continuous. Evidence: `.cache/hero-blend/live-results.json` and `live-390.png`, `live-1536.png`, `live-1905.png` in that directory.
+- This documentation-only closeout does not change the verified runtime. The unrelated deleted `AGENTS_UI_ADDENDUM.md` and untracked `AGENTS.md`/skill directory remain untouched and unstaged.
